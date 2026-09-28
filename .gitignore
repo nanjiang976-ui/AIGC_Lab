@@ -1,0 +1,24 @@
+# Local runtime and preserved test workspaces
+__pycache__/
+*.py[cod]
+.harness-tests/
+.venv/
+
+# Secrets and local editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Large media / editing projects: record metadata in Markdown, back up separately
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.psd
+*.blend
+*.zip

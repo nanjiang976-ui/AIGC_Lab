@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "WORK-001",
+  "title": "{{作品名称}}",
+  "kind": "comic",
+  "scope": "prompts",
+  "revision": "v001",
+  "status": "DRAFT",
+  "generation": {
+    "status": "NOT_RUN",
+    "tool": "",
+    "model": "",
+    "generated_at": "",
+    "revision": "",
+    "evidence": []
+  },
+  "review": {
+    "status": "NOT_RUN",
+    "reviewer": "",
+    "reviewed_at": "",
+    "revision": "",
+    "evidence": []
+  }
+}

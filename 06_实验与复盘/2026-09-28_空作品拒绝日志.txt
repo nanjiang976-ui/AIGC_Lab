@@ -1,0 +1,3 @@
+FAIL phase=prompts 作品数量=0 错误数量=1
+- [NO_WORK] C:\Users\NJ\Desktop\Codex\OPC\AIGC_Lab: prompts/delivery 门禁不能在没有作品时通过
+检查仅验证文件、字段和关联；结构通过不代表已生成或已验收，也不验证媒体真实性或审美质量。
