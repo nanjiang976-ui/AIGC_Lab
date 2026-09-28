@@ -60,6 +60,6 @@ python -X utf8 -m unittest discover -s scripts/tests -v
 
 采用本地 Git 保存文本资料和小型参考图。大型视频/音频/工程文件默认忽略；生成记录仍需记下实际路径、工具和版本，媒体备份单独管理。复制仓库到另一台电脑后，必须补齐媒体再做交付检查，不得把记录当成媒体本身。
 
-每次任务结束更新计划和复盘；只有出现跨作品可复用的经验才精简更新公共模板。当前未设置定时任务，也未连接远程仓库或自动发布。
+每次任务结束更新计划和复盘；只有出现跨作品可复用的经验才精简更新公共模板。当前未设置定时任务或自动发布。远程仓库为 [nanjiang976-ui/AIGC_Lab](https://github.com/nanjiang976-ui/AIGC_Lab)，默认分支为 `main`。
 
 管理方法来源：[OpenAI Harness Engineering](https://openai.com/index/harness-engineering/)。本项目的状态、目录和创作验收规则是针对影像创作制定的本地约定。
