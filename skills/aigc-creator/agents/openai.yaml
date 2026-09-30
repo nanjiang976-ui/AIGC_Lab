@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 创作助手"
+  short_description: "通过逐轮提问扩展故事与画面，生成分镜提示词并维护跨片段一致性和分类提示词库"
+  default_prompt: "请使用 $aigc-creator，从我的想法开始逐轮提问，完善图片或视频内容，输出提示词并沉淀通用模块。"
+policy:
+  allow_implicit_invocation: true
