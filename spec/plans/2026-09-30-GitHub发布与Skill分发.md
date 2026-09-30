@@ -1,6 +1,6 @@
 # GitHub 推送与 Skill 分发
 
-日期：2026-09-30。状态：IN_PROGRESS。
+日期：2026-09-30。状态：DONE。
 
 用户明确要求：将新修改内容及新创建的 Skill 推送 GitHub，并注明如何使用。
 
@@ -23,6 +23,14 @@
 - 6 个文件逐字节一致，Skill 内本地引用均可解析，不依赖原用户名或绝对路径。
 - 安装步骤隔离试验：能复制全部 6 文件；已有同名目标时在复制前拒绝，不覆盖。试验资料保留在被忽略的 `.harness-tests`，不推送。
 - 独立只读审查：未发现阻止发布的问题；安装命令语法、当前用户授权边界、更新说明、历史状态说明均已核对。
-- `git diff --check` 通过；最终暂存范围检查与远程 SHA 验证在提交/推送时执行。
+- `git diff --check` 与暂存差异检查通过；34 个文件均为本次 Markdown/YAML，未包含脚本、凭据模式、媒体或被忽略的演练资料。
 
 媒体实测与未来每次隐式自动选择没有在本轮执行。当前技能清单已经列出 `aigc-creator`，这只证明发现了技能元信息，不证明所有自然语言请求都能正确触发。
+
+## 已核验的远程交付
+
+- 内容提交：`e57c31d3d5ad62b4e4aa75a95cc9a3f317464ce9`，`feat: add AIGC creator skill, prompt library and usage guide`。
+- `git push origin main` 退出码 0，远程从 `fce08fe` 前进到 `e57c31d`。
+- 内容推送后 `git rev-parse HEAD` 与 `git ls-remote origin refs/heads/main` 均返回上述完整 SHA，确认内容已到 GitHub；当时工作区干净。
+- 本节是该次内容提交的推送核验记录；后续文档提交可继续推进 main，不改变上述内容已推送的事实。
+- 已发布入口：[仓库首页](https://github.com/nanjiang976-ui/AIGC_Lab)、[Skill 文件](https://github.com/nanjiang976-ui/AIGC_Lab/tree/main/skills/aigc-creator)。安装与使用入口位于根 README。
