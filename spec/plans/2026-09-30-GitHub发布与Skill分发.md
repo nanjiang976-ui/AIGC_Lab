@@ -34,3 +34,10 @@
 - 内容推送后 `git rev-parse HEAD` 与 `git ls-remote origin refs/heads/main` 均返回上述完整 SHA，确认内容已到 GitHub；当时工作区干净。
 - 本节是该次内容提交的推送核验记录；后续文档提交可继续推进 main，不改变上述内容已推送的事实。
 - 已发布入口：[仓库首页](https://github.com/nanjiang976-ui/AIGC_Lab)、[Skill 文件](https://github.com/nanjiang976-ui/AIGC_Lab/tree/main/skills/aigc-creator)。安装与使用入口位于根 README。
+
+## 后续文档精简 · 2026-09-30
+
+- 用户要求检查重复并精简；范围为根 README、Skill 使用说明和提示词库 README，Skill 与生成规则不变。
+- 首页只留一套启动提示词；合并调用/重启/维护等重复说明，库首页改为索引，详细步骤引用现有文档。
+- 本地验证：项目链接/结构校验和差异检查通过；独立只读复核确认无关键信息丢失或循环指引。三文档分别由 78/105/13 行缩至 58/80/10 行；远程同步在提交后核对 SHA。
+- 复盘：同一操作只维护一份完整说明，首页保留足够开始使用的信息。本轮未修改脚本或 Skill，无需重复其行为/安装试验。
