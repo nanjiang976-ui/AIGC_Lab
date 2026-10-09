@@ -30,6 +30,7 @@ class ProjectValidationTests(unittest.TestCase):
             target = directory / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text('内容完整。镜头 EP01_SH001。\n', encoding='utf-8')
+        self.write_sent(directory, '### EP01_SH001\n\n```text\n完整雨夜画面。\n```\n')
         self.write_shots(directory)
         manifest = dict(schema_version=1, id='WORK-001', title='雨夜便利店', kind=kind,
                         scope=scope, revision='v001', status=status,
@@ -40,6 +41,9 @@ class ProjectValidationTests(unittest.TestCase):
 
     def save_manifest(self, directory, manifest):
         (directory / 'project.json').write_text(json.dumps(manifest, ensure_ascii=False), encoding='utf-8')
+
+    def write_sent(self, directory, content):
+        (directory / '04_生成提示词/本次发送.md').write_text(content, encoding='utf-8')
 
     def write_shots(self, directory, **changes):
         row = dict(shot_id='EP01_SH001', duration_seconds='3', scene_id='SCENE-001',
@@ -286,6 +290,229 @@ class ProjectValidationTests(unittest.TestCase):
     def test_work_selection_cannot_escape_or_select_template(self):
         self.assert_fails('PATH', work='../outside')
         self.assert_fails('WORK_SELECTION', work='01_创作模板')
+
+
+    def test_quoted_multiline_shot_id_is_rejected_without_joining_lines(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_shots(directory, shot_id='EP01_\nSH001')
+        self.assert_fails('SHOT_ID', phase='prompts')
+
+    def test_quoted_multiline_duration_is_rejected_without_joining_lines(self):
+        directory, _ = self.work(status='PROMPT_READY', kind='video')
+        for value in ('1\n0', '1\r\n0'):
+            with self.subTest(value=value):
+                self.write_shots(directory, duration_seconds=value)
+                self.assert_fails('DURATION', phase='prompts')
+
+    def test_quoted_multiline_descriptions_and_prompts_remain_valid(self):
+        directory, _ = self.work(status='PROMPT_READY', kind='video')
+        self.write_shots(directory, description='雨夜。\n一只小猫在灯下。',
+                         image_prompt='中景。\n保持雨滴与暖光。',
+                         video_prompt='缓慢推进。\n小猫抬头。')
+        self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_csv_newlines_do_not_create_a_placeholder_by_joining_words(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_shots(directory, description='画面内的两行字为 TO\nDO。')
+        self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_required_documents_cannot_be_whitespace_at_prompt_gate(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for relative in ('00_创作需求.md', '01_故事与角色设定.md', '02_剧情脚本.md'):
+            target = directory / relative
+            original = target.read_text(encoding='utf-8')
+            with self.subTest(relative=relative):
+                target.write_text(' \n\t', encoding='utf-8')
+                self.assert_fails('EMPTY', phase='prompts')
+            target.write_text(original, encoding='utf-8')
+
+    def test_draft_structure_allows_whitespace_documents_but_prompt_gate_does_not(self):
+        directory, _ = self.work()
+        for relative in ('00_创作需求.md', '01_故事与角色设定.md', '02_剧情脚本.md'):
+            (directory / relative).write_text(' \n\t', encoding='utf-8')
+        self.assertEqual([], validate_project(self.root).errors)
+        self.assert_fails('EMPTY', phase='prompts')
+
+    def test_local_links_allow_balanced_and_nested_parentheses(self):
+        references = self.root / 'references'
+        references.mkdir()
+        for filename in ('model(1).md', 'model(outer(inner)).md'):
+            (references / filename).write_text('参考内容', encoding='utf-8')
+            with self.subTest(filename=filename):
+                (self.root / 'README.md').write_text(
+                    f'[参考](references/{filename})', encoding='utf-8')
+                self.assertEqual([], validate_project(self.root).errors)
+
+    def test_local_links_allow_escaped_parentheses(self):
+        references = self.root / 'references'
+        references.mkdir()
+        (references / 'model(1).md').write_text('参考内容', encoding='utf-8')
+        (self.root / 'README.md').write_text(
+            r'[参考](references/model\(1\).md)', encoding='utf-8')
+        self.assertEqual([], validate_project(self.root).errors)
+
+    def test_parenthesized_link_with_title_and_anchor_is_valid(self):
+        references = self.root / 'references'
+        references.mkdir()
+        (references / 'model(1).md').write_text('# title\n参考内容', encoding='utf-8')
+        (self.root / 'README.md').write_text(
+            '[参考](references/model(1).md#title "模型说明")', encoding='utf-8')
+        self.assertEqual([], validate_project(self.root).errors)
+
+    def test_missing_parenthesized_links_fail_for_the_full_target(self):
+        references = self.root / 'references'
+        references.mkdir()
+        # A truncated prefix existing must not make the real missing link pass.
+        (references / 'model(1').write_text('旧解析器截断出的文件名', encoding='utf-8')
+        for destination in ('references/model(1).md', r'references/model\(1\).md'):
+            with self.subTest(destination=destination):
+                (self.root / 'README.md').write_text(
+                    f'[缺失]({destination})', encoding='utf-8')
+                self.assert_fails('LINK')
+
+    def test_parenthesized_link_parsing_preserves_path_boundary_checks(self):
+        for destination in ('../outside(1).md', r'..\outside\(1\).md',
+                            'C:/outside(1).md', 'C:outside(1).md',
+                            '%2e%2e/outside(1).md', '%2foutside(1).md'):
+            with self.subTest(destination=destination):
+                (self.root / 'README.md').write_text(
+                    f'[越界]({destination})', encoding='utf-8')
+                self.assert_fails('LINK_PATH')
+
+    def test_skill_entry_and_nested_reference_links_are_checked(self):
+        skill = self.root / 'skills/aigc-creator'
+        references = skill / 'references'
+        references.mkdir(parents=True)
+        (self.root / 'README.md').write_text(
+            '[Skill](skills/aigc-creator/SKILL.md)', encoding='utf-8')
+        (skill / 'SKILL.md').write_text('[缺失](references/missing.md)', encoding='utf-8')
+        self.assert_fails('LINK')
+        (skill / 'SKILL.md').write_text('[指南](references/guide.md)', encoding='utf-8')
+        (references / 'guide.md').write_text('[缺失](missing.md)', encoding='utf-8')
+        self.assert_fails('LINK')
+        (references / 'guide.md').write_text('[入口](../SKILL.md)', encoding='utf-8')
+        self.assertEqual([], validate_project(self.root).errors)
+
+    def test_skill_reparse_directory_is_rejected_without_reading_contents(self):
+        directory = self.root / 'skills/aigc-creator/references/linked'
+        directory.mkdir(parents=True)
+        (directory / 'outside.md').write_bytes(b'\xff\xfeinvalid-utf8')
+        original = validator._reparse
+        with patch('validate_project._reparse', side_effect=lambda path: path == directory or original(path)):
+            result = validate_project(self.root)
+        self.assertTrue(any('[PATH]' in error for error in result.errors), result.errors)
+        self.assertFalse(any('[READ]' in error for error in result.errors), result.errors)
+
+    def test_skill_root_reparse_is_rejected_without_reading_contents(self):
+        directory = self.root / 'skills'
+        directory.mkdir()
+        (directory / 'outside.md').write_bytes(b'\xff\xfeinvalid-utf8')
+        original = validator._reparse
+        with patch('validate_project._reparse', side_effect=lambda path: path == directory or original(path)):
+            result = validate_project(self.root)
+        self.assertTrue(any('[PATH]' in error for error in result.errors), result.errors)
+        self.assertFalse(any('[READ]' in error for error in result.errors), result.errors)
+
+    def test_sendable_shot_requires_nonempty_body(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for body in (' \n\t', '```text\n \t\n```\n', '<!-- 内部注释 -->\n',
+                     '<!-- 多行\n内部注释 -->\n', '#### 图片提示词\n\n#### 视频提示词\n'):
+            with self.subTest(body=body):
+                self.write_sent(directory, '### EP01_SH001\n\n' + body)
+                self.assert_fails('SEND_EMPTY', phase='prompts')
+
+    def test_sendable_shot_ids_in_body_do_not_replace_headings(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for content in ('画面内容 EP01_SH001。\n',
+                        '### 发送稿\n\n```text\nEP01_SH001：完整雨夜画面。\n```\n',
+                        '```text\n### EP01_SH001\n完整雨夜画面。\n```\n',
+                        '<!--\n### EP01_SH001\n-->\n完整雨夜画面。\n'):
+            with self.subTest(content=content):
+                self.write_sent(directory, content)
+                self.assert_fails('SEND_SHOT', phase='prompts')
+
+    def test_duplicate_sendable_shot_groups_are_rejected(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_sent(directory,
+                        '### EP01_SH001\n\n图片正文。\n\n### EP01_SH001\n\n视频正文。\n')
+        self.assert_fails('SEND_DUPLICATE', phase='prompts')
+
+    def test_extra_sendable_shot_group_is_rejected(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_sent(directory,
+                        '### EP01_SH001\n\n雨夜正文。\n\n### EP01_SH002\n\n多余镜头。\n')
+        self.assert_fails('SEND_EXTRA', phase='prompts')
+
+    def test_sendable_shot_groups_require_all_csv_shots(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        with (directory / '03_分镜表.csv').open(encoding='utf-8', newline='') as file:
+            first = next(csv.DictReader(file))
+        self.write_rows(directory, [first, dict(first, shot_id='EP01_SH002')])
+        self.assert_fails('SEND_SHOT', phase='prompts')
+
+    def test_unclosed_sendable_fence_is_rejected(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for body in ('```text\n完整雨夜画面。\n', '~~~text\n完整雨夜画面。\n'):
+            with self.subTest(body=body):
+                self.write_sent(directory, '### EP01_SH001\n\n' + body)
+                self.assert_fails('SEND_FENCE', phase='prompts')
+
+    def test_sendable_shot_supports_plain_text_and_fenced_text(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for body in ('完整雨夜画面。\n', '```text\n完整雨夜画面。\n```\n',
+                     '~~~text\n完整雨夜画面。\n~~~\n'):
+            with self.subTest(body=body):
+                self.write_sent(directory, '### EP01_SH001\n\n' + body)
+                self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_sendable_shot_supports_multiple_code_blocks_in_one_group(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_sent(directory, '### EP01_SH001\n\n'
+                        '#### 图片提示词\n\n```text\n完整雨夜画面。\n```\n\n'
+                        '#### 视频提示词\n\n```text\n缓慢推进，小猫抬头。\n```\n')
+        self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_other_shot_ids_in_sendable_body_are_not_extra_groups(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_sent(directory, '### EP01_SH001\n\n'
+                        '保持与 EP01_SH002 相同的场景。\n\n'
+                        '```text\n画面内写有 EP01_SH003。\n```\n')
+        self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_draft_structure_allows_partial_sendable_groups(self):
+        directory, _ = self.work()
+        self.write_sent(directory, '### EP01_SH001\n\n```text\n\n```\n')
+        self.assertEqual([], validate_project(self.root).errors)
+        self.assert_fails('SEND_EMPTY', phase='prompts')
+
+    def test_sendable_fenced_text_preserves_literal_comment_markers(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for body in ('<!-- 要在画面中呈现的标记 -->', '<!--'):
+            with self.subTest(body=body):
+                self.write_sent(directory, f'### EP01_SH001\n\n```text\n{body}\n```\n')
+                self.assertEqual([], validate_project(self.root, phase='prompts').errors)
+
+    def test_empty_code_block_is_not_filled_by_an_explanatory_label(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        self.write_sent(directory, '### EP01_SH001\n\n视频提示词：\n```text\n\n```\n')
+        self.assert_fails('SEND_EMPTY', phase='prompts')
+
+    def test_empty_headings_and_thematic_breaks_are_not_sendable_body(self):
+        directory, _ = self.work(status='PROMPT_READY')
+        for body in ('##\n', '### \n', '---\n', '* * *\n', '___\n'):
+            with self.subTest(body=body):
+                self.write_sent(directory, '## EP01_SH001\n\n' + body)
+                self.assert_fails('SEND_EMPTY', phase='prompts')
+
+    def test_link_opening_escape_depends_on_backslash_parity(self):
+        for count in (1, 2, 3, 4):
+            with self.subTest(backslashes=count):
+                (self.root / 'README.md').write_text(
+                    '\\' * count + '[缺失](references/missing(1).md)', encoding='utf-8')
+                if count % 2:
+                    self.assertEqual([], validate_project(self.root).errors)
+                else:
+                    self.assert_fails('LINK')
 
 
 if __name__ == '__main__':

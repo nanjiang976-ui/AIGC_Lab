@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-30T17:13:18+08:00",
+  "scope": "prompts结构与文件对应，非媒体效果",
+  "checks": {
+    "six_unique_shots": true,
+    "planned_total_30_seconds": true,
+    "six_video_six_firstframe_three_master_blocks": true,
+    "csv_video_matches_send_verbatim": true,
+    "csv_image_matches_firstframes_verbatim": true,
+    "no_fictional_asset_paths": true,
+    "no_unfilled_variables": true,
+    "no_internal_ids_in_model_blocks": true,
+    "neutral_solo_masters": true,
+    "female_wet_state_in_each_shot": true,
+    "robot_existing_droplets_in_final_entry": true,
+    "closeup_canopy_outside_frame": true,
+    "generation_not_run": true
+  },
+  "passed": true,
+  "video_prompt_character_counts": [
+    733,
+    769,
+    830,
+    771,
+    778,
+    856
+  ],
+  "media_validation": "NOT_RUN"
+}

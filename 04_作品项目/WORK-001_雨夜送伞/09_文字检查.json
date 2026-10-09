@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-09T04:01:06+00:00",
+  "revision": "v002",
+  "scope": "prompts 文件对应、SH003 摘要及历史保留的自动检查；非内容批准或媒体效果",
+  "checks": {
+    "six_unique_shots": true,
+    "planned_total_30_seconds": true,
+    "six_video_six_firstframe_three_master_blocks": true,
+    "csv_video_matches_send_verbatim": true,
+    "csv_image_matches_firstframes_verbatim": true,
+    "sh003_summary_agrees_with_image_and_video": true,
+    "no_fictional_asset_paths": true,
+    "generation_not_run": true,
+    "fourteen_original_files_archived_verbatim": true,
+    "only_sh003_description_changed_in_csv": true,
+    "all_fifteen_model_blocks_unchanged": true,
+    "current_revision_v002": true,
+    "generation_metadata_cleared": true,
+    "current_markdown_version_headers_updated": true
+  },
+  "passed": true,
+  "failures": [],
+  "sh003_description": "接稳再松手。单独呈现复杂交接，防止悬空、粘手或复制道具。 固定机位手部近景，画面左边是奶白色机器人右前臂与深灰两指夹爪，右边是深青蓝风衣左袖及女性左手；两处握持点清楚可见，直伞杆向画面上方延伸出框，撑开的伞面保持在画外，背景路灯虚化。",
+  "manifest_status": "ACCEPTED",
+  "review_status": "PASS",
+  "video_prompt_character_counts": [
+    733,
+    769,
+    830,
+    771,
+    778,
+    856
+  ],
+  "v001_sha256": {
+    "00_创作需求.md": "95fb75e76341e33e6b422c2171dafb5ece25842c02bed2d433b383872dc0433e",
+    "01_故事与角色设定.md": "99c44710662be2a650cf9a1d7d0bae0c7c6caf3982bde87e1e8b73d5ade3b333",
+    "02_剧情脚本.md": "c269a7eb8e5ab0526d2afa8773940f7e431df6eb4499aad97f8c71845732e880",
+    "03_分镜表.csv": "bbea93eb988e0684bff95e7122f32c0d2282b9ac7850c22545ae91c0cf72347d",
+    "04_生成提示词/使用顺序.md": "d319eb304fecc295fa413637a59d030407295e803ffb18566c9e8e9cb1873fad",
+    "04_生成提示词/本次发送.md": "114b2d7229da16cce2d68fd9502f53aec484ed037a39dbd77b0256a4a3573bbb",
+    "04_生成提示词/母版图片提示词.md": "e03d3f99906ac367a0faf46112de7b371d7994da5e4e6916349edf359fb2c5b9",
+    "04_生成提示词/首帧图片提示词.md": "007c404ee5f43fa867c02a94e27bfcc36d8522c7043883c181b962d86fd5d7f7",
+    "05_生成结果/README.md": "75958b9724f5ba621f366be7c5d03c84d7f9453cf47bc7aae05755897e0b8a9d",
+    "06_修改与验收.md": "af2519d0364485774592f613b747ebe3b48003d2da0aea558e3cb0cef282f72a",
+    "07_连续性台账.md": "9125bef95cb491f55ac4253f0399f00ef3bb8b280ac00e5fdc678efbbac505cf",
+    "08_分段与衔接.md": "362fd935b1bc5d6177fd80ccbe284a14c2af3ee8a59450d6e80f541b3f937e4e",
+    "09_文字检查.json": "b142804e3b13eb31f5c40c443110b46500de4197ea98dc8f8d345e973ac3edf3",
+    "project.json": "9ef51da1b35d1ec5580f968fc82e78f619d2f0f905e9d445d8b4bbb26159b2a0"
+  },
+  "media_validation": "NOT_RUN"
+}

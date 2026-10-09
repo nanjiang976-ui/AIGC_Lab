@@ -9,12 +9,14 @@ import argparse
 import csv
 from dataclasses import dataclass, field
 from datetime import datetime
+import io
 import json
 import math
 import ntpath
 from pathlib import Path
 import re
 import stat
+import string
 from urllib.parse import unquote, urlsplit
 
 CONTENT_DIRS = ('01_创作模板', '02_提示词库', '03_参考素材与风格',
@@ -32,6 +34,8 @@ CSV_FIELDS = ('shot_id', 'duration_seconds', 'scene_id', 'character_ids',
 STATUSES = ('DRAFT', 'PROMPT_READY', 'GENERATED', 'ACCEPTED', 'ARCHIVED')
 PLACEHOLDER = re.compile(r'\{\{.*?\}\}|待确认|\bTODO\b', re.IGNORECASE | re.DOTALL)
 SHOT_ID = re.compile(r'EP\d{2,}_SH\d{3,}\Z')
+SHOT_TOKEN = re.compile(r'(?<![A-Za-z0-9_])EP\d{2,}_SH\d{3,}(?![A-Za-z0-9_])')
+MARKDOWN_ESCAPE = re.compile(r'\\([' + re.escape(string.punctuation) + r'])')
 
 
 @dataclass
@@ -101,6 +105,50 @@ def read_text(path: Path, result: Result) -> str | None:
         return None
 
 
+def inline_link_destinations(content: str):
+    """Read inline destinations with balanced parentheses and Markdown escapes."""
+    prefix = re.compile(r'\[(?:\\.|[^\]\\\n])*\]\(\s*')
+    title_tail = re.compile(r'''\s+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\))\s*\)''')
+    for match in prefix.finditer(content):
+        preceding = match.start() - 1
+        while preceding >= 0 and content[preceding] == '\\':
+            preceding -= 1
+        if (match.start() - preceding - 1) % 2:
+            continue
+        index = match.end()
+        if index >= len(content):
+            continue
+        angled = content[index] == '<'
+        if angled:
+            index += 1
+        start = index
+        depth = 0
+        while index < len(content):
+            char = content[index]
+            if char == '\\' and index + 1 < len(content) and content[index + 1] in string.punctuation:
+                index += 2
+                continue
+            if angled:
+                if char in '<>\r\n':
+                    break
+            elif char.isspace() or (char == ')' and depth == 0):
+                break
+            elif char == '(':
+                depth += 1
+            elif char == ')':
+                depth -= 1
+            index += 1
+        if depth or index >= len(content):
+            continue
+        destination = content[start:index]
+        if angled:
+            if content[index] != '>':
+                continue
+            index += 1
+        if re.match(r'\s*\)', content[index:]) or title_tail.match(content, index):
+            yield MARKDOWN_ESCAPE.sub(r'\1', destination)
+
+
 def validate_links(path: Path, root: Path, result: Result) -> None:
     """Check inline Markdown local links; skip fenced code, URLs and anchors."""
     content = read_text(path, result)
@@ -119,8 +167,7 @@ def validate_links(path: Path, root: Path, result: Result) -> None:
             continue
         if fence is None:
             lines.append(line)
-    for match in re.finditer(r'\[[^\]\n]*\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+"[^"]*")?\s*\)', '\n'.join(lines)):
-        value = match.group(1).strip('<>')
+    for value in inline_link_destinations('\n'.join(lines)):
         if value.startswith('#'):
             continue
         if re.match(r'^(?:https?|mailto|data|app|codex)\:', value, re.IGNORECASE):
@@ -177,7 +224,7 @@ def validate_document_links(root: Path, result: Result) -> None:
             checked = safe_path(root, path.name, result, path)
             if checked is not None and checked.is_file():
                 validate_links(checked, root, result)
-    for relative in ('spec', *CONTENT_DIRS):
+    for relative in ('spec', 'skills', *CONTENT_DIRS):
         directory = safe_path(root, relative, result, root)
         if directory is None or not directory.is_dir():
             continue
@@ -272,7 +319,7 @@ def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) 
     if gate and PLACEHOLDER.search(content):
         result.fail('PLACEHOLDER', path, '提示词就绪门禁不允许占位内容')
     try:
-        reader = csv.DictReader(content.splitlines(), strict=True)
+        reader = csv.DictReader(io.StringIO(content, newline=''), strict=True)
         if reader.fieldnames is None or any(key not in reader.fieldnames for key in CSV_FIELDS) or len(set(reader.fieldnames)) != len(reader.fieldnames):
             result.fail('CSV_HEADER', path, f'需要唯一字段: {",".join(CSV_FIELDS)}')
             return []
@@ -290,6 +337,9 @@ def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) 
         if None in row or any(value is None for value in row.values()):
             result.fail('CSV_ROW', location, '行列数不匹配')
             continue
+        for key, code in (('shot_id', 'SHOT_ID'), ('duration_seconds', 'DURATION')):
+            if '\n' in row[key] or '\r' in row[key]:
+                result.fail(code, location, f'{key} 必须是单行值，不允许内部换行')
         row = {key: value.strip() for key, value in row.items()}
         must_fill = ['shot_id', 'scene_id', 'description', 'image_prompt', 'duration_seconds']
         if manifest['kind'] in ('video', 'comic'):
@@ -318,6 +368,77 @@ def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) 
     return ids
 
 
+def validate_sent_prompts(content: str, ids: list[str], path: Path, result: Result) -> None:
+    """Match each shot heading to nonempty text, ignoring comments and fence syntax."""
+    groups = []
+    current = None
+    fence = None
+    block = None
+    comment = False
+    for line in content.splitlines():
+        if fence is not None:
+            if re.fullmatch(r' {0,3}' + re.escape(fence[0]) + '{' + str(len(fence)) + r',}[ \t]*', line):
+                fence = None
+                block = None
+            elif block is not None:
+                block.append(line)
+            continue
+        # Fenced text is literal input; HTML comments are hidden only outside it.
+        visible = []
+        while line:
+            marker = '-->' if comment else '<!--'
+            index = line.find(marker)
+            if index < 0:
+                if not comment:
+                    visible.append(line)
+                break
+            if not comment:
+                visible.append(line[:index])
+            line = line[index + len(marker):]
+            comment = not comment
+        line = ''.join(visible)
+        opening = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', line)
+        if opening:
+            fence = opening.group(1)
+            block = [] if current is not None else None
+            if current is not None:
+                current['blocks'].append(block)
+            continue
+        heading = re.match(r'^ {0,3}(#{1,6})(?:[ \t]+(.*?))?[ \t]*$', line)
+        if heading:
+            level = len(heading.group(1))
+            shots = SHOT_TOKEN.findall(heading.group(2) or '')
+            if shots:
+                if len(shots) != 1:
+                    result.fail('SEND_SHOT', path, '每个镜头标题只能包含一个镜头编号')
+                current = dict(shot=shots[0], level=level, text=[], blocks=[])
+                groups.append(current)
+            elif current is not None and level <= current['level']:
+                current = None
+            continue
+        if re.fullmatch(r' {0,3}(?:(?:\*[ \t]*){3,}|(?:-[ \t]*){3,}|(?:_[ \t]*){3,})', line):
+            continue
+        if current is not None:
+            current['text'].append(line)
+    if fence is not None:
+        result.fail('SEND_FENCE', path, '发送正文代码块必须闭合')
+    seen = set()
+    expected = set(ids)
+    for group in groups:
+        shot = group['shot']
+        if shot in seen:
+            result.fail('SEND_DUPLICATE', path, f'重复镜头标题组: {shot}')
+        seen.add(shot)
+        if shot not in expected:
+            result.fail('SEND_EXTRA', path, f'发送版含分镜表之外的镜头: {shot}')
+        bodies = group['blocks'] or [group['text']]
+        if any(not '\n'.join(body).strip() for body in bodies):
+            result.fail('SEND_EMPTY', path, f'镜头 {shot} 缺少非空可发送正文')
+    for shot in ids:
+        if shot not in seen:
+            result.fail('SEND_SHOT', path, f'本次发送.md 缺少镜头标题: {shot}')
+
+
 def validate_work(directory: Path, manifest: dict, phase: str, result: Result) -> None:
     if not validate_manifest(manifest, directory, result):
         return
@@ -334,14 +455,14 @@ def validate_work(directory: Path, manifest: dict, phase: str, result: Result) -
             content = read_text(path, result)
             if content is not None:
                 contents[relative] = content
+                if gate and not content.strip():
+                    result.fail('EMPTY', path, '就绪门槛要求必填文档正文非空白')
                 if gate and relative != '06_修改与验收.md' and PLACEHOLDER.search(content):
                     result.fail('PLACEHOLDER', path, '提示词就绪门禁不允许占位内容')
     ids = validate_shots(directory, manifest, gate, result)
     if gate:
         sent = contents.get('04_生成提示词/本次发送.md', '')
-        for shot in ids:
-            if not re.search(r'(?<![A-Za-z0-9_])' + re.escape(shot) + r'(?![A-Za-z0-9_])', sent):
-                result.fail('SEND_SHOT', directory, f'本次发送.md 缺少镜头: {shot}')
+        validate_sent_prompts(sent, ids, directory / '04_生成提示词/本次发送.md', result)
     for key in ('generation', 'review'):
         validate_record(manifest, key, directory, result)
     if manifest['status'] == 'GENERATED' and manifest['scope'] != 'media':

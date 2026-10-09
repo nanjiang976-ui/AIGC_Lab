@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "WORK-001",
+  "title": "雨夜送伞",
+  "kind": "video",
+  "scope": "prompts",
+  "revision": "v002",
+  "status": "ACCEPTED",
+  "generation": {
+    "status": "NOT_RUN",
+    "tool": "",
+    "model": "",
+    "generated_at": "",
+    "revision": "",
+    "evidence": []
+  },
+  "review": {
+    "status": "PASS",
+    "reviewer": "Codex主Agent；Codex 独立审查 Agent /root/repair_review",
+    "reviewed_at": "2026-10-09T03:58:34.529485+00:00",
+    "revision": "v002",
+    "evidence": [
+      "06_修改与验收.md",
+      "09_文字检查.json"
+    ]
+  }
+}
