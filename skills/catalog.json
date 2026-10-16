@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "aigc-creator",
+      "path": "skills/aigc-creator",
+      "group": "orchestrator",
+      "title": "全链路创作总控",
+      "dependencies": []
+    },
+    {
+      "name": "aigc-prd",
+      "path": "skills/core/aigc-prd",
+      "group": "core",
+      "title": "需求访谈与PRD",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-script",
+      "path": "skills/core/aigc-script",
+      "group": "core",
+      "title": "剧情与信息脚本",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-visual-assets",
+      "path": "skills/core/aigc-visual-assets",
+      "group": "core",
+      "title": "角色视图与视觉资产",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-blocking",
+      "path": "skills/core/aigc-blocking",
+      "group": "core",
+      "title": "场面调度",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-storyboard",
+      "path": "skills/core/aigc-storyboard",
+      "group": "core",
+      "title": "分镜设计",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-keyframes",
+      "path": "skills/core/aigc-keyframes",
+      "group": "core",
+      "title": "首帧与关键帧",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-video-prompts",
+      "path": "skills/core/aigc-video-prompts",
+      "group": "core",
+      "title": "视频动作提示词",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-audio",
+      "path": "skills/core/aigc-audio",
+      "group": "core",
+      "title": "声音与对白表演",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-editing",
+      "path": "skills/core/aigc-editing",
+      "group": "core",
+      "title": "剪辑与后期",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-review",
+      "path": "skills/core/aigc-review",
+      "group": "core",
+      "title": "连续性与交付审查",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-narrative",
+      "path": "skills/modules/narrative/aigc-narrative",
+      "group": "module",
+      "module": "narrative",
+      "title": "剧情短片与AI漫剧",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-blocking",
+        "aigc-storyboard",
+        "aigc-keyframes",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-commercial",
+      "path": "skills/modules/commercial/aigc-commercial",
+      "group": "module",
+      "module": "commercial",
+      "title": "广告与品牌宣传",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-keyframes",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-explainer",
+      "path": "skills/modules/explainer/aigc-explainer",
+      "group": "module",
+      "module": "explainer",
+      "title": "科普与知识讲解",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-keyframes",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-presenter",
+      "path": "skills/modules/presenter/aigc-presenter",
+      "group": "module",
+      "module": "presenter",
+      "title": "数字人与口播",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-documentary",
+      "path": "skills/modules/documentary/aigc-documentary",
+      "group": "module",
+      "module": "documentary",
+      "title": "纪实与历史情景重建",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-music",
+      "path": "skills/modules/music/aigc-music",
+      "group": "module",
+      "module": "music",
+      "title": "音乐MV与节拍视觉",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-keyframes",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-product-demo",
+      "path": "skills/modules/product-demo/aigc-product-demo",
+      "group": "module",
+      "module": "product-demo",
+      "title": "产品与操作演示",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-storyboard",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-visual-art",
+      "path": "skills/modules/visual-art/aigc-visual-art",
+      "group": "module",
+      "module": "visual-art",
+      "title": "氛围艺术与循环影像",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-visual-assets",
+        "aigc-storyboard",
+        "aigc-keyframes",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    },
+    {
+      "name": "aigc-montage",
+      "path": "skills/modules/montage/aigc-montage",
+      "group": "module",
+      "module": "montage",
+      "title": "混剪、预告与活动回顾",
+      "dependencies": [
+        "aigc-creator",
+        "aigc-prd",
+        "aigc-script",
+        "aigc-storyboard",
+        "aigc-video-prompts",
+        "aigc-audio",
+        "aigc-editing",
+        "aigc-review"
+      ]
+    }
+  ],
+  "bundle_version": "1.0.0"
+}

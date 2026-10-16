@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 纪实与重建"
+  short_description: "为纪实短片保留来源链、区分真实记录与生成重建并设计清晰标识"
+  default_prompt: "使用 $aigc-documentary 按来源组织我的纪实素材并标清重建边界。"
+policy:
+  allow_implicit_invocation: true

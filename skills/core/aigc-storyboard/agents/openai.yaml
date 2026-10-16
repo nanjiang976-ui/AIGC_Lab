@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 分镜设计"
+  short_description: "给出合理镜头数量与张力递进，落实逐镜三要素、切点和前后连续性"
+  default_prompt: "请使用 $aigc-storyboard 把脚本转为具体分镜，说明镜头数、相机角色画面、张力与衔接。"

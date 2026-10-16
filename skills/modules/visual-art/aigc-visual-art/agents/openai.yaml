@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 视觉艺术"
+  short_description: "为抽象、氛围和循环影像设计视觉变量、运动规律、首尾状态与接点检查"
+  default_prompt: "使用 $aigc-visual-art 为我的视觉主题设计精简流程和可检查的运动方案。"
+policy:
+  allow_implicit_invocation: true

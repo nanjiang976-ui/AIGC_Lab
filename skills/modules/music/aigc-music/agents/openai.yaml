@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 音乐影像"
+  short_description: "依据实际音轨与节拍结构编排音乐视频的视觉变化、镜头时长和后期踩点"
+  default_prompt: "使用 $aigc-music 为我的音轨设计有节拍依据的视觉段落和剪辑计划。"
+policy:
+  allow_implicit_invocation: true

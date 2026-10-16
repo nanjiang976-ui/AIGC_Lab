@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 剧情脚本"
+  short_description: "把创意展开为因果清楚的节拍、可见表演与对白，并提出镜头数量依据"
+  default_prompt: "请使用 $aigc-script 把我的剧情写成可表演的脚本，给出节拍、对白和有理由的镜头数。"

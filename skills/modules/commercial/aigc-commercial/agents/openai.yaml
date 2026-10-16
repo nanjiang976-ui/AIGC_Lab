@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 商业广告"
+  short_description: "为品牌广告组织产品外观、卖点证据、镜头表达和明确的行动提示"
+  default_prompt: "使用 $aigc-commercial 将我的产品资料和传播目标转成有依据的广告镜头。"
+policy:
+  allow_implicit_invocation: true

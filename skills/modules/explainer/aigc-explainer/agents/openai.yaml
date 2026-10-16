@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 科普解释"
+  short_description: "将知识主题转为主张明确、类比有边界、画面与解说对应的科普短片"
+  default_prompt: "使用 $aigc-explainer 为我的受众设计有依据、易理解的科普短片。"
+policy:
+  allow_implicit_invocation: true

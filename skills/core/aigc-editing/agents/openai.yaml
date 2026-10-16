@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 剪辑时间轴"
+  short_description: "规划素材入出点与声音跨切，准确计算画面重叠、保留时长和最终片长"
+  default_prompt: "请使用 $aigc-editing 根据实际素材设计剪辑表，核对入出点、转场重叠、声音衔接与总时长。"
