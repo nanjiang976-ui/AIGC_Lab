@@ -567,5 +567,23 @@
       "format_exit": 0,
       "bundle_version": "1.0.0"
     }
-  ]
+  ],
+  "publication": {
+    "user_preview_approved": true,
+    "authorization": "预览通过，提交并推送该分支",
+    "branch": "codex/aigc-skill-chain",
+    "source_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+    "remote_source_commit_verified": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+    "remote_main_unchanged": "e621996331faf6e8ab46a455e621d45603cfc208",
+    "original_uncommitted_files_checked": 51,
+    "original_files_changed": 0,
+    "fresh_regression_tests": 101,
+    "fresh_skill_formats": 20,
+    "staged_file_count": 87,
+    "regular_files_only": true,
+    "credential_signature_findings": 0,
+    "real_user_install_executed": false,
+    "media_generation_executed": false,
+    "verified_at": "2026-10-16T15:26:50.992161+08:00"
+  }
 }

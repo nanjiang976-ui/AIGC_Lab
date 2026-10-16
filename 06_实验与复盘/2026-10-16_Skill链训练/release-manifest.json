@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "status": "AWAITING_USER_PREVIEW_APPROVAL",
+  "status": "PUBLISHED",
   "bundle_version": "1.0.0",
   "branch": "codex/aigc-skill-chain",
   "base_commit": "e621996331faf6e8ab46a455e621d45603cfc208",
   "remote": "origin",
   "remote_url": "https://github.com/nanjiang976-ui/AIGC_Lab.git",
   "intended_push_ref": "refs/heads/codex/aigc-skill-chain",
-  "push_executed": false,
-  "commit_executed": false,
+  "push_executed": true,
+  "commit_executed": true,
   "real_user_install_executed": false,
   "original_checkout_modified_by_this_task": false,
   "not_carried": [
@@ -22,77 +22,105 @@
     "已有WORK-001的导航事实"
   ],
   "file_count": 87,
-  "nonself_bytes": 6158846,
+  "nonself_bytes": 6159660,
   "entries": [
     {
       "path": "04_作品项目/README.md",
       "bytes": 2753,
-      "sha256": "4fdac8d0c9efef6b423be0e0b65ff012215215e0e4a29b953d3fdb2a0effa68a"
+      "sha256": "4fdac8d0c9efef6b423be0e0b65ff012215215e0e4a29b953d3fdb2a0effa68a",
+      "approved_preview_sha256": "4fdac8d0c9efef6b423be0e0b65ff012215215e0e4a29b953d3fdb2a0effa68a",
+      "approved_preview_bytes": 2753
     },
     {
       "path": "05_工具与模型适配/AIGC创作Skill使用说明.md",
       "bytes": 5391,
-      "sha256": "6601437188d28d249260d69c0b4a52dbdc3eb12bb2f5a592074af509adf221e5"
+      "sha256": "6601437188d28d249260d69c0b4a52dbdc3eb12bb2f5a592074af509adf221e5",
+      "approved_preview_sha256": "6601437188d28d249260d69c0b4a52dbdc3eb12bb2f5a592074af509adf221e5",
+      "approved_preview_bytes": 5391
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/README.md",
-      "bytes": 4458,
-      "sha256": "73fb4ca7b94627678796a51e935cae1d94cb0295a790b841359e03eb8538b0f4"
+      "bytes": 4507,
+      "sha256": "9d964a1e5d7f04096ac0aea1db61ea81fc4112639b18bd873b982347774e2852",
+      "approved_preview_sha256": "73fb4ca7b94627678796a51e935cae1d94cb0295a790b841359e03eb8538b0f4",
+      "approved_preview_bytes": 4458
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/baseline-modules.md",
       "bytes": 10284,
-      "sha256": "e06e094b1fbd9cb4155e0a4d0f24eda91f29787c062e01f5ea0600cd7642b714"
+      "sha256": "e06e094b1fbd9cb4155e0a4d0f24eda91f29787c062e01f5ea0600cd7642b714",
+      "approved_preview_sha256": "e06e094b1fbd9cb4155e0a4d0f24eda91f29787c062e01f5ea0600cd7642b714",
+      "approved_preview_bytes": 10284
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/baseline-narrative.md",
       "bytes": 28522,
-      "sha256": "97f51355d5c8f7b96ae405625474d9797d43b571feab70d1b6e59be10ef6fa3b"
+      "sha256": "97f51355d5c8f7b96ae405625474d9797d43b571feab70d1b6e59be10ef6fa3b",
+      "approved_preview_sha256": "97f51355d5c8f7b96ae405625474d9797d43b571feab70d1b6e59be10ef6fa3b",
+      "approved_preview_bytes": 28522
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/browser-preview.md",
       "bytes": 1890,
-      "sha256": "ff0d8958fe240efa21c1de8ffb6a36337759de777d8956cdd2c084a56727277c"
+      "sha256": "ff0d8958fe240efa21c1de8ffb6a36337759de777d8956cdd2c084a56727277c",
+      "approved_preview_sha256": "ff0d8958fe240efa21c1de8ffb6a36337759de777d8956cdd2c084a56727277c",
+      "approved_preview_bytes": 1890
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/corrections-v002.md",
       "bytes": 15797,
-      "sha256": "2d291b980efe35995ac660fae1df3f281641f882269ff8a39524100b6ae04d14"
+      "sha256": "2d291b980efe35995ac660fae1df3f281641f882269ff8a39524100b6ae04d14",
+      "approved_preview_sha256": "2d291b980efe35995ac660fae1df3f281641f882269ff8a39524100b6ae04d14",
+      "approved_preview_bytes": 15797
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/example-chain-v002.md",
       "bytes": 32387,
-      "sha256": "7447f4583f41d7c03b617ddf9541d745699dc619f829bac2afd2eed622191cd0"
+      "sha256": "7447f4583f41d7c03b617ddf9541d745699dc619f829bac2afd2eed622191cd0",
+      "approved_preview_sha256": "7447f4583f41d7c03b617ddf9541d745699dc619f829bac2afd2eed622191cd0",
+      "approved_preview_bytes": 32387
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/forward-chain.md",
       "bytes": 49604,
-      "sha256": "8909fa9b2a6cc2c541530dbf696ac7d2c251c5b6721b329033341b84fcff00f4"
+      "sha256": "8909fa9b2a6cc2c541530dbf696ac7d2c251c5b6721b329033341b84fcff00f4",
+      "approved_preview_sha256": "8909fa9b2a6cc2c541530dbf696ac7d2c251c5b6721b329033341b84fcff00f4",
+      "approved_preview_bytes": 49604
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/forward-handoff.md",
       "bytes": 34060,
-      "sha256": "68fd1b9ee5adaaa0694ab7072e6a95c2af8e7d5c4ff757b2aa74d988f8823f5c"
+      "sha256": "68fd1b9ee5adaaa0694ab7072e6a95c2af8e7d5c4ff757b2aa74d988f8823f5c",
+      "approved_preview_sha256": "68fd1b9ee5adaaa0694ab7072e6a95c2af8e7d5c4ff757b2aa74d988f8823f5c",
+      "approved_preview_bytes": 34060
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/forward-modules.md",
       "bytes": 32626,
-      "sha256": "1517bdb345078f3528f0957475697512c7da206d68d24b193c42d995f9ee53ce"
+      "sha256": "1517bdb345078f3528f0957475697512c7da206d68d24b193c42d995f9ee53ce",
+      "approved_preview_sha256": "1517bdb345078f3528f0957475697512c7da206d68d24b193c42d995f9ee53ce",
+      "approved_preview_bytes": 32626
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/independent-review.md",
       "bytes": 23630,
-      "sha256": "74acb0752c3a0cc16557da6f580e150e2bed9b8ff558d1b4db469607b0536b20"
+      "sha256": "74acb0752c3a0cc16557da6f580e150e2bed9b8ff558d1b4db469607b0536b20",
+      "approved_preview_sha256": "74acb0752c3a0cc16557da6f580e150e2bed9b8ff558d1b4db469607b0536b20",
+      "approved_preview_bytes": 23630
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/preview.md",
-      "bytes": 8032,
-      "sha256": "2f63a102565dd51cf6ab921bfa626d3c743dbf3fc0c23b92f9952ea247a829a7"
+      "bytes": 9202,
+      "sha256": "8da68742f868204cb3763713f9fa4dcd69f4c752f07c433e78d531629c3d8ba8",
+      "approved_preview_sha256": "2f63a102565dd51cf6ab921bfa626d3c743dbf3fc0c23b92f9952ea247a829a7",
+      "approved_preview_bytes": 8032
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/regression-framing.md",
       "bytes": 17341,
-      "sha256": "eda09c92b484ae18e52003bf3e796c7decd42b7022b265a7e58643314939798a"
+      "sha256": "eda09c92b484ae18e52003bf3e796c7decd42b7022b265a7e58643314939798a",
+      "approved_preview_sha256": "eda09c92b484ae18e52003bf3e796c7decd42b7022b265a7e58643314939798a",
+      "approved_preview_bytes": 17341
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/release-manifest.json",
@@ -101,364 +129,516 @@
     },
     {
       "path": "06_实验与复盘/2026-10-16_Skill链训练/verification.json",
-      "bytes": 17265,
-      "sha256": "c3efdd973ecb060f329359565b11918d67d4a4705ec2c11517b880a0b4dc5fdd"
+      "bytes": 17457,
+      "sha256": "2cdd30ac3af680b165af862bfd19c42598e28d81bbabb76735c8865100c493bc",
+      "approved_preview_sha256": "c3efdd973ecb060f329359565b11918d67d4a4705ec2c11517b880a0b4dc5fdd",
+      "approved_preview_bytes": 17265
     },
     {
       "path": "06_实验与复盘/README.md",
       "bytes": 1308,
-      "sha256": "3f2f1f1e91115790e293bc441d16167a9f97d8595bab49b907594619fea44e4b"
+      "sha256": "3f2f1f1e91115790e293bc441d16167a9f97d8595bab49b907594619fea44e4b",
+      "approved_preview_sha256": "3f2f1f1e91115790e293bc441d16167a9f97d8595bab49b907594619fea44e4b",
+      "approved_preview_bytes": 1308
     },
     {
       "path": "AGENTS.md",
       "bytes": 9270,
-      "sha256": "4c9bd5b2f01896e6f9558e911b1b7b5a96cfb88ee3a77b8c177c201d996a08ff"
+      "sha256": "4c9bd5b2f01896e6f9558e911b1b7b5a96cfb88ee3a77b8c177c201d996a08ff",
+      "approved_preview_sha256": "4c9bd5b2f01896e6f9558e911b1b7b5a96cfb88ee3a77b8c177c201d996a08ff",
+      "approved_preview_bytes": 9270
     },
     {
       "path": "README.md",
-      "bytes": 18125,
-      "sha256": "88cb81e76f1ac5284802be70b88f3395101124b90fe8b0515d1bcfcc73c6c7d4"
+      "bytes": 18184,
+      "sha256": "2214ca1679fe290bfd4a6b960f884c0cabb0935d895a81596f92eba248e8a724",
+      "approved_preview_sha256": "88cb81e76f1ac5284802be70b88f3395101124b90fe8b0515d1bcfcc73c6c7d4",
+      "approved_preview_bytes": 18125
     },
     {
       "path": "scripts/skill_bundle.py",
       "bytes": 23523,
-      "sha256": "4bda76750b48c5730f2c04ed4476b30f0a3fe844b9bd09761a3cdb303f5cf0b6"
+      "sha256": "4bda76750b48c5730f2c04ed4476b30f0a3fe844b9bd09761a3cdb303f5cf0b6",
+      "approved_preview_sha256": "4bda76750b48c5730f2c04ed4476b30f0a3fe844b9bd09761a3cdb303f5cf0b6",
+      "approved_preview_bytes": 23523
     },
     {
       "path": "scripts/tests/test_skill_bundle.py",
       "bytes": 19462,
-      "sha256": "1320bb44b850e2f3ca94f750b7b2f70cf78f1c5b2019514208a2ea8d276c8b70"
+      "sha256": "1320bb44b850e2f3ca94f750b7b2f70cf78f1c5b2019514208a2ea8d276c8b70",
+      "approved_preview_sha256": "1320bb44b850e2f3ca94f750b7b2f70cf78f1c5b2019514208a2ea8d276c8b70",
+      "approved_preview_bytes": 19462
     },
     {
       "path": "skills/README.md",
       "bytes": 2148,
-      "sha256": "8bd747dd91e6876260427a3a773da46399daf1a1f9ba660ec6b6cf8aa4bf23b5"
+      "sha256": "8bd747dd91e6876260427a3a773da46399daf1a1f9ba660ec6b6cf8aa4bf23b5",
+      "approved_preview_sha256": "8bd747dd91e6876260427a3a773da46399daf1a1f9ba660ec6b6cf8aa4bf23b5",
+      "approved_preview_bytes": 2148
     },
     {
       "path": "skills/aigc-creator/SKILL.md",
-      "bytes": 5677,
-      "sha256": "8f9392cf676fe5ac4222b30515004ecfde3c8d732de3c0bc21b8950dc8e0120f"
+      "bytes": 5613,
+      "sha256": "81a052ba778b3fad78e5031c4feefc7c61d61e42fecaf6f7bc1d3c8a1f20f19e",
+      "approved_preview_sha256": "8f9392cf676fe5ac4222b30515004ecfde3c8d732de3c0bc21b8950dc8e0120f",
+      "approved_preview_bytes": 5677
     },
     {
       "path": "skills/aigc-creator/agents/openai.yaml",
-      "bytes": 424,
-      "sha256": "339250fbfc1598ff4879cf736db072c525c18cd9783c2a023464a351cf0c720c"
+      "bytes": 418,
+      "sha256": "7b2aa17a331b1e840c6fc18956d32f9c6db565bb4e3ec16ca090673d20f482b6",
+      "approved_preview_sha256": "339250fbfc1598ff4879cf736db072c525c18cd9783c2a023464a351cf0c720c",
+      "approved_preview_bytes": 424
     },
     {
       "path": "skills/aigc-creator/assets/reference-screenshots/01-shot-script.png",
       "bytes": 1295461,
-      "sha256": "e80998ff650ef025a5e99d27be56009b86bcf0e58a35993e824aef9ef56cf0ec"
+      "sha256": "e80998ff650ef025a5e99d27be56009b86bcf0e58a35993e824aef9ef56cf0ec",
+      "approved_preview_sha256": "e80998ff650ef025a5e99d27be56009b86bcf0e58a35993e824aef9ef56cf0ec",
+      "approved_preview_bytes": 1295461
     },
     {
       "path": "skills/aigc-creator/assets/reference-screenshots/02-blocking.png",
       "bytes": 1820238,
-      "sha256": "14695be94c8c314ec5229a9c25f1248ea9033b13ab61eb3116ddb005278eb3e1"
+      "sha256": "14695be94c8c314ec5229a9c25f1248ea9033b13ab61eb3116ddb005278eb3e1",
+      "approved_preview_sha256": "14695be94c8c314ec5229a9c25f1248ea9033b13ab61eb3116ddb005278eb3e1",
+      "approved_preview_bytes": 1820238
     },
     {
       "path": "skills/aigc-creator/assets/reference-screenshots/03-continuous-shot.png",
       "bytes": 2458929,
-      "sha256": "e331e195cc663e05c430156c8a1d7c1bb714ce8bd549cfed2a14273c57270029"
+      "sha256": "e331e195cc663e05c430156c8a1d7c1bb714ce8bd549cfed2a14273c57270029",
+      "approved_preview_sha256": "e331e195cc663e05c430156c8a1d7c1bb714ce8bd549cfed2a14273c57270029",
+      "approved_preview_bytes": 2458929
     },
     {
       "path": "skills/aigc-creator/references/continuity.md",
       "bytes": 6171,
-      "sha256": "4be1f78c0942fa2a51f5a02f5a61747e2c553cf9e3107ec8bdfb1b93cbeaf631"
+      "sha256": "4be1f78c0942fa2a51f5a02f5a61747e2c553cf9e3107ec8bdfb1b93cbeaf631",
+      "approved_preview_sha256": "4be1f78c0942fa2a51f5a02f5a61747e2c553cf9e3107ec8bdfb1b93cbeaf631",
+      "approved_preview_bytes": 6171
     },
     {
       "path": "skills/aigc-creator/references/film-cases.md",
       "bytes": 10886,
-      "sha256": "c6724715a661dd36de56cd6d7a91f2451ade49080284a86508569db310cd23ff"
+      "sha256": "c6724715a661dd36de56cd6d7a91f2451ade49080284a86508569db310cd23ff",
+      "approved_preview_sha256": "c6724715a661dd36de56cd6d7a91f2451ade49080284a86508569db310cd23ff",
+      "approved_preview_bytes": 10886
     },
     {
       "path": "skills/aigc-creator/references/handoff.md",
       "bytes": 6381,
-      "sha256": "d6389a7270d5950aac1c2e67061e3bf16dcb807e01f8be4365ed87351271a3cc"
+      "sha256": "d6389a7270d5950aac1c2e67061e3bf16dcb807e01f8be4365ed87351271a3cc",
+      "approved_preview_sha256": "d6389a7270d5950aac1c2e67061e3bf16dcb807e01f8be4365ed87351271a3cc",
+      "approved_preview_bytes": 6381
     },
     {
       "path": "skills/aigc-creator/references/lexicon.md",
       "bytes": 9987,
-      "sha256": "6d58aa35a421b8439e3b427ebd7634a15aac37350bbfb73b4a204e094a7ee680"
+      "sha256": "6d58aa35a421b8439e3b427ebd7634a15aac37350bbfb73b4a204e094a7ee680",
+      "approved_preview_sha256": "6d58aa35a421b8439e3b427ebd7634a15aac37350bbfb73b4a204e094a7ee680",
+      "approved_preview_bytes": 9987
     },
     {
       "path": "skills/aigc-creator/references/model-adaptation.md",
       "bytes": 13581,
-      "sha256": "bf2060d602534f45cfc378702ebb08755d826190e786c670caa7a0bd19846a37"
+      "sha256": "bf2060d602534f45cfc378702ebb08755d826190e786c670caa7a0bd19846a37",
+      "approved_preview_sha256": "bf2060d602534f45cfc378702ebb08755d826190e786c670caa7a0bd19846a37",
+      "approved_preview_bytes": 13581
     },
     {
       "path": "skills/aigc-creator/references/project-integration.md",
       "bytes": 5798,
-      "sha256": "644929a14a123ae431a7506f73ba4acdfd4b54d2e4405353672321beb9b89d1c"
+      "sha256": "644929a14a123ae431a7506f73ba4acdfd4b54d2e4405353672321beb9b89d1c",
+      "approved_preview_sha256": "644929a14a123ae431a7506f73ba4acdfd4b54d2e4405353672321beb9b89d1c",
+      "approved_preview_bytes": 5798
     },
     {
       "path": "skills/aigc-creator/references/prompt-language.md",
       "bytes": 9352,
-      "sha256": "36e55602dac0c394d39a654677c3d14ed52f3c6d557f5491647d222cc3438be1"
+      "sha256": "36e55602dac0c394d39a654677c3d14ed52f3c6d557f5491647d222cc3438be1",
+      "approved_preview_sha256": "36e55602dac0c394d39a654677c3d14ed52f3c6d557f5491647d222cc3438be1",
+      "approved_preview_bytes": 9352
     },
     {
       "path": "skills/aigc-creator/references/routes.md",
       "bytes": 5633,
-      "sha256": "e87a5561bfeab2705a8c4a74ec0acc1c797925c49de58c16fdfadfa006dfb45f"
+      "sha256": "e87a5561bfeab2705a8c4a74ec0acc1c797925c49de58c16fdfadfa006dfb45f",
+      "approved_preview_sha256": "e87a5561bfeab2705a8c4a74ec0acc1c797925c49de58c16fdfadfa006dfb45f",
+      "approved_preview_bytes": 5633
     },
     {
       "path": "skills/aigc-creator/references/screenshot-analysis.md",
       "bytes": 4477,
-      "sha256": "4db7057a6676ba99da790a70f5d8bd7f9126f45fde0dd0c725b185c1a9dcd30f"
+      "sha256": "4db7057a6676ba99da790a70f5d8bd7f9126f45fde0dd0c725b185c1a9dcd30f",
+      "approved_preview_sha256": "4db7057a6676ba99da790a70f5d8bd7f9126f45fde0dd0c725b185c1a9dcd30f",
+      "approved_preview_bytes": 4477
     },
     {
       "path": "skills/catalog.json",
-      "bytes": 6694,
-      "sha256": "bf865e0cce128bcdcb568e4509f80ebaf769bd01c82fdef5485a9d342c624b4e"
+      "bytes": 6426,
+      "sha256": "caed47ce38061f8c3f62c4c5a246f2d93420c1188dbc3aa5d62bd06a5ecf0ede",
+      "approved_preview_sha256": "bf865e0cce128bcdcb568e4509f80ebaf769bd01c82fdef5485a9d342c624b4e",
+      "approved_preview_bytes": 6694
     },
     {
       "path": "skills/core/aigc-audio/SKILL.md",
       "bytes": 4979,
-      "sha256": "6fbd5239f7519fccf575a793f2a6391943fb8608f9dd3914e41ba8b5c74110e5"
+      "sha256": "6fbd5239f7519fccf575a793f2a6391943fb8608f9dd3914e41ba8b5c74110e5",
+      "approved_preview_sha256": "6fbd5239f7519fccf575a793f2a6391943fb8608f9dd3914e41ba8b5c74110e5",
+      "approved_preview_bytes": 4979
     },
     {
       "path": "skills/core/aigc-audio/agents/openai.yaml",
-      "bytes": 289,
-      "sha256": "6f67d3ddd12864ee54dcf3f62db376a1986e55f7daae53726a45182652ed9181"
+      "bytes": 285,
+      "sha256": "8b266a38a0a23329b6693b0fb77a919c03138c2fda8ecd31b06b5a432c85882c",
+      "approved_preview_sha256": "6f67d3ddd12864ee54dcf3f62db376a1986e55f7daae53726a45182652ed9181",
+      "approved_preview_bytes": 289
     },
     {
       "path": "skills/core/aigc-blocking/SKILL.md",
       "bytes": 5315,
-      "sha256": "f0ac9da314d4c25e657bd8bf0a6788bee5635d6472f3c7c6219917accdd1e6a6"
+      "sha256": "f0ac9da314d4c25e657bd8bf0a6788bee5635d6472f3c7c6219917accdd1e6a6",
+      "approved_preview_sha256": "f0ac9da314d4c25e657bd8bf0a6788bee5635d6472f3c7c6219917accdd1e6a6",
+      "approved_preview_bytes": 5315
     },
     {
       "path": "skills/core/aigc-blocking/agents/openai.yaml",
-      "bytes": 289,
-      "sha256": "374b0aa6d8785eaf52a9a253fbd20c446dd607449183faccb906284e78313251"
+      "bytes": 285,
+      "sha256": "272ac84a0d82191aaea7740808283323ddfb987de1c90d40282960360fd1ed07",
+      "approved_preview_sha256": "374b0aa6d8785eaf52a9a253fbd20c446dd607449183faccb906284e78313251",
+      "approved_preview_bytes": 289
     },
     {
       "path": "skills/core/aigc-editing/SKILL.md",
       "bytes": 5322,
-      "sha256": "a95fbe4b1f0927216f355f2b408c3e26b98be9b299a9fab92cb11ffbf89f6f1e"
+      "sha256": "a95fbe4b1f0927216f355f2b408c3e26b98be9b299a9fab92cb11ffbf89f6f1e",
+      "approved_preview_sha256": "a95fbe4b1f0927216f355f2b408c3e26b98be9b299a9fab92cb11ffbf89f6f1e",
+      "approved_preview_bytes": 5322
     },
     {
       "path": "skills/core/aigc-editing/agents/openai.yaml",
-      "bytes": 312,
-      "sha256": "6384bfbacd2c2476c13ad8a5bd1a0552bc8f5e9acee26f3d921c91aaffb7b467"
+      "bytes": 308,
+      "sha256": "8d10ac7fb828ec8f8321393ff3201c80462ef880b46508fad7056aa9698b6d53",
+      "approved_preview_sha256": "6384bfbacd2c2476c13ad8a5bd1a0552bc8f5e9acee26f3d921c91aaffb7b467",
+      "approved_preview_bytes": 312
     },
     {
       "path": "skills/core/aigc-keyframes/SKILL.md",
       "bytes": 5583,
-      "sha256": "c43f53da6dff7e69b6ce85475745387f841f8c581ca99578d2364f67be881ab0"
+      "sha256": "c43f53da6dff7e69b6ce85475745387f841f8c581ca99578d2364f67be881ab0",
+      "approved_preview_sha256": "c43f53da6dff7e69b6ce85475745387f841f8c581ca99578d2364f67be881ab0",
+      "approved_preview_bytes": 5583
     },
     {
       "path": "skills/core/aigc-keyframes/agents/openai.yaml",
-      "bytes": 305,
-      "sha256": "eb7b8c3a8f7dce25996e5f4aee9961be510d92d1680447b1f624d08cead6ee3c"
+      "bytes": 301,
+      "sha256": "1dada7854a6eb4c6a342e9ac835fc8907b36e21f85716f11260a6ed84aa866b7",
+      "approved_preview_sha256": "eb7b8c3a8f7dce25996e5f4aee9961be510d92d1680447b1f624d08cead6ee3c",
+      "approved_preview_bytes": 305
     },
     {
       "path": "skills/core/aigc-prd/SKILL.md",
       "bytes": 5140,
-      "sha256": "36b31d52f3701f09742d509eb46681834c05cc0aa6b6f59101156176b50cbdc3"
+      "sha256": "36b31d52f3701f09742d509eb46681834c05cc0aa6b6f59101156176b50cbdc3",
+      "approved_preview_sha256": "36b31d52f3701f09742d509eb46681834c05cc0aa6b6f59101156176b50cbdc3",
+      "approved_preview_bytes": 5140
     },
     {
       "path": "skills/core/aigc-prd/agents/openai.yaml",
-      "bytes": 296,
-      "sha256": "07d7f37b96b0b811b6a8d46549c4203d6ac6d47794f640ffcfe6a76016495318"
+      "bytes": 292,
+      "sha256": "74d6afa33665fc98eabc76ffe0f2b8382e06091bd4b7c6c62be09b1d45938314",
+      "approved_preview_sha256": "07d7f37b96b0b811b6a8d46549c4203d6ac6d47794f640ffcfe6a76016495318",
+      "approved_preview_bytes": 296
     },
     {
       "path": "skills/core/aigc-review/SKILL.md",
       "bytes": 6201,
-      "sha256": "5f00fe88aa128f9bf0de7cbc5820779e08412b6ba90c11239c802d66d355aa7a"
+      "sha256": "5f00fe88aa128f9bf0de7cbc5820779e08412b6ba90c11239c802d66d355aa7a",
+      "approved_preview_sha256": "5f00fe88aa128f9bf0de7cbc5820779e08412b6ba90c11239c802d66d355aa7a",
+      "approved_preview_bytes": 6201
     },
     {
       "path": "skills/core/aigc-review/agents/openai.yaml",
-      "bytes": 311,
-      "sha256": "843a5f46207a8e13b6cbeeb9ecc5d0a3bf660de99c10ac0568eb7b3613a6ec32"
+      "bytes": 307,
+      "sha256": "e53b167b09d82d0fc059c1c3d0e3276d7d41eb7a124ac84497d275714012cf7d",
+      "approved_preview_sha256": "843a5f46207a8e13b6cbeeb9ecc5d0a3bf660de99c10ac0568eb7b3613a6ec32",
+      "approved_preview_bytes": 311
     },
     {
       "path": "skills/core/aigc-script/SKILL.md",
       "bytes": 5364,
-      "sha256": "219d9728f1714e60b947462d0a55e048ace941ab1b472a20c50f9fbcd4241b9c"
+      "sha256": "219d9728f1714e60b947462d0a55e048ace941ab1b472a20c50f9fbcd4241b9c",
+      "approved_preview_sha256": "219d9728f1714e60b947462d0a55e048ace941ab1b472a20c50f9fbcd4241b9c",
+      "approved_preview_bytes": 5364
     },
     {
       "path": "skills/core/aigc-script/agents/openai.yaml",
-      "bytes": 302,
-      "sha256": "940b66221f06f90cc691df570348aeb25ae63820ed9e220ccc649d693e13d143"
+      "bytes": 298,
+      "sha256": "0ac5e1d6a5e359c44583e933ea5fea2459899b2c46f9d0d978796793f0f0ddd8",
+      "approved_preview_sha256": "940b66221f06f90cc691df570348aeb25ae63820ed9e220ccc649d693e13d143",
+      "approved_preview_bytes": 302
     },
     {
       "path": "skills/core/aigc-storyboard/SKILL.md",
       "bytes": 5526,
-      "sha256": "db26b4282d3948e6a35dc37cc7f4f80263dfe24b1a682b03ace44d4303fa6363"
+      "sha256": "db26b4282d3948e6a35dc37cc7f4f80263dfe24b1a682b03ace44d4303fa6363",
+      "approved_preview_sha256": "db26b4282d3948e6a35dc37cc7f4f80263dfe24b1a682b03ace44d4303fa6363",
+      "approved_preview_bytes": 5526
     },
     {
       "path": "skills/core/aigc-storyboard/agents/openai.yaml",
-      "bytes": 300,
-      "sha256": "80c9e767ea7b47c4f8ba1d74339f5c5beeb340b488fee3bf59c5822819d7cf15"
+      "bytes": 296,
+      "sha256": "d43f46016ab7240ce3acf565654ea2e8b08f119f679683a4e66b45c8078db511",
+      "approved_preview_sha256": "80c9e767ea7b47c4f8ba1d74339f5c5beeb340b488fee3bf59c5822819d7cf15",
+      "approved_preview_bytes": 300
     },
     {
       "path": "skills/core/aigc-video-prompts/SKILL.md",
       "bytes": 6985,
-      "sha256": "20de57edf72fe1ae03ea8778d9b04360f70646975058c91ada8cef1a4eb670fa"
+      "sha256": "20de57edf72fe1ae03ea8778d9b04360f70646975058c91ada8cef1a4eb670fa",
+      "approved_preview_sha256": "20de57edf72fe1ae03ea8778d9b04360f70646975058c91ada8cef1a4eb670fa",
+      "approved_preview_bytes": 6985
     },
     {
       "path": "skills/core/aigc-video-prompts/agents/openai.yaml",
-      "bytes": 315,
-      "sha256": "a20b881f0fb8cf631d33fa73654365b1c88a57e29ca8f0f25f8908faf72cf413"
+      "bytes": 311,
+      "sha256": "1d9e23b2c997ee716bb8faeaca5fd11a661eb00d7a8288d5620a67f790a970a4",
+      "approved_preview_sha256": "a20b881f0fb8cf631d33fa73654365b1c88a57e29ca8f0f25f8908faf72cf413",
+      "approved_preview_bytes": 315
     },
     {
       "path": "skills/core/aigc-visual-assets/SKILL.md",
       "bytes": 6995,
-      "sha256": "b9337a1685caa1b8101b9ff3d49e32b3f2c0a2366ddb12fb8fa90fcc59efc7fa"
+      "sha256": "b9337a1685caa1b8101b9ff3d49e32b3f2c0a2366ddb12fb8fa90fcc59efc7fa",
+      "approved_preview_sha256": "b9337a1685caa1b8101b9ff3d49e32b3f2c0a2366ddb12fb8fa90fcc59efc7fa",
+      "approved_preview_bytes": 6995
     },
     {
       "path": "skills/core/aigc-visual-assets/agents/openai.yaml",
-      "bytes": 318,
-      "sha256": "f4947fb129b3f51eacf3e721eb78acdcf1278c40f59395af16d23fd3e06637e9"
+      "bytes": 314,
+      "sha256": "b79b405d849f028dfac821c40641b73e97650e8a3ec0165d490f1f8ed6c97245",
+      "approved_preview_sha256": "f4947fb129b3f51eacf3e721eb78acdcf1278c40f59395af16d23fd3e06637e9",
+      "approved_preview_bytes": 318
     },
     {
       "path": "skills/modules/commercial/README.md",
       "bytes": 425,
-      "sha256": "3b13ecf33a5c6e392b3358bcd7b3a35abd4605b20427e55ec659d28d28c1bd43"
+      "sha256": "3b13ecf33a5c6e392b3358bcd7b3a35abd4605b20427e55ec659d28d28c1bd43",
+      "approved_preview_sha256": "3b13ecf33a5c6e392b3358bcd7b3a35abd4605b20427e55ec659d28d28c1bd43",
+      "approved_preview_bytes": 425
     },
     {
       "path": "skills/modules/commercial/aigc-commercial/SKILL.md",
-      "bytes": 6771,
-      "sha256": "1d4ffb7584136bc1e1956bbb0b8c69df1ef68f51ad664e428665d6b4d46421f7"
+      "bytes": 6687,
+      "sha256": "c07da7eedf9defb82c64ac479847c319f271f9473116350012724fa2b8da4e60",
+      "approved_preview_sha256": "1d4ffb7584136bc1e1956bbb0b8c69df1ef68f51ad664e428665d6b4d46421f7",
+      "approved_preview_bytes": 6771
     },
     {
       "path": "skills/modules/commercial/aigc-commercial/agents/openai.yaml",
       "bytes": 314,
-      "sha256": "6a6665c61fa910e2c2ad77e9f21e74bbb059b9e219e696cdb4d9eac3fa436f18"
+      "sha256": "6a6665c61fa910e2c2ad77e9f21e74bbb059b9e219e696cdb4d9eac3fa436f18",
+      "approved_preview_sha256": "6a6665c61fa910e2c2ad77e9f21e74bbb059b9e219e696cdb4d9eac3fa436f18",
+      "approved_preview_bytes": 314
     },
     {
       "path": "skills/modules/documentary/README.md",
       "bytes": 409,
-      "sha256": "4e5be2a545ebf05900545ba5563125b63ff17e9427736d1ca31ac16722e21fed"
+      "sha256": "4e5be2a545ebf05900545ba5563125b63ff17e9427736d1ca31ac16722e21fed",
+      "approved_preview_sha256": "4e5be2a545ebf05900545ba5563125b63ff17e9427736d1ca31ac16722e21fed",
+      "approved_preview_bytes": 409
     },
     {
       "path": "skills/modules/documentary/aigc-documentary/SKILL.md",
-      "bytes": 6865,
-      "sha256": "a0f7d536f48a4ebd2656f278605d611219107f543953588ff72ff89979fe5952"
+      "bytes": 6785,
+      "sha256": "bbca16ed7acff2a0d5d5c8702b03ec84916e5dd9f41639158bb034b46d9546cc",
+      "approved_preview_sha256": "a0f7d536f48a4ebd2656f278605d611219107f543953588ff72ff89979fe5952",
+      "approved_preview_bytes": 6865
     },
     {
       "path": "skills/modules/documentary/aigc-documentary/agents/openai.yaml",
       "bytes": 306,
-      "sha256": "a975cb024f922b91cb5834f641aea801eaa2a936249cd36b06bd2fbd03a56219"
+      "sha256": "a975cb024f922b91cb5834f641aea801eaa2a936249cd36b06bd2fbd03a56219",
+      "approved_preview_sha256": "a975cb024f922b91cb5834f641aea801eaa2a936249cd36b06bd2fbd03a56219",
+      "approved_preview_bytes": 306
     },
     {
       "path": "skills/modules/explainer/README.md",
       "bytes": 402,
-      "sha256": "f59ba90835614383c2c4eb9eb0bcfb06241292665e6e0ed9b7f36cae1472f108"
+      "sha256": "f59ba90835614383c2c4eb9eb0bcfb06241292665e6e0ed9b7f36cae1472f108",
+      "approved_preview_sha256": "f59ba90835614383c2c4eb9eb0bcfb06241292665e6e0ed9b7f36cae1472f108",
+      "approved_preview_bytes": 402
     },
     {
       "path": "skills/modules/explainer/aigc-explainer/SKILL.md",
-      "bytes": 6973,
-      "sha256": "36d44a2923690e24d7b9e22a538394eb11ec1ad80d63e8cb769904f70fd0a7fb"
+      "bytes": 6887,
+      "sha256": "17814c909ce79f8a09f175581325d9c11a5730167f4df11dc2130ddfca06948c",
+      "approved_preview_sha256": "36d44a2923690e24d7b9e22a538394eb11ec1ad80d63e8cb769904f70fd0a7fb",
+      "approved_preview_bytes": 6973
     },
     {
       "path": "skills/modules/explainer/aigc-explainer/agents/openai.yaml",
       "bytes": 307,
-      "sha256": "c71f58963099599a71327a9f9b4681c22edb3645f7045335a62d0ad61011aca2"
+      "sha256": "c71f58963099599a71327a9f9b4681c22edb3645f7045335a62d0ad61011aca2",
+      "approved_preview_sha256": "c71f58963099599a71327a9f9b4681c22edb3645f7045335a62d0ad61011aca2",
+      "approved_preview_bytes": 307
     },
     {
       "path": "skills/modules/montage/README.md",
       "bytes": 443,
-      "sha256": "1f1abffbbcef4d974b3392a373ea73a5536e46e6f999efb72894ebe0fdbe52d4"
+      "sha256": "1f1abffbbcef4d974b3392a373ea73a5536e46e6f999efb72894ebe0fdbe52d4",
+      "approved_preview_sha256": "1f1abffbbcef4d974b3392a373ea73a5536e46e6f999efb72894ebe0fdbe52d4",
+      "approved_preview_bytes": 443
     },
     {
       "path": "skills/modules/montage/aigc-montage/SKILL.md",
-      "bytes": 6565,
-      "sha256": "05ab7e31571eb1339054e87c57990d8e2017026c3d264ced32b4b64334778a2a"
+      "bytes": 6485,
+      "sha256": "affc150df91d091e1ab7db50818a37abaa0d0f8264eed39bf68f289eef20456d",
+      "approved_preview_sha256": "05ab7e31571eb1339054e87c57990d8e2017026c3d264ced32b4b64334778a2a",
+      "approved_preview_bytes": 6565
     },
     {
       "path": "skills/modules/montage/aigc-montage/agents/openai.yaml",
       "bytes": 320,
-      "sha256": "4879a8063cede7a84ae7ea5f92d3779ceb59b4fcc4dabb3f6e5375438cb844e2"
+      "sha256": "4879a8063cede7a84ae7ea5f92d3779ceb59b4fcc4dabb3f6e5375438cb844e2",
+      "approved_preview_sha256": "4879a8063cede7a84ae7ea5f92d3779ceb59b4fcc4dabb3f6e5375438cb844e2",
+      "approved_preview_bytes": 320
     },
     {
       "path": "skills/modules/music/README.md",
       "bytes": 402,
-      "sha256": "793fae399e91a8f0bd0c027e6be65a7225b2ee1de213f5ca66ef9f02aa53b0b1"
+      "sha256": "793fae399e91a8f0bd0c027e6be65a7225b2ee1de213f5ca66ef9f02aa53b0b1",
+      "approved_preview_sha256": "793fae399e91a8f0bd0c027e6be65a7225b2ee1de213f5ca66ef9f02aa53b0b1",
+      "approved_preview_bytes": 402
     },
     {
       "path": "skills/modules/music/aigc-music/SKILL.md",
-      "bytes": 6385,
-      "sha256": "02351bdf44c86b9e98100c352ee585853a76d7fa9ecd0fcfa0cfed8351477cee"
+      "bytes": 6304,
+      "sha256": "d5dc47497833382e514eb2b29aaa80cebb29962f30f5bdf4c5bb59d73b20ad15",
+      "approved_preview_sha256": "02351bdf44c86b9e98100c352ee585853a76d7fa9ecd0fcfa0cfed8351477cee",
+      "approved_preview_bytes": 6385
     },
     {
       "path": "skills/modules/music/aigc-music/agents/openai.yaml",
       "bytes": 318,
-      "sha256": "4e735ed936f133941004f0cee612329cd24667a85e2e6d1a3bc85f92387c2110"
+      "sha256": "4e735ed936f133941004f0cee612329cd24667a85e2e6d1a3bc85f92387c2110",
+      "approved_preview_sha256": "4e735ed936f133941004f0cee612329cd24667a85e2e6d1a3bc85f92387c2110",
+      "approved_preview_bytes": 318
     },
     {
       "path": "skills/modules/narrative/README.md",
       "bytes": 430,
-      "sha256": "85688cae228d885ced1d104d933972f1fb66b8c8076d74fe4b08b2e565617969"
+      "sha256": "85688cae228d885ced1d104d933972f1fb66b8c8076d74fe4b08b2e565617969",
+      "approved_preview_sha256": "85688cae228d885ced1d104d933972f1fb66b8c8076d74fe4b08b2e565617969",
+      "approved_preview_bytes": 430
     },
     {
       "path": "skills/modules/narrative/aigc-narrative/SKILL.md",
-      "bytes": 6545,
-      "sha256": "a27d751da01f51717fb4c9f212b32a20aaca46204d3126d8dcb80573ad87f7a0"
+      "bytes": 6467,
+      "sha256": "377452ff811e6362023640901adbc0af73ba7fab2a518babf50a43ae94f600b7",
+      "approved_preview_sha256": "a27d751da01f51717fb4c9f212b32a20aaca46204d3126d8dcb80573ad87f7a0",
+      "approved_preview_bytes": 6545
     },
     {
       "path": "skills/modules/narrative/aigc-narrative/agents/openai.yaml",
       "bytes": 307,
-      "sha256": "e1eba438a8596413f515a07b0ed335583fcc711b2fbdb47d53ecdf7fbff96623"
+      "sha256": "e1eba438a8596413f515a07b0ed335583fcc711b2fbdb47d53ecdf7fbff96623",
+      "approved_preview_sha256": "e1eba438a8596413f515a07b0ed335583fcc711b2fbdb47d53ecdf7fbff96623",
+      "approved_preview_bytes": 307
     },
     {
       "path": "skills/modules/presenter/README.md",
       "bytes": 404,
-      "sha256": "898f51c37dfa9a6febcb8b6e317e823976c564dc3bf3bf7e6652decd289cb8a6"
+      "sha256": "898f51c37dfa9a6febcb8b6e317e823976c564dc3bf3bf7e6652decd289cb8a6",
+      "approved_preview_sha256": "898f51c37dfa9a6febcb8b6e317e823976c564dc3bf3bf7e6652decd289cb8a6",
+      "approved_preview_bytes": 404
     },
     {
       "path": "skills/modules/presenter/aigc-presenter/SKILL.md",
-      "bytes": 7077,
-      "sha256": "a921e015f97c7d44065b1a7e0129a17ab6b212a84f69f1647d3dda9b0b7f275e"
+      "bytes": 6987,
+      "sha256": "7e3bb8199fdab7d70ddb112f59e09f15a0325d47f53c04abe228a4505f61612f",
+      "approved_preview_sha256": "a921e015f97c7d44065b1a7e0129a17ab6b212a84f69f1647d3dda9b0b7f275e",
+      "approved_preview_bytes": 7077
     },
     {
       "path": "skills/modules/presenter/aigc-presenter/agents/openai.yaml",
       "bytes": 313,
-      "sha256": "1c8138061450991e911e9cfcb1f2cd983130f74d6d2bb8e1ec0c4131faf38e7d"
+      "sha256": "1c8138061450991e911e9cfcb1f2cd983130f74d6d2bb8e1ec0c4131faf38e7d",
+      "approved_preview_sha256": "1c8138061450991e911e9cfcb1f2cd983130f74d6d2bb8e1ec0c4131faf38e7d",
+      "approved_preview_bytes": 313
     },
     {
       "path": "skills/modules/product-demo/README.md",
       "bytes": 434,
-      "sha256": "709bfd12506c61068dc0330a2bde4cc0ca3d5578ae46e8d3a34b30cbbb86edec"
+      "sha256": "709bfd12506c61068dc0330a2bde4cc0ca3d5578ae46e8d3a34b30cbbb86edec",
+      "approved_preview_sha256": "709bfd12506c61068dc0330a2bde4cc0ca3d5578ae46e8d3a34b30cbbb86edec",
+      "approved_preview_bytes": 434
     },
     {
       "path": "skills/modules/product-demo/aigc-product-demo/SKILL.md",
-      "bytes": 6723,
-      "sha256": "72e0aabdc9e727e580ae23d18a32606a717d2d09bab3cbe4f15ebec3406242c1"
+      "bytes": 6644,
+      "sha256": "f47cf1fd5fb89a7d228607650e5f8cf60a328222e0f7724a4421ffb195890313",
+      "approved_preview_sha256": "72e0aabdc9e727e580ae23d18a32606a717d2d09bab3cbe4f15ebec3406242c1",
+      "approved_preview_bytes": 6723
     },
     {
       "path": "skills/modules/product-demo/aigc-product-demo/agents/openai.yaml",
       "bytes": 313,
-      "sha256": "72f1cb465739fb5ca109112d720f6470bb0cc30ffbfa4c0a91ae8d9fd3334bb7"
+      "sha256": "72f1cb465739fb5ca109112d720f6470bb0cc30ffbfa4c0a91ae8d9fd3334bb7",
+      "approved_preview_sha256": "72f1cb465739fb5ca109112d720f6470bb0cc30ffbfa4c0a91ae8d9fd3334bb7",
+      "approved_preview_bytes": 313
     },
     {
       "path": "skills/modules/visual-art/README.md",
       "bytes": 440,
-      "sha256": "af16c4157c18be07b9b57d66d1b01d0e352414f559cc3679ecb7251979db6390"
+      "sha256": "af16c4157c18be07b9b57d66d1b01d0e352414f559cc3679ecb7251979db6390",
+      "approved_preview_sha256": "af16c4157c18be07b9b57d66d1b01d0e352414f559cc3679ecb7251979db6390",
+      "approved_preview_bytes": 440
     },
     {
       "path": "skills/modules/visual-art/aigc-visual-art/SKILL.md",
-      "bytes": 6559,
-      "sha256": "b3e5b2af91abfd7de82fe02a8ef186e18820c470da71683c7a5624c1aee98542"
+      "bytes": 6478,
+      "sha256": "dbd29ebf47818896c7f8d0110cd5efbbfeaf0e2e1c7dc765e5e66a1d957e648c",
+      "approved_preview_sha256": "b3e5b2af91abfd7de82fe02a8ef186e18820c470da71683c7a5624c1aee98542",
+      "approved_preview_bytes": 6559
     },
     {
       "path": "skills/modules/visual-art/aigc-visual-art/agents/openai.yaml",
       "bytes": 323,
-      "sha256": "9b820968ebc3da995bf4421d78ecf22d1e7787ddbe27e6f315670638b819d599"
+      "sha256": "9b820968ebc3da995bf4421d78ecf22d1e7787ddbe27e6f315670638b819d599",
+      "approved_preview_sha256": "9b820968ebc3da995bf4421d78ecf22d1e7787ddbe27e6f315670638b819d599",
+      "approved_preview_bytes": 323
     },
     {
       "path": "spec/plans/2026-10-16-AIGC全链路Skill实施.md",
-      "bytes": 6659,
-      "sha256": "df3390a2d97b612ece599344b1878981b05924155022f26a670d93de6a780750"
+      "bytes": 6926,
+      "sha256": "2c4ce53fc9a4ac60ae206f6d16e5f31ef5bb4fbefed6ccf94f1626c5568e31d7",
+      "approved_preview_sha256": "df3390a2d97b612ece599344b1878981b05924155022f26a670d93de6a780750",
+      "approved_preview_bytes": 6659
     },
     {
       "path": "spec/plans/2026-10-16-AIGC全链路Skill设计.md",
-      "bytes": 5828,
-      "sha256": "96c8c918a2440c19cc07099055b3c3d65c509f986d05463e608cdbb2e1748b28"
+      "bytes": 5997,
+      "sha256": "588ec48ae5c5c883e721fba62620f39f50f40c0b8bf2aee8473540f0042be686",
+      "approved_preview_sha256": "96c8c918a2440c19cc07099055b3c3d65c509f986d05463e608cdbb2e1748b28",
+      "approved_preview_bytes": 5828
     },
     {
       "path": "spec/plans/README.md",
-      "bytes": 1274,
-      "sha256": "9280956522c64fe080a80345a4fa9bcb467a782fde49143c03a5e5aea5358990"
+      "bytes": 1299,
+      "sha256": "ceb6d15260dd7cb1b882103482f45e75ea1509b7613ea3a56295f379584c3a84",
+      "approved_preview_sha256": "9280956522c64fe080a80345a4fa9bcb467a782fde49143c03a5e5aea5358990",
+      "approved_preview_bytes": 1274
     }
   ],
-  "generated_at": "2026-10-16T11:59:01.790071+08:00"
+  "generated_at": "2026-10-16T11:59:01.790071+08:00",
+  "user_preview_approved": true,
+  "approval_text": "预览通过，提交并推送该分支",
+  "source_release_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+  "preview_snapshot_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+  "remote_source_commit_verified": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+  "hash_basis": "SHA-256 and size of current Git-normalized blob bytes, excluding this manifest itself. approved_preview_* retain original preview working-file values.",
+  "publication_verified_at": "2026-10-16T15:26:50.992161+08:00",
+  "documentation_followup": "Publication state updated in a subsequent documentation-only commit on the same branch."
 }
