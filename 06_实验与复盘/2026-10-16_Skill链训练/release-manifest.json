@@ -638,7 +638,9 @@
   "source_release_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
   "preview_snapshot_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
   "remote_source_commit_verified": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
-  "hash_basis": "SHA-256 and size of current Git-normalized blob bytes, excluding this manifest itself. approved_preview_* retain original preview working-file values.",
+  "hash_basis": "Historical release snapshot: SHA-256 and size of Git-normalized blobs at a5184c06bf2679d6bdcaba51a2a6b8d4ffee336c, excluding this manifest itself. Later main integration may change project documentation; approved_preview_* retain original preview working-file values.",
   "publication_verified_at": "2026-10-16T15:26:50.992161+08:00",
-  "documentation_followup": "Publication state updated in a subsequent documentation-only commit on the same branch."
+  "documentation_followup": "Publication state updated in a subsequent documentation-only commit on the same branch.",
+  "manifest_snapshot_commit": "a5184c06bf2679d6bdcaba51a2a6b8d4ffee336c",
+  "later_integration_record": "spec/plans/2026-10-16-main合并与迭代机制整合.md"
 }
