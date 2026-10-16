@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-16",
+  "scope": "prompts",
+  "source_head": "2d6aa0fae95042975336a666cc53ee11f93fd374",
+  "session_catalog_evidence": "The current turn developer-provided Available skills lists these 20 names with description and r0 paths. Names transcribed from that live session inventory, then compared to project catalog. This does not mean all 20 full instruction files are preloaded or all 20 behaviors tested.",
+  "expected": 20,
+  "listed": 20,
+  "groups": {
+    "orchestrator": 1,
+    "core": 10,
+    "module": 9
+  },
+  "source_install_matching_files": 54,
+  "checks": [
+    {
+      "name": "aigc-creator",
+      "group": "orchestrator",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-creator\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\aigc-creator\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 16
+    },
+    {
+      "name": "aigc-prd",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-prd\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-prd\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-script",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-script\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-script\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-visual-assets",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-visual-assets\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-visual-assets\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-blocking",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-blocking\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-blocking\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-storyboard",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-storyboard\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-storyboard\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-keyframes",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-keyframes\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-keyframes\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-video-prompts",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-video-prompts\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-video-prompts\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-audio",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-audio\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-audio\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-editing",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-editing\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-editing\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-review",
+      "group": "core",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-review\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\core\\aigc-review\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-narrative",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-narrative\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\narrative\\aigc-narrative\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-commercial",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-commercial\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\commercial\\aigc-commercial\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-explainer",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-explainer\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\explainer\\aigc-explainer\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-presenter",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-presenter\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\presenter\\aigc-presenter\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-documentary",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-documentary\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\documentary\\aigc-documentary\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-music",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-music\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\music\\aigc-music\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-product-demo",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-product-demo\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\product-demo\\aigc-product-demo\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-visual-art",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-visual-art\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\visual-art\\aigc-visual-art\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    },
+    {
+      "name": "aigc-montage",
+      "group": "module",
+      "listed_in_current_session": true,
+      "session_entry": "C:\\Users\\NJ\\.codex\\skills\\aigc-montage\\SKILL.md",
+      "source_entry": "C:\\Users\\NJ\\Desktop\\Codex\\OPC\\AIGC_Lab\\skills\\modules\\montage\\aigc-montage\\SKILL.md",
+      "version": "1.0.0",
+      "file_hash_matches": 2
+    }
+  ],
+  "media_generation": "NOT_RUN",
+  "platform_adaptation": "NOT_RUN",
+  "experience_lookup": "无匹配经验；索引0条；未采用EXP，未新增经验"
+}

@@ -1,0 +1,43 @@
+{
+  "source_file": "01_原始执行.md",
+  "copy_file": "03_可复制视频提示词.md",
+  "copy_mode": "Exact extraction of the five section-7 prompt blocks; no creative changes",
+  "blocks": [
+    {
+      "shot_id": "EP01_SH001",
+      "sha256_utf8": "d3bde26eabb17ed4dea14191f3a9face0d5e8b534077b7b67817499fd231f1d0",
+      "target_seconds": 4
+    },
+    {
+      "shot_id": "EP01_SH002",
+      "sha256_utf8": "334025ccd93a3b19db38f0466a2311c53b193160227b1139578a568a0b1feee4",
+      "target_seconds": 5
+    },
+    {
+      "shot_id": "EP01_SH003",
+      "sha256_utf8": "197bfbde7798b67e087d1ab9d5e0ac975980d9ec9565b52d65e80cf6711d11af",
+      "target_seconds": 5
+    },
+    {
+      "shot_id": "EP01_SH004",
+      "sha256_utf8": "bf43c5635bf596c88042329a1d11457a3ba0fa7896eaf117285d13e4dab84742",
+      "target_seconds": 6
+    },
+    {
+      "shot_id": "EP01_SH005",
+      "sha256_utf8": "26482d8914573882a142df2fa73d0805095b43cd276a551fb8c77c218b94f179",
+      "target_seconds": 5
+    }
+  ],
+  "total_target_seconds": 25,
+  "picture_transition_overlap_seconds": 0,
+  "voice_count_correction": {
+    "original_note": "第3镜取物与11字对白",
+    "corrected": {
+      "han_characters": 9,
+      "characters_with_punctuation": 11
+    },
+    "dialogue": "在我这儿。忘放回去了。",
+    "actual_voice_timing": "NOT_RUN"
+  }
+}
