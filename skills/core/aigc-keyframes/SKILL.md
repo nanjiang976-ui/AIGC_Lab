@@ -2,7 +2,7 @@
 name: aigc-keyframes
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when an AI image or video needs a shot's static first frame, endpoint image, or revised keyframe based on a verified previous result.
 ---
 
@@ -21,6 +21,7 @@ description: Use when an AI image or video needs a shot's static first frame, en
 需要镜头的目标瞬间、身份/衣装/场景资产、计划或真实起始状态、构图。
 用户要求沿用真实末帧时，必须拿到该图或明确的已核验状态；只有文字报告时只能完成已知部分，未知处不能补成事实。
 未选平台仍可交自足图片正文，参考输入能力和生成效果未验证。
+只生成提示词的完整流程仍完成所需逐镜首帧正文。无真实参考图时，用已定文字资产与计划起点写自足静态候选，另列待生成/审图/绑定依赖；不把缺图当成省略本节点的理由，也不把候选冒充已审实际首帧。用户明确纯文生或只要求其他节点时按范围裁剪。
 静态输入未满足的图生视频正文只作草案，不进入已就绪发送批次。
 
 ## 制作方法

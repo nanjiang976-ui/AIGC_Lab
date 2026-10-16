@@ -11,5 +11,6 @@
 | [2026-09-30 AIGC 创作 Skill](2026-09-30-AIGC创作Skill.md) | DONE：本地 Skill、60 条分类模块及连续性模板；平台效果未实测 |
 | [2026-09-30 GitHub 推送与 Skill 分发](2026-09-30-GitHub发布与Skill分发.md) | DONE：完整 Skill 与使用文档已推送，内容提交远程 SHA 已核验 |
 | [2026-10-09 审查问题修复](2026-10-09-审查问题修复.md) | DONE：原仓库修复验证通过，61 项测试及 WORK-001 文字交付检查 PASS；媒体未生成 |
+| [2026-10-16 README 与 Skill 剩余改动发布](2026-10-16-README与Skill剩余改动发布.md) | IN_PROGRESS：仅发布经审查的文档与套件 1.0.1 改动，作品及本地报告继续排除 |
 
 可用状态：TODO、IN_PROGRESS、BLOCKED、DONE。BLOCKED 要写清楚阻碍和可以继续的独立工作；只有实际通过验收才写 DONE。完成的计划保留原文件和验证记录。

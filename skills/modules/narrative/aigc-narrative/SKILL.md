@@ -3,7 +3,7 @@ name: aigc-narrative
 description: Use when planning or revising narrative AI shorts, character-driven scenes, AI comics, dramatic causality, tension, or multi-character performance continuity.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 ---
 
 # 剧情与 AI 漫剧
@@ -35,7 +35,7 @@ metadata:
 | 人物或场景复现 | `aigc-visual-assets` 建固定身份；已有适用母版则引用版本 |
 | 多人互动、跨轴、交接道具 | `aigc-blocking` 先锁世界位置、接触点和可见动作，再到 `aigc-storyboard` |
 | 单人静态短对白 | 调度可压缩为分镜内的站位/视线记录，不另造完整空间表 |
-| 需要图生视频或关键姿态控制 | `aigc-keyframes` → `aigc-video-prompts`；仅文生视频时可省独立关键帧生成 |
+| 完整多镜头文字包或需要图生/关键姿态控制 | `aigc-visual-assets`参考图正文 → `aigc-keyframes`首帧正文 → `aigc-video-prompts`；只写提示词仍完成这些文字交付，实际图像待生成/检查；明确纯文生或单节点请求按其范围裁剪 |
 | 对白、环境声、成片 | `aigc-audio` → `aigc-editing` → `aigc-review`；只交文字时不生成或播放 |
 
 ## 专用创作判断

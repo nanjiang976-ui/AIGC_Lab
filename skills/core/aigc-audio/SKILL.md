@@ -2,7 +2,7 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when an AI video needs dialogue timing, voice direction, sound events, music placement, or a lip-sync plan before or after visual generation.
 ---
 

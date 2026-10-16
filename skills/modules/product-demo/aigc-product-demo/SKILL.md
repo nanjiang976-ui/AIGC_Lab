@@ -3,7 +3,7 @@ name: aigc-product-demo
 description: Use when creating software walkthroughs, app tutorials, product how-to videos, or screen demonstrations that must match real UI and reproducible actions.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 ---
 
 # 产品功能演示

@@ -2,7 +2,7 @@
 name: aigc-prd
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when an AI image, video, or comic request is still vague, or an existing creative PRD needs a readiness and contradiction check before production.
 ---
 
@@ -36,7 +36,7 @@ description: Use when an AI image, video, or comic request is still vague, or an
 2. 把类型与表达维度分开，例如剧情 / 写实 / 竖屏；真人、2D、3D 不代替用途分类。
 3. 从用户描述提取主体、动作、关系、信息变化、情绪落点、交付范围和硬约束。
 4. 对照已有资料找冲突，例如30秒对白读完需45秒、静态单图要求连续动作；说明影响和可选取舍。
-5. 确定本轮是 prompts 还是 media，沿用已有授权；只做文字时不把出图、上传或费用写成已执行。
+5. 分别确定本轮范围 prompts/media 与制作输入路线（参考驱动、纯文生、未定），沿用已有授权。只做文字仍可包含参考资产和首帧图片提示词，不据此选择纯文生；实际出图、上传或费用未执行则如实记录。
 6. 生成简洁 PRD，再逐条映射到下一节点：人物外观去资产，行为因果去剧本，输入限制去模型适配。
 7. 问题答案回填来源；没有答案的必要决定仍留待确认，非关键未知项可随交接继续。
 
@@ -44,7 +44,7 @@ description: Use when an AI image, video, or comic request is still vague, or an
 
 - 需求摘要：目的、受众、主类型、媒介/画幅/计划时长、核心内容、情绪或信息落点。
 - 固定约束：已定角色与服装、场景、道具、必须发生/不能改变事项、参考用途。
-- 交付清单：本轮文件或聊天产物、需要哪些生成正文、是否保存/入库。
+- 交付清单：本轮文件或聊天产物、所需参考资产/首帧/动态正文、是否保存/入库；完整流程不能以外观描述代替已要求的图片提示词，单节点按明确范围裁剪。
 - 决策表：已确认、授权工作假设、待确认各自有来源；不把建议写成用户原话。
 - 下一节点的必要输入、可保留材料、仍缺的一项关键问题；交接格式采用共享协议。
 

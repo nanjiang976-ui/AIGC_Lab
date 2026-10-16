@@ -2,7 +2,7 @@
 name: aigc-review
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when AI image or video materials need a scoped quality review, continuity audit, repair routing, or a decision about text readiness versus actual media acceptance.
 ---
 

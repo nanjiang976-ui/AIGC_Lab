@@ -3,7 +3,7 @@ name: aigc-documentary
 description: Use when planning documentary AI videos, historical or real-event explainers, archival sequences, or clearly labeled generated reconstructions requiring source traceability.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 ---
 
 # 纪实与生成重建

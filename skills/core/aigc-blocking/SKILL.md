@@ -2,7 +2,7 @@
 name: aigc-blocking
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when an AI video scene needs multi-character staging, walk paths, eyelines, camera-relative positions, prop transfers, or repair after actual action diverges from the plan.
 ---
 

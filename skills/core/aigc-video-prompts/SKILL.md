@@ -2,7 +2,7 @@
 name: aigc-video-prompts
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when planned AI video shots need complete copyable motion prompts, platform-input adaptation, or continuation after real generated motion differs from the storyboard.
 ---
 
@@ -20,7 +20,7 @@ description: Use when planned AI video shots need complete copyable motion promp
 
 需要分镜三要素、入口/出口、时长意图、资产状态及实际输入模式。
 平台未定时交付完整通用自然语言版，标“平台适配未执行”；不虚构专用标签、负向参数或音频能力。
-必要真实首帧缺失时，图生版本标草案；可同时交不依赖图片的文生版本，但说明路线和连续性控制差异。
+必要真实首帧缺失时，图生版本标草案并保留参考资产/首帧提示词任务；可以另列不依赖图片的文生备选，说明路线和连续性控制差异，但备选不替代已约定的资产/首帧交付，不自动改变主路线。“只生成提示词”不构成纯文生选择。
 此前结果只有用户报告时只承接报告中的状态，未知手势、光向、画幅等不得称已检查。
 
 ## 输入能力分支

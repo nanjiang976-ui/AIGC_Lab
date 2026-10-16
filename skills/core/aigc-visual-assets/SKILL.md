@@ -2,7 +2,7 @@
 name: aigc-visual-assets
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.0"
+  bundle_version: "1.0.1"
 description: Use when an AI image, video, or comic needs consistent character, costume, scene, or prop references, including three-view or four-view assets and reference-sheet repair.
 ---
 
@@ -16,6 +16,7 @@ description: Use when an AI image, video, or comic needs consistent character, c
 - 读取定位后的 `handoff.md`；准备平台输入时读 `model-adaptation.md`。
 - 本节点产出资产描述、各视角图片正文和检查要求；逐镜首帧交 `aigc-keyframes`。
 - 用户只要文字时不调用出图；既有角色已定时只补缺角度或错误部位。
+- 主流程的文字资产交付包含身份/结构规范和所需角色、场景、道具的图片提示词；只列外观表不等于完成参考图提示词。暂无实际图时交自足的候选正文与待生成清单，选定母版后再按已核验能力派生视角；已有适用资产复用，用户只要规范或其他单节点时按其范围裁剪。
 
 ## 最小输入与缺项
 
