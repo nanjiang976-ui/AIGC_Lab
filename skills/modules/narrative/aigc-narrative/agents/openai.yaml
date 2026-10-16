@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 剧情与漫剧"
+  short_description: "为剧情短片与漫剧设计人物因果、可见表演、张力变化和镜头衔接"
+  default_prompt: "使用 $aigc-narrative 将我的故事目标转成可拍的动作与镜头方案。"
+policy:
+  allow_implicit_invocation: true

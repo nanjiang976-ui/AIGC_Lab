@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 声音制作"
+  short_description: "提前试读对白并设计声音事件，区分估计时长、真实音频和口型播放验收"
+  default_prompt: "请使用 $aigc-audio 为脚本安排对白试读、表演、声音事件与口型制作路径。"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 产品演示"
+  short_description: "依据真实界面和操作证据编排可复现的产品教程、录屏步骤与结果核对"
+  default_prompt: "使用 $aigc-product-demo 将我的真实操作素材转成可复现的演示短片。"
+policy:
+  allow_implicit_invocation: true

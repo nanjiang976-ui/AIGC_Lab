@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 视频提示词"
+  short_description: "把分镜转为可复制的动态正文，按真实输入能力分支并承接实际前段状态"
+  default_prompt: "请使用 $aigc-video-prompts 为当前分镜写完整视频正文，核验输入方式并分开上传说明与设置。"

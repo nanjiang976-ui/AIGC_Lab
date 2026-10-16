@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 混剪回顾"
+  short_description: "从实际素材清单与入出点编排混剪回顾，保留事件关系、声音来源和素材缺口"
+  default_prompt: "使用 $aigc-montage 根据我提供的实际素材制作可执行的剪辑清单。"
+policy:
+  allow_implicit_invocation: true

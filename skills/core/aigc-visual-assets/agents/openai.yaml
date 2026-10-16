@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 视觉资产"
+  short_description: "制作角色多视角与场景道具参考，检查非对称结构、比例和实际素材状态"
+  default_prompt: "请使用 $aigc-visual-assets 为已定角色和场景补齐必要视角，分别交付完整图片提示词与检查要求。"

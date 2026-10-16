@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC 主持人口播"
+  short_description: "为虚构讲师和主持人口播安排自然声音、停顿手势与可复核的口型节奏"
+  default_prompt: "使用 $aigc-presenter 将我的讲稿转成自然口播、动作与镜头安排。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,589 @@
+{
+  "scope": "local structure, skill format, regression and isolated bundle installation; no media or real user installation",
+  "checks": [
+    {
+      "name": "structure",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/validate_project.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/structure.log"
+    },
+    {
+      "name": "bundle",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/bundle.log"
+    },
+    {
+      "name": "regression",
+      "command": [
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/regression.log"
+    },
+    {
+      "name": "format-aigc-creator",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/aigc-creator"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-creator.log"
+    },
+    {
+      "name": "format-aigc-prd",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-prd"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-prd.log"
+    },
+    {
+      "name": "format-aigc-script",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-script"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-script.log"
+    },
+    {
+      "name": "format-aigc-visual-assets",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-visual-assets"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-visual-assets.log"
+    },
+    {
+      "name": "format-aigc-blocking",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-blocking"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-blocking.log"
+    },
+    {
+      "name": "format-aigc-storyboard",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-storyboard"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-storyboard.log"
+    },
+    {
+      "name": "format-aigc-keyframes",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-keyframes"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-keyframes.log"
+    },
+    {
+      "name": "format-aigc-video-prompts",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-video-prompts"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-video-prompts.log"
+    },
+    {
+      "name": "format-aigc-audio",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-audio"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-audio.log"
+    },
+    {
+      "name": "format-aigc-editing",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-editing"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-editing.log"
+    },
+    {
+      "name": "format-aigc-review",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/core/aigc-review"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-review.log"
+    },
+    {
+      "name": "format-aigc-narrative",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/narrative/aigc-narrative"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-narrative.log"
+    },
+    {
+      "name": "format-aigc-commercial",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/commercial/aigc-commercial"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-commercial.log"
+    },
+    {
+      "name": "format-aigc-explainer",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/explainer/aigc-explainer"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-explainer.log"
+    },
+    {
+      "name": "format-aigc-presenter",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/presenter/aigc-presenter"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-presenter.log"
+    },
+    {
+      "name": "format-aigc-documentary",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/documentary/aigc-documentary"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-documentary.log"
+    },
+    {
+      "name": "format-aigc-music",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/music/aigc-music"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-music.log"
+    },
+    {
+      "name": "format-aigc-product-demo",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/product-demo/aigc-product-demo"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-product-demo.log"
+    },
+    {
+      "name": "format-aigc-visual-art",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/visual-art/aigc-visual-art"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-visual-art.log"
+    },
+    {
+      "name": "format-aigc-montage",
+      "command": [
+        "-X",
+        "utf8",
+        "C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/modules/montage/aigc-montage"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/format-aigc-montage.log"
+    },
+    {
+      "name": "install-preview",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "install",
+        "--target",
+        "C:\\Users\\NJ\\.codex\\worktrees\\aigc-skill-chain\\AIGC_Lab\\.harness-tests\\skill-chain-0621c68f\\installed-skills"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/install-preview.log"
+    },
+    {
+      "name": "install-first",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "install",
+        "--target",
+        "C:\\Users\\NJ\\.codex\\worktrees\\aigc-skill-chain\\AIGC_Lab\\.harness-tests\\skill-chain-0621c68f\\installed-skills",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/install-first.log"
+    },
+    {
+      "name": "install-idempotent",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "install",
+        "--target",
+        "C:\\Users\\NJ\\.codex\\worktrees\\aigc-skill-chain\\AIGC_Lab\\.harness-tests\\skill-chain-0621c68f\\installed-skills",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/install-idempotent.log"
+    },
+    {
+      "name": "install-conflict",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "install",
+        "--target",
+        "C:\\Users\\NJ\\.codex\\worktrees\\aigc-skill-chain\\AIGC_Lab\\.harness-tests\\skill-chain-0621c68f\\installed-skills",
+        "--apply"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/install-conflict.log"
+    },
+    {
+      "name": "install-update",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "install",
+        "--target",
+        "C:\\Users\\NJ\\.codex\\worktrees\\aigc-skill-chain\\AIGC_Lab\\.harness-tests\\skill-chain-0621c68f\\installed-skills",
+        "--apply",
+        "--update"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/install-update.log"
+    },
+    {
+      "name": "regression-final-compatibility-fix",
+      "command": [
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "ok": true,
+      "tests": 101,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/regression-final.log",
+      "python_runtime": "3.12.10",
+      "python310_actual_run": false
+    },
+    {
+      "name": "structure-final",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/validate_project.py"
+      ],
+      "exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/structure-final.log"
+    },
+    {
+      "name": "bundle-final",
+      "command": [
+        "-X",
+        "utf8",
+        "scripts/skill_bundle.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "ok": true,
+      "log": ".harness-tests/skill-chain-0621c68f/logs/bundle-final.log"
+    }
+  ],
+  "isolated_install": {
+    "packages": 20,
+    "source_files_compared": 54,
+    "all_source_hashes_match": true,
+    "idempotent": true,
+    "conflict_entire_batch_stopped": true,
+    "backup_matches_preupdate": true,
+    "extra_file_preserved": true,
+    "target": ".harness-tests/skill-chain-0621c68f/installed-skills",
+    "backup": ".harness-tests/skill-chain-0621c68f/installed-skills-backups/20261016T031957Z-e280a2e219eb439cab74343080ae9e10",
+    "final_source_files_compared": 54,
+    "final_source_hashes_match": true,
+    "final_updates": 4,
+    "extra_file_still_preserved": true
+  },
+  "generated_at_utc": "2026-10-16T03:19:57.344143+00:00",
+  "all_checks_pass": true,
+  "latest_regression_count": 101,
+  "updated_at_utc": "2026-10-16T03:50:29.887902+00:00",
+  "final_skill_metadata_and_format": [
+    {
+      "name": "aigc-creator",
+      "sha256": "8f9392cf676fe5ac4222b30515004ecfde3c8d732de3c0bc21b8950dc8e0120f",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-prd",
+      "sha256": "36b31d52f3701f09742d509eb46681834c05cc0aa6b6f59101156176b50cbdc3",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-script",
+      "sha256": "219d9728f1714e60b947462d0a55e048ace941ab1b472a20c50f9fbcd4241b9c",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-visual-assets",
+      "sha256": "b9337a1685caa1b8101b9ff3d49e32b3f2c0a2366ddb12fb8fa90fcc59efc7fa",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-blocking",
+      "sha256": "f0ac9da314d4c25e657bd8bf0a6788bee5635d6472f3c7c6219917accdd1e6a6",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-storyboard",
+      "sha256": "db26b4282d3948e6a35dc37cc7f4f80263dfe24b1a682b03ace44d4303fa6363",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-keyframes",
+      "sha256": "c43f53da6dff7e69b6ce85475745387f841f8c581ca99578d2364f67be881ab0",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-video-prompts",
+      "sha256": "20de57edf72fe1ae03ea8778d9b04360f70646975058c91ada8cef1a4eb670fa",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-audio",
+      "sha256": "6fbd5239f7519fccf575a793f2a6391943fb8608f9dd3914e41ba8b5c74110e5",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-editing",
+      "sha256": "a95fbe4b1f0927216f355f2b408c3e26b98be9b299a9fab92cb11ffbf89f6f1e",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-review",
+      "sha256": "5f00fe88aa128f9bf0de7cbc5820779e08412b6ba90c11239c802d66d355aa7a",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-narrative",
+      "sha256": "a27d751da01f51717fb4c9f212b32a20aaca46204d3126d8dcb80573ad87f7a0",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-commercial",
+      "sha256": "1d4ffb7584136bc1e1956bbb0b8c69df1ef68f51ad664e428665d6b4d46421f7",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-explainer",
+      "sha256": "36d44a2923690e24d7b9e22a538394eb11ec1ad80d63e8cb769904f70fd0a7fb",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-presenter",
+      "sha256": "a921e015f97c7d44065b1a7e0129a17ab6b212a84f69f1647d3dda9b0b7f275e",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-documentary",
+      "sha256": "a0f7d536f48a4ebd2656f278605d611219107f543953588ff72ff89979fe5952",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-music",
+      "sha256": "02351bdf44c86b9e98100c352ee585853a76d7fa9ecd0fcfa0cfed8351477cee",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-product-demo",
+      "sha256": "72e0aabdc9e727e580ae23d18a32606a717d2d09bab3cbe4f15ebec3406242c1",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-visual-art",
+      "sha256": "b3e5b2af91abfd7de82fe02a8ef186e18820c470da71683c7a5624c1aee98542",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    },
+    {
+      "name": "aigc-montage",
+      "sha256": "05ab7e31571eb1339054e87c57990d8e2017026c3d264ced32b4b64334778a2a",
+      "format_exit": 0,
+      "bundle_version": "1.0.0"
+    }
+  ],
+  "publication": {
+    "user_preview_approved": true,
+    "authorization": "预览通过，提交并推送该分支",
+    "branch": "codex/aigc-skill-chain",
+    "source_commit": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+    "remote_source_commit_verified": "dc3b4b83ac6879159f0420cf92a06c79dd9e59b6",
+    "remote_main_unchanged": "e621996331faf6e8ab46a455e621d45603cfc208",
+    "original_uncommitted_files_checked": 51,
+    "original_files_changed": 0,
+    "fresh_regression_tests": 101,
+    "fresh_skill_formats": 20,
+    "staged_file_count": 87,
+    "regular_files_only": true,
+    "credential_signature_findings": 0,
+    "real_user_install_executed": false,
+    "media_generation_executed": false,
+    "verified_at": "2026-10-16T15:26:50.992161+08:00"
+  }
+}

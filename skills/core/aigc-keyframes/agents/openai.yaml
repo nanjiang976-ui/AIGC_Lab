@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 静态关键帧"
+  short_description: "提取单一瞬间的首帧和关键帧，区分真实状态、参考用途与动态动作"
+  default_prompt: "请使用 $aigc-keyframes 为当前镜头写静态首帧提示词，核对起点状态并保留后续动态交接。"
