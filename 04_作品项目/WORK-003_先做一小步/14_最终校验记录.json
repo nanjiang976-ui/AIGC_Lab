@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-16T23:41:49+08:00",
+  "scope": "结构、字段、链接和文字正文覆盖；不验证媒体/观众",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "scripts/validate_project.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS phase=structure 结构检查通过；作品数量=4\n检查仅验证文件、字段和关联；结构通过不代表已生成或已验收，也不验证媒体真实性或审美质量。",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "scripts/validate_project.py",
+        "--work",
+        "04_作品项目\\WORK-003_先做一小步",
+        "--phase",
+        "prompts"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS phase=prompts 结构检查通过；作品数量=1\n检查仅验证文件、字段和关联；结构通过不代表已生成或已验收，也不验证媒体真实性或审美质量。",
+      "stderr": ""
+    }
+  ],
+  "delivery_gate": "未运行：当前整部作品仍DRAFT、review NOT_RUN；不为通过门槛填造最终审查"
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "WORK-003",
+  "revision": "v001",
+  "snapshotted_at": "2026-10-16T23:23:45+08:00",
+  "file_count": 14,
+  "files": {
+    "00_创作需求.md": "3f1467e6eeaf31298e16c24e6b67997514da67e617b26481d37c9d6236a2ea4d",
+    "01_故事与角色设定.md": "145919cf25c02f0ded0920f4be2f91f4c9712c220fdde2e87807ea0b68f079d2",
+    "02_剧情脚本.md": "3c50f8a93a48e4a9e30bc0ce59b7c79ef590ca46fd09e493d53b385d0aa6b2dc",
+    "03_分镜表.csv": "780ec0a1ae0e63ef2dfdddc1b8a56905a1aa6629f50db8b44f4214b0ae1815b9",
+    "06_修改与验收.md": "897a9e857e376b36571ac1dea430f018fcd44f067fc3f6d0b0b2947a3e483386",
+    "07_连续性台账.md": "1217d54e9bfdf5d135bc420f4a7f0f7086b82aef0987d337f8978483aad8143e",
+    "08_声音与剪辑计划.md": "29d065832bfa05df584140b26fb772250d303c3e95b68602ab42e7772ecfb4aa",
+    "09_v001独立文字审查.md": "3fcfaeeb18c7a807a455cd0a5399101ab8cb602ce67cccfe16c1042e629c571a",
+    "11_经验检索快照.md": "6ef69cfd20b6ee263d1c0e7d9f709fca6f21cfc6f5e01307717386194becfb0f",
+    "project.json": "0241114701a66b996c41a2e841c3c80f4a7aef1cc78552bc458918f2fe487ff7",
+    "04_生成提示词/参考资产.md": "afd4eaf12b2c7978b90b0da8dcbb635b8bfa1b2fa32bf571983bba7d1d314c29",
+    "04_生成提示词/本次发送.md": "f7e0e5b9383af69d00d02809f88257ceb5a099df152a8bb58b4534da629bb8e3",
+    "04_生成提示词/视频正文草案.md": "8f186a2998a157a315362cae3ac6b6a70cca43d1e481c39e0dd9b063529d3d9d",
+    "05_生成结果/README.md": "0589befda249619563c96867d8a00d72894ec8cac93b06e21ad991869d53e904"
+  },
+  "scope": "真实第一轮文字原稿、前置检索和独立审查；未生成媒体"
+}
