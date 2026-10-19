@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1210" viewBox="0 0 1200 1210" role="img" aria-labelledby="title desc">
+<title id="title">AIGC_Lab 创作流程</title>
+<desc id="desc">参考资产、完整调度、Clip编译，按身份参考、首尾帧或纯文生模式生成，经过剪辑混音与播放验收；拉片和行为验证反向改进项目Skill。15个节点，18条连线。</desc>
+<rect width="1200" height="1210" fill="#FFFFFF"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#66758C"/></marker></defs>
+<g fill="none" stroke="#66758C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)">
+<path data-edge="A-B" d="M600,96.0 V124.0"/>
+<path data-edge="B-C" d="M600,196.0 V224.0"/>
+<path data-edge="C-D" d="M600,296.0 V324.0"/>
+<path data-edge="D-E" d="M600,396.0 V424.0"/>
+<path data-edge="E-F" d="M600,496.0 V524.0"/>
+<path data-edge="F-G" d="M600,596 V642"/>
+<path data-edge="G-H" d="M450,700 H280 V820"/>
+<path data-edge="G-I" d="M600,758 V820"/>
+<path data-edge="G-J" d="M750,700 H920 V820"/>
+<path data-edge="H-K" d="M280,900 V942 H600 V960"/>
+<path data-edge="I-K" d="M600,900 V960"/>
+<path data-edge="J-K" d="M920,900 V942 H600 V960"/>
+<path data-edge="K-L" d="M600,1040 V1090"/>
+<path data-edge="M-N" d="M210,300 V360"/>
+<path data-edge="N-O" d="M210,440 V520"/>
+<path data-edge="O-C" d="M360,545 H390 V260 H440"/>
+<path data-edge="O-D" d="M360,560 H410 V360 H440"/>
+<path data-edge="O-F" d="M360,575 H425 V560 H440"/>
+</g>
+<g id="node-A">
+<rect x="440.0" y="24.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="67">自然语言需求或已有资料</tspan>
+</text>
+</g>
+<g id="node-B">
+<rect x="440.0" y="124.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="167">补本步必要缺口</tspan>
+</text>
+</g>
+<g id="node-C">
+<rect x="440.0" y="224.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="253">参考资产</tspan>
+<tspan x="600" y="281">角色或场景</tspan>
+</text>
+</g>
+<g id="node-D">
+<rect x="440.0" y="324.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="367">完整镜头调度</tspan>
+</text>
+</g>
+<g id="node-E">
+<rect x="440.0" y="424.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="453">分镜与声音协同</tspan>
+<tspan x="600" y="481">时间与连续性检查</tspan>
+</text>
+</g>
+<g id="node-F">
+<rect x="440.0" y="524.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="553">Clip 编译</tspan>
+<tspan x="600" y="581">一镜或多镜</tspan>
+</text>
+</g>
+<g id="node-G">
+<polygon points="600,642.0 750.0,700 600,758.0 450.0,700" fill="#FFF7E8" stroke="#B49A66" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="707">实际模型输入模式</tspan>
+</text>
+</g>
+<g id="node-H">
+<rect x="150.0" y="820.0" width="260" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="280" y="853">绑定已审资产</tspan>
+<tspan x="280" y="881">与独立机位</tspan>
+</text>
+</g>
+<g id="node-I">
+<rect x="470.0" y="820.0" width="260" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="853">制作并检查</tspan>
+<tspan x="600" y="881">静态端点</tspan>
+</text>
+</g>
+<g id="node-J">
+<rect x="790.0" y="820.0" width="260" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="920" y="867">完整文字起点</tspan>
+</text>
+</g>
+<g id="node-K">
+<rect x="440.0" y="960.0" width="320" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="993">按授权生成</tspan>
+<tspan x="600" y="1021">实际结果回填</tspan>
+</text>
+</g>
+<g id="node-L">
+<rect x="440.0" y="1090.0" width="320" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="600" y="1123">剪辑、混音</tspan>
+<tspan x="600" y="1151">整片播放验收</tspan>
+</text>
+</g>
+<g id="node-M">
+<rect x="60.0" y="220.0" width="300" height="80" rx="10" fill="#F0F8F4" stroke="#79A68E" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="210" y="253">拉片</tspan>
+<tspan x="210" y="281">镜头 / 画布 / 提示词</tspan>
+</text>
+</g>
+<g id="node-N">
+<rect x="60.0" y="360.0" width="300" height="80" rx="10" fill="#F0F8F4" stroke="#79A68E" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="210" y="393">候选方法</tspan>
+<tspan x="210" y="421">行为对照、陌生案例复测</tspan>
+</text>
+</g>
+<g id="node-O">
+<rect x="60.0" y="520.0" width="300" height="80" rx="10" fill="#F0F8F4" stroke="#79A68E" stroke-width="2"/>
+<text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
+<tspan x="210" y="553">本项目 Skill</tspan>
+<tspan x="210" y="581">限定更新</tspan>
+</text>
+</g>
+<rect x="192" y="779" width="176" height="28" fill="#FFFFFF"/>
+<text x="280" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">身份与场景参考</text>
+<rect x="512" y="779" width="176" height="28" fill="#FFFFFF"/>
+<text x="600" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">首帧或首尾帧</text>
+<rect x="832" y="779" width="176" height="28" fill="#FFFFFF"/>
+<text x="920" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">明确纯文生</text>
+</svg>
