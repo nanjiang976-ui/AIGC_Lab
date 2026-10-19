@@ -3,12 +3,14 @@ name: aigc-music
 description: Use when planning music-driven AI videos, music visualizers, MV sequences, beat-synchronized imagery, or audiovisual edits tied to a supplied track.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 ---
 
 # 音乐驱动影像
 
 让视觉服从实际音乐结构；拍数换算给计划网格，实际音轨决定同步位置。
+
+需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
 
 ## 适用边界
 

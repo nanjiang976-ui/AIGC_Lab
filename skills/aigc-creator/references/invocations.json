@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "bundle_version": "1.1.1",
+  "skills": [
+    {
+      "name": "aigc-creator",
+      "aliases": [
+        "全链路创作",
+        "从想法开始",
+        "继续我的作品",
+        "帮我做这个视频",
+        "接着这个作品往下做"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-prd",
+      "aliases": [
+        "完善创作需求",
+        "整理PRD",
+        "需求访谈",
+        "整理需求",
+        "检查需求"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-script",
+      "aliases": [
+        "写剧情脚本",
+        "写分场脚本",
+        "改写剧本",
+        "写脚本",
+        "修改对白"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-visual-assets",
+      "aliases": [
+        "角色参考图",
+        "场景参考图",
+        "转换人物四格",
+        "制作视觉资产",
+        "转换这张人物图"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-blocking",
+      "aliases": [
+        "写完整镜头调度",
+        "设计场面调度",
+        "人物走位",
+        "写成完整镜头调度",
+        "只设计走位"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-storyboard",
+      "aliases": [
+        "写分镜",
+        "设计分镜",
+        "分镜设计"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-keyframes",
+      "aliases": [
+        "制作首帧",
+        "提取静态首帧",
+        "设计关键帧",
+        "提取首帧"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-video-prompts",
+      "aliases": [
+        "调度转Clip",
+        "编译Clip提示词",
+        "写视频提示词",
+        "调度转成Clip"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-audio",
+      "aliases": [
+        "设计声音",
+        "写配音稿",
+        "台词表演",
+        "声音设计",
+        "安排对白和声音"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-editing",
+      "aliases": [
+        "整理剪辑方案",
+        "剪辑与混音",
+        "设计转场",
+        "安排剪辑",
+        "核算片长"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-review",
+      "aliases": [
+        "检查生成结果",
+        "审查提示词",
+        "连续性审查",
+        "审查文字包",
+        "检查实际衔接"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-narrative",
+      "aliases": [
+        "剧情短片",
+        "AI漫剧",
+        "叙事短片",
+        "剧情方案"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-commercial",
+      "aliases": [
+        "产品广告",
+        "品牌宣传片",
+        "商业广告",
+        "品牌短片"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-explainer",
+      "aliases": [
+        "科普讲解",
+        "机制演示",
+        "知识解释短片",
+        "科普解释"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-presenter",
+      "aliases": [
+        "数字人口播",
+        "主持人口播",
+        "讲师口播",
+        "主持介绍"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-documentary",
+      "aliases": [
+        "纪实短片",
+        "历史重建",
+        "纪录片创作",
+        "纪实来源",
+        "生成重建"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-music",
+      "aliases": [
+        "音乐MV",
+        "节拍视觉",
+        "音乐可视化",
+        "MV节奏"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-product-demo",
+      "aliases": [
+        "产品操作演示",
+        "软件教程",
+        "真实录屏演示",
+        "产品演示"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-visual-art",
+      "aliases": [
+        "氛围艺术",
+        "无缝循环",
+        "抽象视觉",
+        "氛围影像",
+        "循环视觉"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-montage",
+      "aliases": [
+        "已有素材混剪",
+        "活动回顾",
+        "预告片混剪",
+        "素材混剪"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-shot-study",
+      "aliases": [
+        "视频拉片",
+        "拆解公开工程",
+        "拉片复刻",
+        "拆解这条视频",
+        "拉片"
+      ],
+      "usage": "references/usage.md"
+    },
+    {
+      "name": "aigc-iteration",
+      "aliases": [
+        "复盘创作",
+        "整理可复用经验",
+        "复验创作方法",
+        "复盘这次改动",
+        "复验候选方法"
+      ],
+      "usage": "references/usage.md"
+    }
+  ]
+}

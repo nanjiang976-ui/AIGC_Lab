@@ -2,11 +2,13 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Use when an AI video needs dialogue timing, voice direction, sound events, music placement, or a lip-sync plan before or after visual generation.
 ---
 
 # 声音、试读与口型
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 声音从脚本阶段参与时长设计，再按真实画面完成同步；不能到剪辑末尾才发现对白装不下。
 

@@ -3,12 +3,14 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 ---
 
 # 混剪与活动回顾
 
 先知道手里有什么，再决定怎样连起来；剪辑节奏不能替代素材事实。
+
+需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
 
 ## 适用边界
 

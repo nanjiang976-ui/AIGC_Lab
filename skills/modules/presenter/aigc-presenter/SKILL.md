@@ -3,12 +3,14 @@ name: aigc-presenter
 description: Use when planning AI presenter, avatar, host, talking-head, or digital-human videos where speech delivery, gesture timing, and lip-sync are central.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 ---
 
 # 主持人与数字人口播
 
 先让话说得自然、重点听得清楚，再用克制动作服务表达。
+
+需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
 
 ## 适用边界
 

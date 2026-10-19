@@ -1,6 +1,11 @@
 # AIGC_Lab · AI 影像创作实验室
 
-先把想拍的东西设计清楚，再交给AI生成：**参考图资产 → 完整镜头调度 → Clip提示词 → AI视频生成 → 剪辑与混音**。你用自然语言说需求，后台负责参考绑定、空间关系、演员动作、台词声音、镜头节奏和平台适配。
+> [!IMPORTANT]
+> ### 先把想拍的东西设计清楚，再交给 AI 生成
+>
+> **参考图资产 → 完整镜头调度 → Clip 提示词 → AI 视频生成 → 剪辑与混音**
+>
+> **你用自然语言说需求**，后台负责参考绑定、空间关系、演员动作、台词声音、镜头节奏和平台适配。
 
 **创作原则：必须控制的内容，要在提示词或明确绑定的参考资产中表达；未明确的内容不能期待模型按创作意图补齐；细节应完整、相关且无冲突。** 模型可能补出未说明的元素，图片也会影响画面，因此质量取决于清楚且一致的完整输入，不是单纯增加字数。
 
@@ -14,44 +19,40 @@
 
 **常用入口：**[参考图制作](skills/core/aigc-visual-assets/SKILL.md) · [完整镜头调度](skills/core/aigc-blocking/SKILL.md) · [调度转Clip](skills/core/aigc-video-prompts/SKILL.md) · [四格人物设定表转换提示词](02_提示词库/成熟提示词资产/README.md) · [镜头术语复习](03_参考素材与风格/镜头术语库.md) · [视频拉片复刻库](03_参考素材与风格/视频拉片复刻/README.md)。
 
-本套件1.1.0复用原创作节点，并新增拉片与持续迭代入口，共 **1个总控 + 12个共享节点 + 9个类型模块**。本轮范围见[实施记录](spec/plans/2026-10-19-Clip创作系统.md)，实际输出、修订与检查见[1.1.0训练与验收](06_实验与复盘/2026-10-19_Clip系统训练/README.md)。历史1.0套件的31例文字训练和101项测试见[旧版训练记录](06_实验与复盘/2026-10-16_Skill链训练/README.md)，它们不是新版本或媒体效果的证据。用户级安装与项目源文件分开同步。
+当前套件为1.1.1，共 **1个总控 + 12个共享节点 + 9个类型模块**；每个Skill均有个人调用模板和使用方法。本轮修订与识别验证见[个人模板记录](spec/plans/2026-10-19-个人调用模板与README修订.md)，原系统实际输出与边界见[1.1.0训练与验收](06_实验与复盘/2026-10-19_Clip系统训练/README.md)。历史1.0套件的31例文字训练和101项测试见[旧版训练记录](06_实验与复盘/2026-10-16_Skill链训练/README.md)，它们不是新版本或媒体效果的证据。用户级安装与项目源文件分开同步。
 
-## 3分钟快速开始
+## 我的 Skill 调用模板
 
-**第一次使用只需要看这一节。** 想走完一部作品接着看[完整使用路线](#从想法到成片的完整使用路线)；已有材料直接看[按起点选入口](#按你手上已有的材料选择入口)；安装与维护人员再看后面的细则。
+日常直接从下表选择要做的事，打开对应的“模板与用法”，复制其中的调用模板发给 Codex；把括号中的资料换成你本轮内容即可。每份都附有完整示例、所需输入、交付内容和下一步。
 
-### 1. 打开完整项目
+模板第一行带有明确的 `$skill-name`，后台可据此定位对应 Skill；常用中文口令也有统一索引。自然说法不必完全照抄，多个步骤或意思不明确时由总控判断当前节点。**这些模板发给 Codex；真正发给图片/视频模型的正文，由相应 Skill 完整展开。**
 
-已有本地仓库：在 Codex 中打开包含 `README.md`、`AGENTS.md`、`skills/`、`04_作品项目/` 的 **AIGC_Lab 根目录**。从 GitHub 初次使用，可下载并解压仓库，或克隆：
+| 我现在要做什么 | 模板与使用方法 | 最短调用示例 |
+|---|---|---|
+| 全链路创作总控 | [aigc-creator](skills/aigc-creator/references/usage.md) | 全链路创作：…… |
+| 需求访谈与PRD | [aigc-prd](skills/core/aigc-prd/references/usage.md) | 完善创作需求：…… |
+| 剧情与信息脚本 | [aigc-script](skills/core/aigc-script/references/usage.md) | 写剧情脚本：…… |
+| 参考图与视觉资产 | [aigc-visual-assets](skills/core/aigc-visual-assets/references/usage.md) | 角色参考图：…… |
+| 完整镜头调度 | [aigc-blocking](skills/core/aigc-blocking/references/usage.md) | 写完整镜头调度：…… |
+| 分镜设计 | [aigc-storyboard](skills/core/aigc-storyboard/references/usage.md) | 写分镜：…… |
+| 首帧与关键帧 | [aigc-keyframes](skills/core/aigc-keyframes/references/usage.md) | 制作首帧：…… |
+| 调度转Clip提示词 | [aigc-video-prompts](skills/core/aigc-video-prompts/references/usage.md) | 调度转Clip：…… |
+| 声音与对白表演 | [aigc-audio](skills/core/aigc-audio/references/usage.md) | 设计声音：…… |
+| 剪辑与后期 | [aigc-editing](skills/core/aigc-editing/references/usage.md) | 整理剪辑方案：…… |
+| 连续性与交付审查 | [aigc-review](skills/core/aigc-review/references/usage.md) | 检查生成结果：…… |
+| 剧情短片与AI漫剧 | [aigc-narrative](skills/modules/narrative/aigc-narrative/references/usage.md) | 剧情短片：…… |
+| 广告与品牌宣传 | [aigc-commercial](skills/modules/commercial/aigc-commercial/references/usage.md) | 产品广告：…… |
+| 科普与知识讲解 | [aigc-explainer](skills/modules/explainer/aigc-explainer/references/usage.md) | 科普讲解：…… |
+| 数字人与口播 | [aigc-presenter](skills/modules/presenter/aigc-presenter/references/usage.md) | 数字人口播：…… |
+| 纪实与历史情景重建 | [aigc-documentary](skills/modules/documentary/aigc-documentary/references/usage.md) | 纪实短片：…… |
+| 音乐MV与节拍视觉 | [aigc-music](skills/modules/music/aigc-music/references/usage.md) | 音乐MV：…… |
+| 产品与操作演示 | [aigc-product-demo](skills/modules/product-demo/aigc-product-demo/references/usage.md) | 产品操作演示：…… |
+| 氛围艺术与循环影像 | [aigc-visual-art](skills/modules/visual-art/aigc-visual-art/references/usage.md) | 氛围艺术：…… |
+| 混剪、预告与活动回顾 | [aigc-montage](skills/modules/montage/aigc-montage/references/usage.md) | 已有素材混剪：…… |
+| 视频拉片与复刻 | [aigc-shot-study](skills/core/aigc-shot-study/references/usage.md) | 视频拉片：…… |
+| 创作复盘与持续迭代 | [aigc-iteration](skills/core/aigc-iteration/references/usage.md) | 复盘创作：…… |
 
-```powershell
-git clone https://github.com/nanjiang976-ui/AIGC_Lab.git
-cd AIGC_Lab
-```
-
-不要只复制某一份 `SKILL.md`，它还需要配套的共享规则。在本项目内可以让 Codex 直接读取项目 Skill 源码；**不必先安装全局套件才能开始**。需要在其他项目使用或通过技能菜单选择时，再按[安装与更新](#安装更新与分类分发)同步。项目源码、用户级安装和当前会话加载是三个不同状态，下载仓库不会自动更新后两者。
-
-### 2. 复制这一条开始新作
-
-下面是可直接发送的示例；把故事换成你的想法即可。无需背 Skill 名称、镜头术语或 Clip 格式。
-
-```text
-读取这个项目的 README 和 AGENTS，优先使用项目 skills 目录及同版共享规则。
-帮我新建一部20秒、9:16、真人实拍风格的剧情短片：
-修表师把修好的旧怀表交给顾客，顾客接过后听见滴答，眼眶渐湿。
-先检查已有信息，缺关键创作决定时每次只问一个问题。
-本轮只准备文字和提示词，不调用图片或视频生成；平台暂未确定。
-按参考资产→完整镜头调度→Clip提示词推进，首帧按实际入口判断。
-请保存为新作品，自动维护编号、版本、素材依赖和下轮起点。
-```
-
-**你只需补创作决定，不用手填 CSV、JSON、Clip编号或时间映射。** Codex 会识别本轮范围，复用已有资料，自动安排内部节点。20秒是成片设计目标，不代表任意模型都能一次生成20秒。
-
-### 3. 看结果，并给下一步指令
-
-每次先看答复中的“已完成什么、文件在哪、还缺什么”。新作品在[作品项目](04_作品项目/README.md)中单独建目录；只要复制模型正文时看该作品的 `04_生成提示词/本次发送.md`，素材文件、上传绑定和参数看配套交接说明。
-
-**需要真实参考图但尚无图时，Clip仍是草案。** 先使用参考图提示词取得图片，再回传实际文件；检查通过且平台适配完成后，Codex 才整理对应的可发送版。不要把候选稿、整份 README 或内部管理台账直接粘给生成模型。
+不确定选哪个时，使用[总控模板](skills/aigc-creator/references/usage.md)，说明你手头已有的资料和本轮想拿到的结果。只做一步就用该节点模板，续作时带上准确作品目录或ID。已有完整资料不重新开展全片访谈。
 
 ## 按你手上已有的材料选择入口
 

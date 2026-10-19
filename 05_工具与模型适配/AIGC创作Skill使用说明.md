@@ -1,6 +1,6 @@
 # AIGC 全链路 Skill 安装与使用
 
-版本：1.1.0 · 2026-10-19。套件包含总控 `aigc-creator`、12个共享节点、9个类型模块。项目介绍、流程图、节点衔接与训练方法以[根README](../README.md)为准，这里专门说明安装、更新和故障定位。
+版本：1.1.1 · 2026-10-19。套件包含总控 `aigc-creator`、12个共享节点、9个类型模块。项目介绍、流程图、节点衔接与训练方法以[根README](../README.md)为准，这里专门说明安装、更新和故障定位。
 
 ## 安装前
 
@@ -64,7 +64,7 @@ JSON报告包含 `ok`、`errors`、`actions`、`extras_preserved`、`backup_dir`
 3. 在Codex技能列表确认22个名称。新技能没有出现在当前会话时重启，再明确指定一次，例如 `$aigc-prd`。
 4. 执行一个有代表性的文字请求，检查真实输出与交接；允许自动调用的配置不能代替这一步。
 
-各包 frontmatter 中 `metadata.bundle=aigc-lab`、`metadata.bundle_version=1.1.0` 标识配套版本。完整项目环境优先使用当前明确工作区的源码与共享资料，脱离项目再检查安装包是否配套；旧全局总控不能替代新工作树的公共协议。
+各包 frontmatter 中 `metadata.bundle=aigc-lab`、`metadata.bundle_version=1.1.1` 标识配套版本。完整项目环境优先使用当前明确工作区的源码与共享资料，脱离项目再检查安装包是否配套；旧全局总控不能替代新工作树的公共协议。
 
 技能包的结构和发现机制依据[OpenAI官方Skill说明](https://learn.chatgpt.com/docs/build-skills)；本机的实际加载还须按上面步骤验证。安装不需要媒体平台密钥，也不增加后台任务、定时任务或自动发布。
 
@@ -91,3 +91,7 @@ JSON报告包含 `ok`、`errors`、`actions`、`extras_preserved`、`backup_dir`
 套件改动后运行包校验、逐skill quick_validate、相关行为题。脚本改动再跑项目tests；已有真实作品还按prompts/media范围检查。保留用户作品历史与当前状态，不为了套用新节点强制迁移旧CSV。
 
 源与安装副本不是自动同步关系。新方法通过真实行为对照和陌生案例复测后可按项目授权升套件版本；全局安装仍单独同步，不随日常入库自动执行；新增词语/案例保留来源、用途和验证边界。测试报告、安装计划和媒体证据分别保存，不能互相替代。
+
+## 个人模板入口
+
+平时从[README的个人模板表](../README.md#我的-skill-调用模板)选择当前要做的事。每包`references/usage.md`提供可复制模板和已填例子；首行显式技能名由后端识别，中文口令按统一索引给候选。只读识别可用`python -X utf8 scripts/skill_bundle.py route --text`，它不执行生成或安装。

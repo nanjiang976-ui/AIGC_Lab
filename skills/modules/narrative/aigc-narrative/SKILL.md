@@ -3,12 +3,14 @@ name: aigc-narrative
 description: Use when planning or revising narrative AI shorts, character-driven scenes, AI comics, dramatic causality, tension, or multi-character performance continuity.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 ---
 
 # 剧情与 AI 漫剧
 
 用人物的可见选择推动事件变化；风格、画幅和模型不替代戏剧目的。
+
+需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
 
 ## 适用边界
 

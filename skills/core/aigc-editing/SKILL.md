@@ -2,11 +2,13 @@
 name: aigc-editing
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Use when AI-generated clips need an edit plan, source in/out points, duration and overlap accounting, sound bridges, or repair of continuity in an assembled sequence.
 ---
 
 # 剪辑与成片时间轴
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 用真实素材的可用区间实现分镜意图；镜头计划时长、素材原长、入出点和最终片长分别计算。
 

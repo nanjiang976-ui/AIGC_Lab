@@ -23,6 +23,7 @@ from urllib.parse import unquote, urlsplit
 from uuid import uuid4
 
 from validate_project import inline_link_destinations, _unique_json
+from skill_invocations import validate_registry, route_text, routing_error
 
 
 NAME = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
@@ -44,6 +45,7 @@ class Report:
     actions: list[dict] = field(default_factory=list)
     extras: list[str] = field(default_factory=list)
     packages: list[Package] = field(default_factory=list, repr=False)
+    invocations: list[dict] = field(default_factory=list, repr=False)
     backup_dir: str | None = None
     applied: bool = False
     written: list[str] = field(default_factory=list)
@@ -348,7 +350,16 @@ def validate_bundle(root):
 
     for name in graph:
         visit(name)
+    report.invocations = validate_registry(root, document, report, report.packages)
     return report
+
+
+def route_bundle(root, text):
+    """Read-only invocation suggestion; never generates, installs, or publishes."""
+    report = validate_bundle(root)
+    if report.errors:
+        return routing_error(report.errors)
+    return route_text(text, report.invocations)
 
 
 def _digest(path):
@@ -486,14 +497,21 @@ def install_bundle(root, target, *, apply=False, update=False):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     subcommands = parser.add_subparsers(dest='command', required=True)
-    for command in ('validate', 'install'):
+    for command in ('validate', 'install', 'route'):
         command_parser = subcommands.add_parser(command)
         command_parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
         if command == 'install':
             command_parser.add_argument('--target', type=Path, required=True)
             command_parser.add_argument('--apply', action='store_true', help='Write the preflighted installation')
             command_parser.add_argument('--update', action='store_true', help='Back up and replace changed known files')
+        elif command == 'route':
+            command_parser.add_argument('--text', required=True,
+                                        help='Current user invocation intent only; suggestions do not execute actions')
     args = parser.parse_args(argv)
+    if args.command == 'route':
+        result = route_bundle(args.root, args.text)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0 if result['ok'] else 1
     if args.command == 'validate':
         report = validate_bundle(args.root)
         mode = 'validate'

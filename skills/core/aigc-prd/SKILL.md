@@ -2,11 +2,13 @@
 name: aigc-prd
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Use when an AI image, video, or comic request is still vague, or an existing creative PRD needs a readiness and contradiction check before production.
 ---
 
 # 创作需求 PRD
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 把创意整理为能驱动当前制作阶段的需求；已有完整 PRD 时先校验，不重新访谈。
 

@@ -2,11 +2,13 @@
 name: aigc-review
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Use when AI image or video materials need a scoped quality review, continuity audit, repair routing, or a decision about text readiness versus actual media acceptance.
 ---
 
 # 审查与可修复反馈
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 依据当前版本和真实证据找出能修复的问题，标明责任节点；审查不能代替用户审美选择。
 

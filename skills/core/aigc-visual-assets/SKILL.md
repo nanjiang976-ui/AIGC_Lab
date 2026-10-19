@@ -2,11 +2,13 @@
 name: aigc-visual-assets
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Create character or scene reference prompts from plain-language descriptions, standardize an existing character image into a four-panel sheet, or repair reference assets for AI video. Preserve identity and separate clothing from later Clip identity anchors.
 ---
 
 # 参考图制作：角色或场景
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 用户可以说“给这位短发维修工做角色参考图”“把这张人物图整理成四格”或“做夜间便利店的场景参考图”。后端选择预设、展开规范并检查依赖；用户不用记四格顺序、锚定语法或资产编号。
 

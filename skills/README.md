@@ -27,3 +27,7 @@
 安装更新见[使用说明](../05_工具与模型适配/AIGC创作Skill使用说明.md)。历史1.0测试结果见[旧版训练记录](../06_实验与复盘/2026-10-16_Skill链训练/README.md)。
 
 1.1.0的范围和实际验证见[本轮计划](../spec/plans/2026-10-19-Clip创作系统.md)。
+
+## 我的调用模板
+
+每包的`references/usage.md`是该Skill的个人模板与使用说明，由本包SKILL入口跳转；完整入口表见[根README](../README.md#我的-skill-调用模板)。后台统一索引为[invocations.json](aigc-creator/references/invocations.json)，识别规则见[调用协议](aigc-creator/references/invocations.md)。

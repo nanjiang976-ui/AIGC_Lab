@@ -2,11 +2,13 @@
 name: aigc-video-prompts
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: "把完整调度或分镜编译为一镜或多镜的Clip提示词包与可复制的平台发送版，处理身份参考、衣装、时序、声画和真实结果续接；用户无需记Clip语法。"
 ---
 
 # 调度转 Clip 提示词
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 把已设计镜头编译为当前输入方式能执行的正文；相机、角色/主体、画面与起止变化必须可读。
 

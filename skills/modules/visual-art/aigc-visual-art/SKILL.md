@@ -3,12 +3,14 @@ name: aigc-visual-art
 description: Use when planning AI visual art, abstract motion, ambient scenes, non-narrative clips, or seamless-loop targets without requiring characters or plot.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 ---
 
 # 视觉艺术与氛围影像
 
 用受控的形状、光、材质和运动产生观看体验；没有故事或人物也能形成完整作品。
+
+需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
 
 ## 适用边界
 

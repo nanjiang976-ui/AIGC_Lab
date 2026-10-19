@@ -1,0 +1,398 @@
+[
+  {
+    "skill": "aigc-creator",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-creator"
+  },
+  {
+    "skill": "aigc-creator",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-creator"
+  },
+  {
+    "skill": "aigc-prd",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-prd"
+  },
+  {
+    "skill": "aigc-prd",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-prd"
+  },
+  {
+    "skill": "aigc-script",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-script"
+  },
+  {
+    "skill": "aigc-script",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-script"
+  },
+  {
+    "skill": "aigc-visual-assets",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-visual-assets"
+  },
+  {
+    "skill": "aigc-visual-assets",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-visual-assets"
+  },
+  {
+    "skill": "aigc-blocking",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-blocking"
+  },
+  {
+    "skill": "aigc-blocking",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-blocking"
+  },
+  {
+    "skill": "aigc-storyboard",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-storyboard"
+  },
+  {
+    "skill": "aigc-storyboard",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-storyboard"
+  },
+  {
+    "skill": "aigc-keyframes",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-keyframes"
+  },
+  {
+    "skill": "aigc-keyframes",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-keyframes"
+  },
+  {
+    "skill": "aigc-video-prompts",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-video-prompts"
+  },
+  {
+    "skill": "aigc-video-prompts",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-video-prompts"
+  },
+  {
+    "skill": "aigc-audio",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-audio"
+  },
+  {
+    "skill": "aigc-audio",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-audio"
+  },
+  {
+    "skill": "aigc-editing",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-editing"
+  },
+  {
+    "skill": "aigc-editing",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-editing"
+  },
+  {
+    "skill": "aigc-review",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-review"
+  },
+  {
+    "skill": "aigc-review",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-review"
+  },
+  {
+    "skill": "aigc-narrative",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-narrative"
+  },
+  {
+    "skill": "aigc-narrative",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-narrative"
+  },
+  {
+    "skill": "aigc-commercial",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-commercial"
+  },
+  {
+    "skill": "aigc-commercial",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-commercial"
+  },
+  {
+    "skill": "aigc-explainer",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-explainer"
+  },
+  {
+    "skill": "aigc-explainer",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-explainer"
+  },
+  {
+    "skill": "aigc-presenter",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-presenter"
+  },
+  {
+    "skill": "aigc-presenter",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-presenter"
+  },
+  {
+    "skill": "aigc-documentary",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-documentary"
+  },
+  {
+    "skill": "aigc-documentary",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-documentary"
+  },
+  {
+    "skill": "aigc-music",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-music"
+  },
+  {
+    "skill": "aigc-music",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-music"
+  },
+  {
+    "skill": "aigc-product-demo",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-product-demo"
+  },
+  {
+    "skill": "aigc-product-demo",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-product-demo"
+  },
+  {
+    "skill": "aigc-visual-art",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-visual-art"
+  },
+  {
+    "skill": "aigc-visual-art",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-visual-art"
+  },
+  {
+    "skill": "aigc-montage",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-montage"
+  },
+  {
+    "skill": "aigc-montage",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-montage"
+  },
+  {
+    "skill": "aigc-shot-study",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-shot-study"
+  },
+  {
+    "skill": "aigc-shot-study",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-shot-study"
+  },
+  {
+    "skill": "aigc-iteration",
+    "case": "template",
+    "status": "PASS",
+    "selected": "aigc-iteration"
+  },
+  {
+    "skill": "aigc-iteration",
+    "case": "example",
+    "status": "PASS",
+    "selected": "aigc-iteration"
+  },
+  {
+    "skill": "aigc-creator",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-creator"
+  },
+  {
+    "skill": "aigc-prd",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-prd"
+  },
+  {
+    "skill": "aigc-script",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-script"
+  },
+  {
+    "skill": "aigc-visual-assets",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-visual-assets"
+  },
+  {
+    "skill": "aigc-blocking",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-blocking"
+  },
+  {
+    "skill": "aigc-storyboard",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-storyboard"
+  },
+  {
+    "skill": "aigc-keyframes",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-keyframes"
+  },
+  {
+    "skill": "aigc-video-prompts",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-video-prompts"
+  },
+  {
+    "skill": "aigc-audio",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-audio"
+  },
+  {
+    "skill": "aigc-editing",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-editing"
+  },
+  {
+    "skill": "aigc-review",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-review"
+  },
+  {
+    "skill": "aigc-narrative",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-narrative"
+  },
+  {
+    "skill": "aigc-commercial",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-commercial"
+  },
+  {
+    "skill": "aigc-explainer",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-explainer"
+  },
+  {
+    "skill": "aigc-presenter",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-presenter"
+  },
+  {
+    "skill": "aigc-documentary",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-documentary"
+  },
+  {
+    "skill": "aigc-music",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-music"
+  },
+  {
+    "skill": "aigc-product-demo",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-product-demo"
+  },
+  {
+    "skill": "aigc-visual-art",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-visual-art"
+  },
+  {
+    "skill": "aigc-montage",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-montage"
+  },
+  {
+    "skill": "aigc-shot-study",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-shot-study"
+  },
+  {
+    "skill": "aigc-iteration",
+    "case": "readme_short_call",
+    "status": "PASS",
+    "selected": "aigc-iteration"
+  }
+]

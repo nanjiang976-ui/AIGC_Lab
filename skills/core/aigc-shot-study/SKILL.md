@@ -2,11 +2,13 @@
 name: aigc-shot-study
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.0"
+  bundle_version: "1.1.1"
 description: Use when the user supplies a public AI-video project, finished video, prompt, or screenshot to study its shots, canvas structure, and prompt design, then prepare a traceable recreation case and reusable findings.
 ---
 
 # 视频拉片与复刻
+
+个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
 把用户提供的案例拆成能用于下一次创作的决定。用户可以只说“拆一下这条视频，看看我下次能用什么”，不需要知道表格、镜头术语或 Clip 语法。
 
