@@ -3,7 +3,7 @@ name: aigc-explainer
 description: Use when creating AI educational explainers, science animations, mechanism demonstrations, or concept videos requiring claim accuracy and bounded analogies.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 ---
 
 # 科普与知识解释

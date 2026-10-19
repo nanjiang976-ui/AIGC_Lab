@@ -1,0 +1,461 @@
+{
+  "mode": "preview",
+  "ok": true,
+  "package_count": 22,
+  "errors": [],
+  "actions": [
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\agents\\openai.yaml",
+      "source_sha256": "339250fbfc1598ff4879cf736db072c525c18cd9783c2a023464a351cf0c720c",
+      "target_sha256": "339250fbfc1598ff4879cf736db072c525c18cd9783c2a023464a351cf0c720c"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\assets\\reference-screenshots\\01-shot-script.png",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\assets\\reference-screenshots\\01-shot-script.png",
+      "source_sha256": "e80998ff650ef025a5e99d27be56009b86bcf0e58a35993e824aef9ef56cf0ec",
+      "target_sha256": "e80998ff650ef025a5e99d27be56009b86bcf0e58a35993e824aef9ef56cf0ec"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\assets\\reference-screenshots\\02-blocking.png",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\assets\\reference-screenshots\\02-blocking.png",
+      "source_sha256": "14695be94c8c314ec5229a9c25f1248ea9033b13ab61eb3116ddb005278eb3e1",
+      "target_sha256": "14695be94c8c314ec5229a9c25f1248ea9033b13ab61eb3116ddb005278eb3e1"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\assets\\reference-screenshots\\03-continuous-shot.png",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\assets\\reference-screenshots\\03-continuous-shot.png",
+      "source_sha256": "e331e195cc663e05c430156c8a1d7c1bb714ce8bd549cfed2a14273c57270029",
+      "target_sha256": "e331e195cc663e05c430156c8a1d7c1bb714ce8bd549cfed2a14273c57270029"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\clip-prompts.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\clip-prompts.md",
+      "source_sha256": "a4ab266f1870130b52f5d9f0bae1042022641003ad46b3161b70aa21e3427f22",
+      "target_sha256": "a4ab266f1870130b52f5d9f0bae1042022641003ad46b3161b70aa21e3427f22"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\continuity.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\continuity.md",
+      "source_sha256": "fa649cf4410130e0cd4e0b36334234257604065c67dd0f905544ef885ac7fd06",
+      "target_sha256": "fa649cf4410130e0cd4e0b36334234257604065c67dd0f905544ef885ac7fd06"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\director-dispatch.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\director-dispatch.md",
+      "source_sha256": "6cf75a9994fd6aae4663e6077c219f8511541f398056e9d3039c57b920e31aee",
+      "target_sha256": "6cf75a9994fd6aae4663e6077c219f8511541f398056e9d3039c57b920e31aee"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\film-cases.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\film-cases.md",
+      "source_sha256": "c6724715a661dd36de56cd6d7a91f2451ade49080284a86508569db310cd23ff",
+      "target_sha256": "c6724715a661dd36de56cd6d7a91f2451ade49080284a86508569db310cd23ff"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\handoff.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\handoff.md",
+      "source_sha256": "ca458b20af935cd8245cbfb8bda313a4150c4a64cf4623d7cfc00ab3ab1c3a64",
+      "target_sha256": "ca458b20af935cd8245cbfb8bda313a4150c4a64cf4623d7cfc00ab3ab1c3a64"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\interview.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\interview.md",
+      "source_sha256": "76875df385509fe0b79672c96a390b758846060520765847ecf6b60200a5cf99",
+      "target_sha256": "76875df385509fe0b79672c96a390b758846060520765847ecf6b60200a5cf99"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\iteration.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\iteration.md",
+      "source_sha256": "14f198a37410a174234a4f0c0aa2f62fa24af4c97a4c72e50119c280d2441282",
+      "target_sha256": "14f198a37410a174234a4f0c0aa2f62fa24af4c97a4c72e50119c280d2441282"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\lexicon.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\lexicon.md",
+      "source_sha256": "d2b9c11175005424348bf5086d9df7e1b4cefb3778cf2ef00d6c73fa55473ef8",
+      "target_sha256": "d2b9c11175005424348bf5086d9df7e1b4cefb3778cf2ef00d6c73fa55473ef8"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\library.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\library.md",
+      "source_sha256": "bf8d99cee11f367ffa0e9995a3df9f74c0a7b4ef4f0011524be623d2b426839f",
+      "target_sha256": "bf8d99cee11f367ffa0e9995a3df9f74c0a7b4ef4f0011524be623d2b426839f"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\model-adaptation.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\model-adaptation.md",
+      "source_sha256": "d0be047ad813dec17ca7991796bdfa5bd1524e59e2fbbe377c6f11db76e692f0",
+      "target_sha256": "d0be047ad813dec17ca7991796bdfa5bd1524e59e2fbbe377c6f11db76e692f0"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\project-integration.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\project-integration.md",
+      "source_sha256": "c3e68bc38a46a6ed1815e886de81b332565e983b6d82b4509db84de29aa6a001",
+      "target_sha256": "c3e68bc38a46a6ed1815e886de81b332565e983b6d82b4509db84de29aa6a001"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\prompt-language.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\prompt-language.md",
+      "source_sha256": "52bcb8000725ab13d07c86ab4e56bcafb5e7f904bdd1130fde3e7a043d76c45b",
+      "target_sha256": "52bcb8000725ab13d07c86ab4e56bcafb5e7f904bdd1130fde3e7a043d76c45b"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\reference-assets.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\reference-assets.md",
+      "source_sha256": "00483150466f464d1bd24382118ecaf4847a3d41c66798f9435888709372c2da",
+      "target_sha256": "00483150466f464d1bd24382118ecaf4847a3d41c66798f9435888709372c2da"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\routes.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\routes.md",
+      "source_sha256": "b714b4c835dd2d9f86be4fba977b230eda8e044d160bb7419bacdae6a978f36a",
+      "target_sha256": "b714b4c835dd2d9f86be4fba977b230eda8e044d160bb7419bacdae6a978f36a"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\screenshot-analysis.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\screenshot-analysis.md",
+      "source_sha256": "4db7057a6676ba99da790a70f5d8bd7f9126f45fde0dd0c725b185c1a9dcd30f",
+      "target_sha256": "4db7057a6676ba99da790a70f5d8bd7f9126f45fde0dd0c725b185c1a9dcd30f"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\shot-glossary.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\shot-glossary.md",
+      "source_sha256": "861723787cb14bdde4b7a346d441782ea0d1b17af1f8b1dc9262a41ac572f4ed",
+      "target_sha256": "861723787cb14bdde4b7a346d441782ea0d1b17af1f8b1dc9262a41ac572f4ed"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\shot-study.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\references\\shot-study.md",
+      "source_sha256": "8719ef8c25a135ee2f55c2fc8ae9ce903c5bd3b36f115d4bc4c26ae92691bd7f",
+      "target_sha256": "8719ef8c25a135ee2f55c2fc8ae9ce903c5bd3b36f115d4bc4c26ae92691bd7f"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-creator\\SKILL.md",
+      "source_sha256": "b69831d9bffb999f7ab2dac185aca5db54c09c68e4ae14ab01bcfd913d86750c",
+      "target_sha256": "b69831d9bffb999f7ab2dac185aca5db54c09c68e4ae14ab01bcfd913d86750c"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-prd\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-prd\\agents\\openai.yaml",
+      "source_sha256": "07d7f37b96b0b811b6a8d46549c4203d6ac6d47794f640ffcfe6a76016495318",
+      "target_sha256": "07d7f37b96b0b811b6a8d46549c4203d6ac6d47794f640ffcfe6a76016495318"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-prd\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-prd\\SKILL.md",
+      "source_sha256": "b004d0396e6d4159aaeaf8ca5303e837f808ba55ff8640187e2703c60c356005",
+      "target_sha256": "b004d0396e6d4159aaeaf8ca5303e837f808ba55ff8640187e2703c60c356005"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-script\\agents\\openai.yaml",
+      "source_sha256": "940b66221f06f90cc691df570348aeb25ae63820ed9e220ccc649d693e13d143",
+      "target_sha256": "940b66221f06f90cc691df570348aeb25ae63820ed9e220ccc649d693e13d143"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-script\\SKILL.md",
+      "source_sha256": "580a124ef94337fbe5df889c5372766e842070effaa296558ddc06651b4e645d",
+      "target_sha256": "580a124ef94337fbe5df889c5372766e842070effaa296558ddc06651b4e645d"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-visual-assets\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-visual-assets\\agents\\openai.yaml",
+      "source_sha256": "c134880b8843380ece52a0e9991f7b89fffb8243b864a7a32550bd9b1c2d00e2",
+      "target_sha256": "c134880b8843380ece52a0e9991f7b89fffb8243b864a7a32550bd9b1c2d00e2"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-visual-assets\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-visual-assets\\SKILL.md",
+      "source_sha256": "703edb8f180c302be3c9117175320698cd7390386b0664781bc231db550514b2",
+      "target_sha256": "703edb8f180c302be3c9117175320698cd7390386b0664781bc231db550514b2"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-blocking\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-blocking\\agents\\openai.yaml",
+      "source_sha256": "cef90abc4963db7deee88fc5bd8514075e3a794b497b7c8ef81d7d354a3096b8",
+      "target_sha256": "cef90abc4963db7deee88fc5bd8514075e3a794b497b7c8ef81d7d354a3096b8"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-blocking\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-blocking\\SKILL.md",
+      "source_sha256": "5c8ce96d8daf0f1b3aa44aeff6d3b0e87aef854b2eb122bc98a7575dcd9cb357",
+      "target_sha256": "5c8ce96d8daf0f1b3aa44aeff6d3b0e87aef854b2eb122bc98a7575dcd9cb357"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-storyboard\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-storyboard\\agents\\openai.yaml",
+      "source_sha256": "80c9e767ea7b47c4f8ba1d74339f5c5beeb340b488fee3bf59c5822819d7cf15",
+      "target_sha256": "80c9e767ea7b47c4f8ba1d74339f5c5beeb340b488fee3bf59c5822819d7cf15"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-storyboard\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-storyboard\\SKILL.md",
+      "source_sha256": "875cf7d66596d5ea6ac13d9f21a5f35b5534f58bfaaafcc5351b2ff0155cd73a",
+      "target_sha256": "875cf7d66596d5ea6ac13d9f21a5f35b5534f58bfaaafcc5351b2ff0155cd73a"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-keyframes\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-keyframes\\agents\\openai.yaml",
+      "source_sha256": "eb7b8c3a8f7dce25996e5f4aee9961be510d92d1680447b1f624d08cead6ee3c",
+      "target_sha256": "eb7b8c3a8f7dce25996e5f4aee9961be510d92d1680447b1f624d08cead6ee3c"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-keyframes\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-keyframes\\SKILL.md",
+      "source_sha256": "9c0e4c78d1cbf0ce98018d41bf345cea319f2edc879f478067e2f2f530153105",
+      "target_sha256": "9c0e4c78d1cbf0ce98018d41bf345cea319f2edc879f478067e2f2f530153105"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-video-prompts\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-video-prompts\\agents\\openai.yaml",
+      "source_sha256": "39479d6de7461ecddb655863509e70e347da659a69881f3d8eb8fae8f20469b9",
+      "target_sha256": "39479d6de7461ecddb655863509e70e347da659a69881f3d8eb8fae8f20469b9"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-video-prompts\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-video-prompts\\SKILL.md",
+      "source_sha256": "80d42d09e609c78d6b0c423584bbfeda6f64ca7ae017123794e1f8c39b12371d",
+      "target_sha256": "80d42d09e609c78d6b0c423584bbfeda6f64ca7ae017123794e1f8c39b12371d"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-audio\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-audio\\agents\\openai.yaml",
+      "source_sha256": "6f67d3ddd12864ee54dcf3f62db376a1986e55f7daae53726a45182652ed9181",
+      "target_sha256": "6f67d3ddd12864ee54dcf3f62db376a1986e55f7daae53726a45182652ed9181"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-audio\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-audio\\SKILL.md",
+      "source_sha256": "856309966511cf9dc518be021e7ea111d5a64b5bac03847df660a9e85e5f9234",
+      "target_sha256": "856309966511cf9dc518be021e7ea111d5a64b5bac03847df660a9e85e5f9234"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-editing\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-editing\\agents\\openai.yaml",
+      "source_sha256": "6384bfbacd2c2476c13ad8a5bd1a0552bc8f5e9acee26f3d921c91aaffb7b467",
+      "target_sha256": "6384bfbacd2c2476c13ad8a5bd1a0552bc8f5e9acee26f3d921c91aaffb7b467"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-editing\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-editing\\SKILL.md",
+      "source_sha256": "ad7e816d475a818a2594147d8bbcdd6d844fc3bba2ce772f9942c3be096be2f0",
+      "target_sha256": "ad7e816d475a818a2594147d8bbcdd6d844fc3bba2ce772f9942c3be096be2f0"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-review\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-review\\agents\\openai.yaml",
+      "source_sha256": "843a5f46207a8e13b6cbeeb9ecc5d0a3bf660de99c10ac0568eb7b3613a6ec32",
+      "target_sha256": "843a5f46207a8e13b6cbeeb9ecc5d0a3bf660de99c10ac0568eb7b3613a6ec32"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-review\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-review\\SKILL.md",
+      "source_sha256": "ec98817e4972808eaad7b6734a31d4bc75840e117b30e521e30458f7cde7b276",
+      "target_sha256": "ec98817e4972808eaad7b6734a31d4bc75840e117b30e521e30458f7cde7b276"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\narrative\\aigc-narrative\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-narrative\\agents\\openai.yaml",
+      "source_sha256": "ae49abb69588d5b3d036e44fb56d561010f225d16c435f6348575994f602e5e2",
+      "target_sha256": "ae49abb69588d5b3d036e44fb56d561010f225d16c435f6348575994f602e5e2"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\narrative\\aigc-narrative\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-narrative\\SKILL.md",
+      "source_sha256": "021a12dea2bd5b3617c5f84f36f650f9f1c1ab1b87e115754f66c7229520d692",
+      "target_sha256": "021a12dea2bd5b3617c5f84f36f650f9f1c1ab1b87e115754f66c7229520d692"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\commercial\\aigc-commercial\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-commercial\\agents\\openai.yaml",
+      "source_sha256": "1b30ed89dfff7ae9e5f09dc5c083fb80a299826fabbfe8af59dd4d80b65b7d9a",
+      "target_sha256": "1b30ed89dfff7ae9e5f09dc5c083fb80a299826fabbfe8af59dd4d80b65b7d9a"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\commercial\\aigc-commercial\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-commercial\\SKILL.md",
+      "source_sha256": "4359cf14d6372f315e74dd21b4b483fc5e7be65fd694ba6184e74d0933507034",
+      "target_sha256": "4359cf14d6372f315e74dd21b4b483fc5e7be65fd694ba6184e74d0933507034"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\explainer\\aigc-explainer\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-explainer\\agents\\openai.yaml",
+      "source_sha256": "3ad8c6be63456332cf561a9f8d9ec1059f6d09a7663b30613e9270fe5e15998c",
+      "target_sha256": "3ad8c6be63456332cf561a9f8d9ec1059f6d09a7663b30613e9270fe5e15998c"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\explainer\\aigc-explainer\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-explainer\\SKILL.md",
+      "source_sha256": "06d8b2cfbd49f72e3d8f5f042d0eb187b6989a2179355795eedf70e4f5bbb0c3",
+      "target_sha256": "06d8b2cfbd49f72e3d8f5f042d0eb187b6989a2179355795eedf70e4f5bbb0c3"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\presenter\\aigc-presenter\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-presenter\\agents\\openai.yaml",
+      "source_sha256": "9c5f1e892220e29bcb6409872d59b8d4eb9e7881d61b307e8587aed3db02537e",
+      "target_sha256": "9c5f1e892220e29bcb6409872d59b8d4eb9e7881d61b307e8587aed3db02537e"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\presenter\\aigc-presenter\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-presenter\\SKILL.md",
+      "source_sha256": "a291131885d07b1d751bbbc2eaa4459d06cdabd16fe8e26b7c753a5c0f6c0ba0",
+      "target_sha256": "a291131885d07b1d751bbbc2eaa4459d06cdabd16fe8e26b7c753a5c0f6c0ba0"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\documentary\\aigc-documentary\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-documentary\\agents\\openai.yaml",
+      "source_sha256": "14c8e56dd17c35c673e6a5412805d146a5936ca841eccaf7e5ebec0d04a45f68",
+      "target_sha256": "14c8e56dd17c35c673e6a5412805d146a5936ca841eccaf7e5ebec0d04a45f68"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\documentary\\aigc-documentary\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-documentary\\SKILL.md",
+      "source_sha256": "b4f7f702975a397fd437702738a304df7e865f617f19e8672956a42fecf17347",
+      "target_sha256": "b4f7f702975a397fd437702738a304df7e865f617f19e8672956a42fecf17347"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\music\\aigc-music\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-music\\agents\\openai.yaml",
+      "source_sha256": "f8c81aab01ff660da11e1171e00f5c58db8a2c90122cec926814bb2d211e5388",
+      "target_sha256": "f8c81aab01ff660da11e1171e00f5c58db8a2c90122cec926814bb2d211e5388"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\music\\aigc-music\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-music\\SKILL.md",
+      "source_sha256": "0a7ba2a4e226d8a112cc89fca0791c050cfb126a1351d8c8b07f9a73079a0c2c",
+      "target_sha256": "0a7ba2a4e226d8a112cc89fca0791c050cfb126a1351d8c8b07f9a73079a0c2c"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\product-demo\\aigc-product-demo\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-product-demo\\agents\\openai.yaml",
+      "source_sha256": "b341a4d3496eda34a21e1307a34d18b090d68f8676d36fa74c710d416d552cc6",
+      "target_sha256": "b341a4d3496eda34a21e1307a34d18b090d68f8676d36fa74c710d416d552cc6"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\product-demo\\aigc-product-demo\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-product-demo\\SKILL.md",
+      "source_sha256": "bd59c41d87df8c32c6ade189a037d2d397fe52b2d124c1d493bf3049a52a5995",
+      "target_sha256": "bd59c41d87df8c32c6ade189a037d2d397fe52b2d124c1d493bf3049a52a5995"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\visual-art\\aigc-visual-art\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-visual-art\\agents\\openai.yaml",
+      "source_sha256": "8ca5d9fc2249fd3293f91087db900053691fe484b847a8526cad1cc8496f374d",
+      "target_sha256": "8ca5d9fc2249fd3293f91087db900053691fe484b847a8526cad1cc8496f374d"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\visual-art\\aigc-visual-art\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-visual-art\\SKILL.md",
+      "source_sha256": "6dd4a9bed7a56cca5fb0fd5e90e3c1cad7126a87c86f5dd4377c9a9fac0f5b1b",
+      "target_sha256": "6dd4a9bed7a56cca5fb0fd5e90e3c1cad7126a87c86f5dd4377c9a9fac0f5b1b"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\montage\\aigc-montage\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-montage\\agents\\openai.yaml",
+      "source_sha256": "fc281e152180d07339b0f5abe9f8928f1757ce88e3e955fc3e1103c9bbb882f4",
+      "target_sha256": "fc281e152180d07339b0f5abe9f8928f1757ce88e3e955fc3e1103c9bbb882f4"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\montage\\aigc-montage\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-montage\\SKILL.md",
+      "source_sha256": "48341e899826743cd15fd5e9a3a41c5a79e1ba0e5f524de50cc3ca1605992c0b",
+      "target_sha256": "48341e899826743cd15fd5e9a3a41c5a79e1ba0e5f524de50cc3ca1605992c0b"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-shot-study\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-shot-study\\agents\\openai.yaml",
+      "source_sha256": "ebde37233ee817e709d45de079d047bf208a26c39c104d75dbf8a9068ff9dd1b",
+      "target_sha256": "ebde37233ee817e709d45de079d047bf208a26c39c104d75dbf8a9068ff9dd1b"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-shot-study\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-shot-study\\SKILL.md",
+      "source_sha256": "5d7a3a6248b2b28e5a6ed19dc306b36e4784ee5385edf084e37812f8ece6269e",
+      "target_sha256": "5d7a3a6248b2b28e5a6ed19dc306b36e4784ee5385edf084e37812f8ece6269e"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-iteration\\agents\\openai.yaml",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-iteration\\agents\\openai.yaml",
+      "source_sha256": "0b1f1144718f63e528f13c00e08bf2d64ac1d99090005227f80342d0a9716207",
+      "target_sha256": "0b1f1144718f63e528f13c00e08bf2d64ac1d99090005227f80342d0a9716207"
+    },
+    {
+      "action": "unchanged",
+      "source": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-iteration\\SKILL.md",
+      "destination": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\.harness-tests\\clip-install\\aigc-iteration\\SKILL.md",
+      "source_sha256": "bd469a82ac2e6185ef98cb5095ecc76b3ff2575491d777c6274b5d9118919c09",
+      "target_sha256": "bd469a82ac2e6185ef98cb5095ecc76b3ff2575491d777c6274b5d9118919c09"
+    }
+  ],
+  "extras_preserved": [],
+  "backup_dir": null,
+  "applied": false,
+  "written": [],
+  "attempted": []
+}

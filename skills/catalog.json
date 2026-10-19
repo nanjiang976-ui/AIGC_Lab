@@ -30,7 +30,7 @@
       "name": "aigc-visual-assets",
       "path": "skills/core/aigc-visual-assets",
       "group": "core",
-      "title": "角色视图与视觉资产",
+      "title": "参考图与视觉资产",
       "dependencies": [
         "aigc-creator"
       ]
@@ -39,9 +39,11 @@
       "name": "aigc-blocking",
       "path": "skills/core/aigc-blocking",
       "group": "core",
-      "title": "场面调度",
+      "title": "完整镜头调度",
       "dependencies": [
-        "aigc-creator"
+        "aigc-creator",
+        "aigc-storyboard",
+        "aigc-audio"
       ]
     },
     {
@@ -66,7 +68,7 @@
       "name": "aigc-video-prompts",
       "path": "skills/core/aigc-video-prompts",
       "group": "core",
-      "title": "视频动作提示词",
+      "title": "调度转Clip提示词",
       "dependencies": [
         "aigc-creator"
       ]
@@ -262,7 +264,25 @@
         "aigc-editing",
         "aigc-review"
       ]
+    },
+    {
+      "name": "aigc-shot-study",
+      "path": "skills/core/aigc-shot-study",
+      "group": "core",
+      "title": "视频拉片与复刻",
+      "dependencies": [
+        "aigc-creator"
+      ]
+    },
+    {
+      "name": "aigc-iteration",
+      "path": "skills/core/aigc-iteration",
+      "group": "core",
+      "title": "创作复盘与持续迭代",
+      "dependencies": [
+        "aigc-creator"
+      ]
     }
   ],
-  "bundle_version": "1.0.1"
+  "bundle_version": "1.1.0"
 }

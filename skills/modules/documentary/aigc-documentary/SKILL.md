@@ -3,7 +3,7 @@ name: aigc-documentary
 description: Use when planning documentary AI videos, historical or real-event explainers, archival sequences, or clearly labeled generated reconstructions requiring source traceability.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 ---
 
 # 纪实与生成重建
@@ -35,7 +35,7 @@ metadata:
 | 依据与叙事关系 | `aigc-script` 建事实/来源矩阵，未核实信息保留缺口 |
 | 全部使用真实素材 | `aigc-storyboard` → `aigc-editing`，可跳资产生成、关键帧和视频生成节点 |
 | 用户允许重建 | `aigc-visual-assets` 锁有依据特征，`aigc-blocking` 只处理确有必要的空间动作 |
-| 重建画面需要生成 | `aigc-keyframes` → `aigc-video-prompts`；提示词与成片均继承重建身份 |
+| 重建画面需要生成 | `aigc-video-prompts`编译Clip；仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`；提示词与成片均继承重建身份 |
 | 档案原声、配音或拟音 | `aigc-audio` 分轨标来源；`aigc-review` 同时审事实链与标识可读性 |
 
 ## 专用创作判断

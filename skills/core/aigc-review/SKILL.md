@@ -2,7 +2,7 @@
 name: aigc-review
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 description: Use when AI image or video materials need a scoped quality review, continuity audit, repair routing, or a decision about text readiness versus actual media acceptance.
 ---
 
@@ -71,7 +71,7 @@ description: Use when AI image or video materials need a scoped quality review, 
 - 可发送项、需修改项、缺依赖项分别列；不把候选正文混进当前发送批次。
 - PASS 必须限定对象和范围并指明证据；无媒体时不填写生成成功或播放通过。
 - 用户审美取舍作为待反馈或已记录反馈，不代替签字，不伪造审核人。
-- 复盘仅在当前授权范围记录；没有跨作品证据时不把单片偏好升为公共默认，不自动改 Skill 或长期记忆。
+- 复盘仅在当前授权范围记录；没有跨作品证据时不把单片偏好升为公共默认，Skill更新只按共享iteration.md及项目明确授权范围，在真实行为对照与陌生案例复测通过后进行；不自动改长期记忆。
 
 ## 演练请求
 

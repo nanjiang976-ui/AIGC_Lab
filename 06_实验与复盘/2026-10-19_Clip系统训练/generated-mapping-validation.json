@@ -1,0 +1,12 @@
+{
+  "scope": "独立实际执行JSON的数据结构验证；不校验提示词内容、媒体或平台",
+  "source": "05_陌生案例复测原始执行.txt",
+  "fixture": ".harness-tests\\5c27041d254d411dad7a7b1081f52806",
+  "errors": [],
+  "work_count": 1,
+  "status": "PASS",
+  "clip_ids": [
+    "EP01_CL001",
+    "EP01_CL002"
+  ]
+}

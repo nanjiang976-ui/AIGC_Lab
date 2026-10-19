@@ -1,0 +1,112 @@
+[
+  {
+    "name": "aigc-creator",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-prd",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-script",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-visual-assets",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-blocking",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-storyboard",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-keyframes",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-video-prompts",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-audio",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-editing",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-review",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-narrative",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-commercial",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-explainer",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-presenter",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-documentary",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-music",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-product-demo",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-visual-art",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-montage",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-shot-study",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "aigc-iteration",
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  }
+]

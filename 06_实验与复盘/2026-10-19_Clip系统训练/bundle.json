@@ -1,0 +1,12 @@
+{
+  "mode": "validate",
+  "ok": true,
+  "package_count": 22,
+  "errors": [],
+  "actions": [],
+  "extras_preserved": [],
+  "backup_dir": null,
+  "applied": false,
+  "written": [],
+  "attempted": []
+}

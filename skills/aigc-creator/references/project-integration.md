@@ -21,7 +21,8 @@
 | 故事与角色/衣装/场景/道具固定 ID | 01_故事与角色设定.md |
 | 剧情节拍/对白，单图不适用说明 | 02_剧情脚本.md |
 | 镜头、时长、引用、最终实例化提示词 | 03_分镜表.csv |
-| 本轮实际可发送的镜头正文 | 04_生成提示词/本次发送.md |
+| Clip与Shot区间及真实输入映射（新流程） | 04_生成提示词/clips.json |
+| 本轮实际可发送的Shot或Clip正文 | 04_生成提示词/本次发送.md |
 | 候选提示词与未发送草案 | 04_生成提示词/草案.md（仅有需要时创建） |
 | 实际媒体及生成记录 | 05_生成结果/ |
 | 模块使用 ID/版本、差异、审查、参数、参考映射 | 06_修改与验收.md |
@@ -33,11 +34,11 @@
 
 ## 版本和发送批次
 
-原分镜表头不变：shot_id、duration_seconds、scene_id、character_ids、description、dialogue、image_prompt、video_prompt、reference_files。一个可单独生成镜头一行，图片时长为 0，视频/有时间轴漫剧大于 0。
+原分镜表头不变：shot_id、duration_seconds、scene_id、character_ids、description、dialogue、image_prompt、video_prompt、reference_files。一个叙事Shot一行，图片时长为0，视频/有时间轴漫剧大于0。新Clip流程在project.json显式设prompt_layout=clips、clips_file引用当前revision的映射；缺省per_shot保留旧作品规则。一次生成可含多Shot，长Shot可跨Clip；具体字段读取实际项目spec/clip-contract.md。
 
 编辑已准备/已验收内容前保留旧版本，递增 project.revision，status 回 DRAFT，对应 generation/review 回 NOT_RUN。历史媒体保留。草稿轮内也写明修改；不得把旧版结果重新标成新版 PASS。
 
-分批制作时 `本次发送.md` 只包含当前可发批次，其余放草案；在修改记录写本批 shot_id 清单。如果完整作品尚有待定镜头或依赖未生成的前段终帧，保持 DRAFT。现有项目提示词校验按完整分镜覆盖，不得伪报为“批次校验通过”；批次只做明确范围的内容复核，完整作品材料齐备后再跑 prompts 门槛。
+分批制作时 `本次发送.md` 只包含当前可发批次，其余放草案；在修改记录写本批shot_id或clip_id及映射清单。如果完整作品尚有待定镜头或依赖未生成的前段终帧，保持 DRAFT。现有项目提示词校验按完整分镜覆盖，不得伪报为“批次校验通过”；批次只做明确范围的内容复核，完整作品材料齐备后再跑 prompts 门槛。
 
 ## 检查
 
@@ -50,7 +51,7 @@ python -X utf8 scripts/validate_project.py --work "04_作品项目/WORK-001_实�
 python -X utf8 scripts/validate_project.py --work "04_作品项目/WORK-001_实际名称" --phase delivery
 ```
 
-仅准备草稿时运行结构检查并说明未到 prompts/delivery 阶段。有文字交付需做内容复核，媒体交付还需真实生成证据、播放/视觉检查。检查失败保留准确状态，不能填造用户审核人或虚假证据来通过。当前脚本不专门校验新台账，逐项人工/Agent 复查其逻辑。
+仅准备草稿时运行结构检查并说明未到 prompts/delivery 阶段。有文字交付需做内容复核，媒体交付还需真实生成证据、播放/视觉检查。检查失败保留准确状态，不能填造用户审核人或虚假证据来通过。脚本检查Clip区间/引用/发送结构，不判断调度内容与媒体真实性；连续性和剪辑台账仍逐项人工/Agent复查。
 
 仓库 `skills/catalog.json` 是全套分发清单：`skills/aigc-creator/` 为总控，`skills/core/` 为共享节点，`skills/modules/` 为分类模块。安装时各包按唯一skill名平铺到用户级技能目录，包内 references/assets 保持原相对位置；共享资料由叶节点通过总控的实际发现路径读取，不使用跨包相对链接。
 

@@ -2,7 +2,7 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 description: Use when an AI video needs dialogue timing, voice direction, sound events, music placement, or a lip-sync plan before or after visual generation.
 ---
 
@@ -75,3 +75,7 @@ description: Use when an AI video needs dialogue timing, voice direction, sound 
 
 - 正常：“7秒近景，B吸气说‘你为什么不信我’后落泪，给声音表和前置试读安排。”观察时长与表演分配。
 - 边界：“工具只生成无声视频，嘴部清晰可见，我直接贴配音就算口型通过吧？”观察是否给可执行路线并保留口型未测。
+
+## 与完整调度和Clip协同
+
+完整调度按共享director-dispatch.md把声源、台词原文、画内外位置、发生节拍写进每Shot；Clip编译按clip-prompts.md保持同一时间轴。声音设计从调度开始，原生输出能力在模型适配时确认；不支持时明确后期音轨和口型流程，不能把声音设计删除或称已同步。

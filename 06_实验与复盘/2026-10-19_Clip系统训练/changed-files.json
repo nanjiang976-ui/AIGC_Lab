@@ -1,0 +1,402 @@
+[
+  {
+    "status": " M",
+    "path": "01_创作模板/README.md"
+  },
+  {
+    "status": " M",
+    "path": "02_提示词库/README.md"
+  },
+  {
+    "status": " M",
+    "path": "03_参考素材与风格/README.md"
+  },
+  {
+    "status": " M",
+    "path": "05_工具与模型适配/AIGC创作Skill使用说明.md"
+  },
+  {
+    "status": " M",
+    "path": "06_实验与复盘/README.md"
+  },
+  {
+    "status": " M",
+    "path": "AGENTS.md"
+  },
+  {
+    "status": " M",
+    "path": "README.md"
+  },
+  {
+    "status": " M",
+    "path": "scripts/tests/test_validate_project.py"
+  },
+  {
+    "status": " M",
+    "path": "scripts/validate_project.py"
+  },
+  {
+    "status": " M",
+    "path": "skills/README.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/continuity.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/handoff.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/lexicon.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/model-adaptation.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/project-integration.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/prompt-language.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/aigc-creator/references/routes.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/catalog.json"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-audio/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-blocking/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-blocking/agents/openai.yaml"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-editing/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-keyframes/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-prd/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-review/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-script/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-storyboard/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-video-prompts/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-video-prompts/agents/openai.yaml"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-visual-assets/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/core/aigc-visual-assets/agents/openai.yaml"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/commercial/aigc-commercial/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/documentary/aigc-documentary/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/explainer/aigc-explainer/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/montage/aigc-montage/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/music/aigc-music/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/narrative/aigc-narrative/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/presenter/aigc-presenter/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/product-demo/aigc-product-demo/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "skills/modules/visual-art/aigc-visual-art/SKILL.md"
+  },
+  {
+    "status": " M",
+    "path": "spec/acceptance.md"
+  },
+  {
+    "status": " M",
+    "path": "spec/decisions.md"
+  },
+  {
+    "status": " M",
+    "path": "spec/harness-engineering.md"
+  },
+  {
+    "status": " M",
+    "path": "spec/plans/README.md"
+  },
+  {
+    "status": " M",
+    "path": "spec/持续迭代.md"
+  },
+  {
+    "status": "??",
+    "path": "01_创作模板/Clip提示词交付模板.md"
+  },
+  {
+    "status": "??",
+    "path": "01_创作模板/完整镜头调度模板.md"
+  },
+  {
+    "status": "??",
+    "path": "02_提示词库/成熟提示词资产/README.md"
+  },
+  {
+    "status": "??",
+    "path": "02_提示词库/成熟提示词资产/人物参考图转四格设定表_v001.md"
+  },
+  {
+    "status": "??",
+    "path": "02_提示词库/成熟提示词资产/人物参考图转四格设定表_用户原文.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/README.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/原始提示词素材索引.csv"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/01_来源与可得性.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/02_拉片笔记.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/03_镜头调度拆解.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/04_Clip提示词拆解.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/05_复刻结果与验证.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/06_候选与维护提案.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/README.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/原始提示词摘录.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/原始资料/01_拉片七项.png"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/原始资料/02_镜头调度例.png"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/原始资料/03_Shot3例.png"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例/STUDY-001_四截图文字拆解/原始资料/04_Shot5例.png"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例模板.md"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/视频拉片复刻/案例索引.csv"
+  },
+  {
+    "status": "??",
+    "path": "03_参考素材与风格/镜头术语库.md"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/01_旧版同题原始执行.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/02_新版同题原始执行.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/03_资产三题原始执行.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/04_拉片与迭代原始执行.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/05_陌生案例复测原始执行.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/README.md"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/baseline-sources/clip-prompts-v001.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/baseline-sources/reference-assets-v001.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/baseline-sources/shot-study-v001.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/bundle.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/changed-files.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/diff-check.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/generated-mapping-validation.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/isolated-install-apply.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/isolated-install-preview.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/skill-format.json"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/structure.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/unittest.txt"
+  },
+  {
+    "status": "??",
+    "path": "06_实验与复盘/2026-10-19_Clip系统训练/validation.json"
+  },
+  {
+    "status": "??",
+    "path": "scripts/tests/test_clip_validation.py"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/clip-prompts.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/director-dispatch.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/iteration.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/reference-assets.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/shot-glossary.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/aigc-creator/references/shot-study.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/core/aigc-iteration/SKILL.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/core/aigc-iteration/agents/openai.yaml"
+  },
+  {
+    "status": "??",
+    "path": "skills/core/aigc-shot-study/SKILL.md"
+  },
+  {
+    "status": "??",
+    "path": "skills/core/aigc-shot-study/agents/openai.yaml"
+  },
+  {
+    "status": "??",
+    "path": "spec/clip-contract.md"
+  },
+  {
+    "status": "??",
+    "path": "spec/plans/2026-10-19-Clip创作系统.md"
+  }
+]

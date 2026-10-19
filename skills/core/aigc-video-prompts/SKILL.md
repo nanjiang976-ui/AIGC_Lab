@@ -2,11 +2,11 @@
 name: aigc-video-prompts
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
-description: Use when planned AI video shots need complete copyable motion prompts, platform-input adaptation, or continuation after real generated motion differs from the storyboard.
+  bundle_version: "1.1.0"
+description: "把完整调度或分镜编译为一镜或多镜的Clip提示词包与可复制的平台发送版，处理身份参考、衣装、时序、声画和真实结果续接；用户无需记Clip语法。"
 ---
 
-# 视频动态提示词
+# 调度转 Clip 提示词
 
 把已设计镜头编译为当前输入方式能执行的正文；相机、角色/主体、画面与起止变化必须可读。
 
@@ -14,6 +14,7 @@ description: Use when planned AI video shots need complete copyable motion promp
 
 - 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`prompt-language.md`、`model-adaptation.md`；复杂动作按需读 `screenshot-analysis.md` 的截图1、3。
+- Clip任务必须读取共享 `clip-prompts.md`；其中定义六区块、语言纪律、平台分支、Shot映射和缺项处理。已有单镜请求按一条Clip处理，不强加多镜或几十条片段。
 - 本节点不擅自改变剧情、角色或镜头目的；用户只要提示词时不执行媒体生成。
 
 ## 最小输入与缺项
@@ -37,6 +38,8 @@ description: Use when planned AI video shots need complete copyable motion promp
 
 ## 制作方法
 
+先核对调度六维和逐镜必填内容，缺什么只补什么。保持已确认的角色、台词和事件，按空间/时序/输入能力分Clip；每条Clip自足复述本场衣装与必要状态，角色板默认只锚身份，机位由本Clip独立设计。输出完整六区块创作包，再编译平台发送版。精确目标时间连续覆盖，身份标签有真实映射；正文用正向物理表达，负面项按入口分流，原台词中的否定保持原文。
+
 1. 先写关键主体、核心动作与不可改变约束；这是项目编排原则，不保证跨模型位置权重。
 2. 按起点→触发→动作/接触→反应→终点组织时序；用可见动作代替抽象情绪口号。
 3. 写清相机起止、角色动作表演对白、画面朝向/层次/光线；固定相机也是明确摄影选择。
@@ -48,7 +51,7 @@ description: Use when planned AI video shots need complete copyable motion promp
 
 ## 发送正文与外部说明
 
-- 一镜或一个明确生成段一个完整代码块，无“同上”、占位、本地路径、内部 ID 或项目文件读取要求。
+- 每条Clip一个完整主正文代码块，可包含一个或多个连续Shot；支持独立负向输入的入口另给负向框内容。无“同上”、占位、本地路径、内部 ID 或项目文件读取要求；管理Clip ID在标题中，Shot序号/时间片可在正文中。
 - 正文只含生成内容；上传映射、镜头编号、模型版本、时长设置、来源、未执行项放外部。
 - 平台素材指代确实受支持且已映射时可放正文；实际标签在上传后核对，不虚构附件已存在。
 - “本次发送”仅收录依赖齐备的当前正文；方案候选、日志和未就绪草案保存在工作稿。

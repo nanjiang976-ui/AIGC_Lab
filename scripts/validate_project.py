@@ -35,6 +35,13 @@ STATUSES = ('DRAFT', 'PROMPT_READY', 'GENERATED', 'ACCEPTED', 'ARCHIVED')
 PLACEHOLDER = re.compile(r'\{\{.*?\}\}|待确认|\bTODO\b', re.IGNORECASE | re.DOTALL)
 SHOT_ID = re.compile(r'EP\d{2,}_SH\d{3,}\Z')
 SHOT_TOKEN = re.compile(r'(?<![A-Za-z0-9_])EP\d{2,}_SH\d{3,}(?![A-Za-z0-9_])')
+CLIP_ID = re.compile(r'EP\d{2,}_CL\d{3,}\Z')
+CLIP_TOKEN = re.compile(r'(?<![A-Za-z0-9_])EP\d{2,}_CL\d{3,}(?![A-Za-z0-9_])')
+CLIP_FILE = '04_生成提示词/clips.json'
+ENTRY_MODES = ('text_to_video', 'reference_to_video', 'first_frame', 'first_last_frames')
+REFERENCE_ROLES = ('identity', 'scene', 'first_frame', 'last_frame', 'style', 'audio')
+IMAGE_EXTENSIONS = ('.png', '.jpg', '.jpeg', '.webp', '.bmp', '.tif', '.tiff', '.avif')
+TIME_EPSILON = 1e-6
 MARKDOWN_ESCAPE = re.compile(r'\\([' + re.escape(string.punctuation) + r'])')
 
 
@@ -274,6 +281,15 @@ def validate_manifest(manifest: dict, directory: Path, result: Result) -> bool:
     for key, allowed in (('kind', ('image', 'video', 'comic')), ('scope', ('prompts', 'media')), ('status', STATUSES)):
         if manifest.get(key) not in allowed:
             result.fail('SCHEMA', directory, f'{key} 必须属于 {allowed}')
+    layout = manifest.get('prompt_layout', 'per_shot')
+    if layout not in ('per_shot', 'clips'):
+        result.fail('SCHEMA', directory, 'prompt_layout 必须是 per_shot 或 clips')
+    if layout == 'clips' and manifest.get('kind') not in ('video', 'comic'):
+        result.fail('SCHEMA', directory, 'clips 发送布局仅适用于 video/comic')
+    if 'clips_file' in manifest:
+        safe_path(directory, manifest['clips_file'], result, directory / 'project.json')
+        if layout != 'clips':
+            result.fail('SCHEMA', directory, 'clips_file 仅用于 clips 布局，避免未校验的 Clip 台账')
     for key, extra in (('generation', ('tool', 'model', 'generated_at')), ('review', ('reviewer', 'reviewed_at'))):
         record = manifest.get(key)
         if not isinstance(record, dict):
@@ -309,29 +325,29 @@ def validate_record(manifest: dict, key: str, directory: Path, result: Result) -
         result.fail('DATE', directory, f'{key}.{date_key} 必须是 ISO 日期时间')
 
 
-def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) -> list[str]:
+def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) -> dict[str, float | None]:
     path = require_file(directory, '03_分镜表.csv', result, directory)
     if path is None:
-        return []
+        return {}
     content = read_text(path, result)
     if content is None:
-        return []
+        return {}
     if gate and PLACEHOLDER.search(content):
         result.fail('PLACEHOLDER', path, '提示词就绪门禁不允许占位内容')
     try:
         reader = csv.DictReader(io.StringIO(content, newline=''), strict=True)
         if reader.fieldnames is None or any(key not in reader.fieldnames for key in CSV_FIELDS) or len(set(reader.fieldnames)) != len(reader.fieldnames):
             result.fail('CSV_HEADER', path, f'需要唯一字段: {",".join(CSV_FIELDS)}')
-            return []
+            return {}
         rows = list(reader)
     except csv.Error as exc:
         result.fail('CSV', path, str(exc))
-        return []
+        return {}
     required = gate
     rows = [row for row in rows if any(value for value in row.values())]
     if required and not rows:
         result.fail('SHOTS', path, '至少需要一个完整镜头')
-    ids = []
+    durations = {}
     for index, row in enumerate(rows, 2):
         location = f'{path}:{index}'
         if None in row or any(value is None for value in row.values()):
@@ -341,9 +357,11 @@ def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) 
             if '\n' in row[key] or '\r' in row[key]:
                 result.fail(code, location, f'{key} 必须是单行值，不允许内部换行')
         row = {key: value.strip() for key, value in row.items()}
-        must_fill = ['shot_id', 'scene_id', 'description', 'image_prompt', 'duration_seconds']
-        if manifest['kind'] in ('video', 'comic'):
-            must_fill.append('video_prompt')
+        must_fill = ['shot_id', 'scene_id', 'description', 'duration_seconds']
+        if manifest.get('prompt_layout', 'per_shot') == 'per_shot':
+            must_fill.append('image_prompt')
+            if manifest['kind'] in ('video', 'comic'):
+                must_fill.append('video_prompt')
         if required:
             for key in must_fill:
                 if not row[key]:
@@ -352,24 +370,30 @@ def validate_shots(directory: Path, manifest: dict, gate: bool, result: Result) 
         if shot:
             if not SHOT_ID.fullmatch(shot):
                 result.fail('SHOT_ID', location, f'无效镜头编号: {shot}')
-            if shot in ids:
+            if shot in durations:
                 result.fail('DUPLICATE_SHOT', location, f'重复镜头编号: {shot}')
-            ids.append(shot)
+            durations[shot] = None
         if row['duration_seconds']:
             try:
                 duration = float(row['duration_seconds'])
                 if not math.isfinite(duration) or duration < 0 or (manifest['kind'] != 'image' and duration == 0):
                     raise ValueError('时长范围错误')
+                if shot:
+                    durations[shot] = duration
             except ValueError:
                 result.fail('DURATION', location, '图片时长须为有限非负数；视频/漫剧须为有限正数')
         for reference in row['reference_files'].split(';'):
             if reference.strip():
                 require_file(directory, reference.strip(), result, location)
-    return ids
+    return durations
 
 
-def validate_sent_prompts(content: str, ids: list[str], path: Path, result: Result) -> None:
-    """Match each shot heading to nonempty text, ignoring comments and fence syntax."""
+def validate_sent_prompts(content: str, ids: list[str], path: Path, result: Result,
+                          clips: bool = False) -> None:
+    """Match each Shot/Clip heading to nonempty text; fenced IDs are not headings."""
+    token = CLIP_TOKEN if clips else SHOT_TOKEN
+    label = 'Clip' if clips else '镜头'
+    code = 'SEND_CLIP' if clips else 'SEND_SHOT'
     groups = []
     current = None
     fence = None
@@ -407,10 +431,12 @@ def validate_sent_prompts(content: str, ids: list[str], path: Path, result: Resu
         heading = re.match(r'^ {0,3}(#{1,6})(?:[ \t]+(.*?))?[ \t]*$', line)
         if heading:
             level = len(heading.group(1))
-            shots = SHOT_TOKEN.findall(heading.group(2) or '')
+            if clips and SHOT_TOKEN.search(heading.group(2) or ''):
+                result.fail('SEND_CLIP', path, 'clips 布局不能混入逐 Shot 发送标题；镜头列表放 Clip 正文内')
+            shots = token.findall(heading.group(2) or '')
             if shots:
                 if len(shots) != 1:
-                    result.fail('SEND_SHOT', path, '每个镜头标题只能包含一个镜头编号')
+                    result.fail(code, path, f'每个{label}标题只能包含一个{label}编号')
                 current = dict(shot=shots[0], level=level, text=[], blocks=[])
                 groups.append(current)
             elif current is not None and level <= current['level']:
@@ -427,16 +453,242 @@ def validate_sent_prompts(content: str, ids: list[str], path: Path, result: Resu
     for group in groups:
         shot = group['shot']
         if shot in seen:
-            result.fail('SEND_DUPLICATE', path, f'重复镜头标题组: {shot}')
+            result.fail('SEND_DUPLICATE', path, f'重复{label}标题组: {shot}')
         seen.add(shot)
         if shot not in expected:
-            result.fail('SEND_EXTRA', path, f'发送版含分镜表之外的镜头: {shot}')
+            result.fail('SEND_EXTRA', path, f'发送版含台账之外的{label}: {shot}')
         bodies = group['blocks'] or [group['text']]
         if any(not '\n'.join(body).strip() for body in bodies):
-            result.fail('SEND_EMPTY', path, f'镜头 {shot} 缺少非空可发送正文')
+            result.fail('SEND_EMPTY', path, f'{label} {shot} 缺少非空可发送正文')
     for shot in ids:
         if shot not in seen:
-            result.fail('SEND_SHOT', path, f'本次发送.md 缺少镜头标题: {shot}')
+            result.fail(code, path, f'本次发送.md 缺少{label}标题: {shot}')
+
+
+def clip_text(record: dict, key: str, required: bool, result: Result,
+              location: object, code: str = 'CLIP_SCHEMA') -> str:
+    value = record.get(key, '')
+    if not isinstance(value, str):
+        result.fail(code, location, f'{key} 必须是字符串')
+        return ''
+    if not value.strip():
+        if required:
+            result.fail(code, location, f'{key} 不能为空')
+        return ''
+    if value != value.strip() or '\n' in value or '\r' in value:
+        result.fail(code, location, f'{key} 须为无首尾空白的单行值')
+    return value
+
+
+def clip_number(record: dict, key: str, required: bool, result: Result,
+                location: object, positive: bool = False) -> float | None:
+    value = record.get(key, '')
+    if value is None or value == '':
+        if required:
+            result.fail('CLIP_TIME', location, f'{key} 不能为空')
+        return None
+    try:
+        if type(value) not in (int, float):
+            raise ValueError('必须是 JSON 数值，不能是字符串或布尔值')
+        number = float(value)
+        if not math.isfinite(number) or number < 0 or (positive and number == 0):
+            raise ValueError('必须有限且非负；时长和区间终点须大于零')
+    except (ValueError, OverflowError) as exc:
+        result.fail('CLIP_TIME', location, f'{key}: {exc}')
+        return None
+    return number
+
+
+def same_time(first: float, second: float) -> bool:
+    # Absolute tolerance only: large timestamps must not hide large omissions.
+    return math.isclose(first, second, rel_tol=0, abs_tol=TIME_EPSILON)
+
+
+def interval_can_precede(first: tuple[float | None, float | None],
+                         second: tuple[float | None, float | None],
+                         gap: bool = False) -> bool:
+    """Can two positive, nonnegative intervals be disjoint in this order?
+
+    Missing endpoints remain unknown. A missing end is strictly after its
+    start, and a missing start is strictly before its end; it is not zero.
+    """
+    if first[1] is not None and second[0] is not None:
+        return first[1] < second[0] if gap else first[1] <= second[0] + TIME_EPSILON
+    lower = first[1] if first[1] is not None else (first[0] if first[0] is not None else 0)
+    upper = second[0] if second[0] is not None else (second[1] if second[1] is not None else math.inf)
+    return lower < upper
+
+
+def validate_clip_references(clip: dict, mode: str, directory: Path,
+                             gate: bool, result: Result, location: object) -> None:
+    references = clip.get('references', [])
+    if not isinstance(references, list):
+        result.fail('CLIP_SCHEMA', location, 'references 必须是数组')
+        return
+    labels = set()
+    ready_roles = set()
+    for index, reference in enumerate(references, 1):
+        item_location = f'{location}/references[{index}]'
+        if not isinstance(reference, dict):
+            result.fail('CLIP_SCHEMA', item_location, '参考条目必须是对象')
+            continue
+        label = clip_text(reference, 'label', gate, result, item_location, 'CLIP_REFERENCE')
+        role = clip_text(reference, 'role', gate, result, item_location, 'CLIP_REFERENCE')
+        file = clip_text(reference, 'file', gate, result, item_location, 'CLIP_REFERENCE')
+        if label:
+            if len(label.split()) != 1 or label in labels:
+                result.fail('CLIP_REFERENCE', item_location, 'label 必须是本 Clip 内唯一的单个标识')
+            labels.add(label)
+        if role and role not in REFERENCE_ROLES:
+            result.fail('CLIP_REFERENCE', item_location, f'未知参考用途: {role}')
+        if file:
+            target = require_file(directory, file, result, item_location)
+            image_role = role in REFERENCE_ROLES and role != 'audio'
+            if image_role and Path(file).suffix.lower() not in IMAGE_EXTENSIONS:
+                result.fail('CLIP_REFERENCE', item_location, '图像用途引用须使用图像文件扩展名；实际内容另行审查')
+            elif target is not None and label and role in REFERENCE_ROLES:
+                ready_roles.add(role)
+    if gate:
+        if mode == 'text_to_video' and references:
+            result.fail('CLIP_REFERENCE', location, 'text_to_video 的实际上传 references 必须为空；创作参考另存设计稿')
+        needed = {'first_frame'} if mode == 'first_frame' else (
+            {'first_frame', 'last_frame'} if mode == 'first_last_frames' else set())
+        if needed - ready_roles:
+            result.fail('CLIP_REFERENCE', location, f'{mode} 缺少实际输入用途: {sorted(needed - ready_roles)}')
+        if mode == 'reference_to_video' and not ready_roles.intersection(('identity', 'scene', 'style')):
+            result.fail('CLIP_REFERENCE', location, 'reference_to_video 须绑定至少一份身份/场景/风格图')
+
+
+def validate_clip_segments(clip: dict, duration: float | None, shots: dict[str, float | None],
+                           coverage: dict[str, list[tuple[float | None, float | None]]], gate: bool,
+                           result: Result, location: object) -> None:
+    segments = clip.get('segments', [])
+    if not isinstance(segments, list):
+        result.fail('CLIP_SCHEMA', location, 'segments 必须是数组')
+        return
+    if gate and not segments:
+        result.fail('CLIP_MAPPING', location, '每条 Clip 至少包含一个 Shot 区间')
+    end = 0.0
+    complete = True
+    preceding = []
+    for index, segment in enumerate(segments, 1):
+        item_location = f'{location}/segments[{index}]'
+        if not isinstance(segment, dict):
+            result.fail('CLIP_SCHEMA', item_location, '区间必须是对象')
+            complete = False
+            continue
+        shot = clip_text(segment, 'shot_id', gate, result, item_location, 'CLIP_MAPPING')
+        if shot and (not SHOT_ID.fullmatch(shot) or shot not in shots):
+            result.fail('CLIP_MAPPING', item_location, f'引用不在分镜表中的 Shot: {shot}')
+        values = [clip_number(segment, key, gate, result, item_location, positive=key.endswith('end_seconds'))
+                  for key in ('shot_start_seconds', 'shot_end_seconds', 'clip_start_seconds', 'clip_end_seconds')]
+        if any(value is None for value in values):
+            complete = False
+        shot_start, shot_end, clip_start, clip_end = values
+        shot_interval = shot_start is not None and shot_end is not None
+        clip_interval = clip_start is not None and clip_end is not None
+        if shot_interval and shot_end <= shot_start:
+            result.fail('CLIP_TIME', item_location, 'Shot 区间终点必须大于起点')
+            shot_interval = False
+        if clip_interval and clip_end <= clip_start:
+            result.fail('CLIP_TIME', item_location, 'Clip 区间终点必须大于起点')
+            clip_interval = False
+        if shot_interval and clip_interval and not same_time(shot_end - shot_start, clip_end - clip_start):
+            result.fail('CLIP_TIME', item_location, 'Shot 与 Clip 映射区间须等长；变速需另行设计')
+        # In a draft, gaps may still need filling, but known overlaps and bounds are invalid.
+        if clip_start is None or clip_end is None or clip_end > clip_start:
+            current = (clip_start, clip_end)
+            if any(not interval_can_precede(previous, current, gap=index - previous_index > 1)
+                   for previous_index, previous in preceding):
+                result.fail('CLIP_TIME', item_location, '已填端点与前段时间顺序冲突；缺失端点不能消除重叠')
+            preceding.append((index, current))
+        if clip_interval:
+            if clip_start < end - TIME_EPSILON or (gate and not same_time(clip_start, end)):
+                result.fail('CLIP_TIME', item_location, 'Clip 区间须按时间顺序衔接，不能重叠；就绪时不能漏段')
+            end = clip_end
+        if duration is not None and any(value is not None and value > duration + TIME_EPSILON
+                                        for value in (clip_start, clip_end)):
+            result.fail('CLIP_TIME', item_location, '区间超出 Clip 时长')
+        if shot in shots:
+            if shots[shot] is not None and any(value is not None and value > shots[shot] + TIME_EPSILON
+                                              for value in (shot_start, shot_end)):
+                result.fail('CLIP_MAPPING', item_location, f'区间超出 {shot} 计划时长')
+            if (shot_start is not None or shot_end is not None) and (
+                    shot_start is None or shot_end is None or shot_end > shot_start):
+                coverage[shot].append((shot_start, shot_end))
+    if gate and complete and duration is not None and not same_time(end, duration):
+        result.fail('CLIP_TIME', location, 'Clip 区间须完整覆盖 0 至 duration_seconds')
+
+
+def validate_clips(directory: Path, manifest: dict, shots: dict[str, float | None],
+                   gate: bool, result: Result) -> list[str]:
+    relative = manifest.get('clips_file', CLIP_FILE)
+    path = safe_path(directory, relative, result, directory / 'project.json')
+    if path is None or (not gate and not path.exists()):
+        return []
+    path = require_file(directory, relative, result, directory / 'project.json')
+    if path is None:
+        return []
+    content = read_text(path, result)
+    if content is None:
+        return []
+    try:
+        payload = json.loads(content, object_pairs_hook=_unique_json,
+                             parse_constant=lambda value: (_ for _ in ()).throw(ValueError(f'非法数值: {value}')))
+    except (ValueError, RecursionError) as exc:
+        result.fail('JSON', path, str(exc))
+        return []
+    if not isinstance(payload, dict):
+        result.fail('CLIP_SCHEMA', path, 'clips.json 顶层必须是对象')
+        return []
+    if type(payload.get('schema_version')) is not int or payload['schema_version'] != 1:
+        result.fail('CLIP_SCHEMA', path, 'Clip schema_version 必须是整数 1')
+    if payload.get('revision') != manifest['revision']:
+        result.fail('REVISION', path, 'Clip 台账 revision 必须匹配当前作品 revision')
+    clips = payload.get('clips')
+    if not isinstance(clips, list):
+        result.fail('CLIP_SCHEMA', path, 'clips 必须是数组')
+        return []
+    if gate and not clips:
+        result.fail('CLIP_SCHEMA', path, '就绪门禁至少需要一条 Clip')
+    identities = []
+    coverage = {shot: [] for shot in shots}
+    for index, clip in enumerate(clips, 1):
+        location = f'{path}/clips[{index}]'
+        if not isinstance(clip, dict):
+            result.fail('CLIP_SCHEMA', location, 'Clip 必须是对象')
+            continue
+        identity = clip_text(clip, 'clip_id', gate, result, location, 'CLIP_ID')
+        if identity:
+            if not CLIP_ID.fullmatch(identity):
+                result.fail('CLIP_ID', location, f'无效 Clip 编号: {identity}')
+            if identity in identities:
+                result.fail('DUPLICATE_CLIP', location, f'重复 Clip 编号: {identity}')
+            identities.append(identity)
+        duration = clip_number(clip, 'duration_seconds', gate, result, location, positive=True)
+        mode = clip_text(clip, 'entry_mode', gate, result, location)
+        if mode and mode not in ENTRY_MODES:
+            result.fail('CLIP_SCHEMA', location, f'未知 entry_mode: {mode}')
+        validate_clip_references(clip, mode, directory, gate, result, location)
+        validate_clip_segments(clip, duration, shots, coverage, gate, result, location)
+    for shot, intervals in coverage.items():
+        for index, current in enumerate(intervals):
+            if any((None in current or None in previous)
+                   and not interval_can_precede(previous, current)
+                   and not interval_can_precede(current, previous)
+                   for previous in intervals[:index]):
+                result.fail('CLIP_MAPPING', path, f'{shot} 已填端点确定重叠，不能靠缺失端点绕过检查')
+        completed_intervals = [(start, stop) for start, stop in intervals if start is not None and stop is not None]
+        if gate and not completed_intervals:
+            result.fail('CLIP_MAPPING', path, f'{shot} 没有任何 Clip 映射区间')
+        end = 0.0
+        for start, stop in sorted(completed_intervals):
+            if start < end - TIME_EPSILON or (gate and not same_time(start, end)):
+                result.fail('CLIP_MAPPING', path, f'{shot} 跨 Clip 覆盖重叠或漏段')
+            end = max(end, stop)
+        if gate and shots[shot] is not None and not same_time(end, shots[shot]):
+            result.fail('CLIP_MAPPING', path, f'{shot} 未完整覆盖计划时长 {shots[shot]} 秒')
+    return identities
 
 
 def validate_work(directory: Path, manifest: dict, phase: str, result: Result) -> None:
@@ -459,10 +711,12 @@ def validate_work(directory: Path, manifest: dict, phase: str, result: Result) -
                     result.fail('EMPTY', path, '就绪门槛要求必填文档正文非空白')
                 if gate and relative != '06_修改与验收.md' and PLACEHOLDER.search(content):
                     result.fail('PLACEHOLDER', path, '提示词就绪门禁不允许占位内容')
-    ids = validate_shots(directory, manifest, gate, result)
+    shots = validate_shots(directory, manifest, gate, result)
+    clips = manifest.get('prompt_layout', 'per_shot') == 'clips'
+    ids = validate_clips(directory, manifest, shots, gate, result) if clips else list(shots)
     if gate:
         sent = contents.get('04_生成提示词/本次发送.md', '')
-        validate_sent_prompts(sent, ids, directory / '04_生成提示词/本次发送.md', result)
+        validate_sent_prompts(sent, ids, directory / '04_生成提示词/本次发送.md', result, clips=clips)
     for key in ('generation', 'review'):
         validate_record(manifest, key, directory, result)
     if manifest['status'] == 'GENERATED' and manifest['scope'] != 'media':

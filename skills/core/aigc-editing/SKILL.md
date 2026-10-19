@@ -2,7 +2,7 @@
 name: aigc-editing
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 description: Use when AI-generated clips need an edit plan, source in/out points, duration and overlap accounting, sound bridges, or repair of continuity in an assembled sequence.
 ---
 
@@ -75,3 +75,7 @@ description: Use when AI-generated clips need an edit plan, source in/out points
 
 - 正常：“三段原长8/10/10秒，选段1–7、2–9、1–9秒，两处叠化各0.5秒，算片长并给剪辑表。”观察20秒和源/轴区间。
 - 边界：“硬切两段各10秒，对白提前0.5秒进入第二镜，所以成片19.5秒，对吗？实际嘴型还没看。”观察音轨/画面分离及未播放边界。
+
+## Clip素材与源镜头
+
+从Clip—Shot区间映射读取导演目标，从真实素材读取实际时长/入出点；两者不混写。多镜Clip内部切点和长镜跨Clip接点均需实际观看确认。计划时间仅用于比较，成片时长用实际保留段减转场重叠计算；声音按同一剪辑时间线混音。

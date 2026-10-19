@@ -2,7 +2,7 @@
 name: aigc-storyboard
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 description: Use when an AI video or comic needs a concrete shot count, shot-by-shot camera and performance design, tension progression, or continuity checks between planned shots.
 ---
 
@@ -15,6 +15,7 @@ description: Use when an AI video or comic needs a concrete shot count, shot-by-
 - 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`prompt-language.md`；详细镜头或混合稿按需读 `screenshot-analysis.md` 的截图1、2，借鉴电影技法读 `film-cases.md`。
 - 先消费剧本和调度；已有分镜只改受影响镜头，不强制回到 PRD。
+- 完整调度由 `aigc-blocking` 整合时，按共享 `director-dispatch.md` 输出所需镜头数、构图/裁切、切点与时间，不复制另一个互相冲突的调度版本；术语定义以 `shot-glossary.md` 为准。
 
 ## 最小输入与缺项
 
@@ -37,7 +38,7 @@ description: Use when an AI video or comic needs a concrete shot count, shot-by-
 
 原 CSV 表头保持：
 `shot_id,duration_seconds,scene_id,character_ids,description,dialogue,image_prompt,video_prompt,reference_files`。
-三要素可写在 description；张力、调度、入口/出口、切点、生成片段映射放配套 Markdown。
+三要素可写在 description；张力、完整调度、入口/出口与切点放配套 Markdown。新Clip流程使用独立clip_id与Shot区间映射，具体见项目 `spec/clip-contract.md`；每个Shot保留原叙事身份，不能因一次生成上限拆成多个假切镜。旧作品保持原契约。
 character_ids、reference_files 多项遵循原项目分隔规则；无真实素材不虚填路径。
 详细图片/视频正文交对应节点，不以“同上”完成必填内容。
 

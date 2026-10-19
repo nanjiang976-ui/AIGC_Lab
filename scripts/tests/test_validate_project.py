@@ -135,6 +135,8 @@ class ProjectValidationTests(unittest.TestCase):
         self.assertFalse(any('[READ]' in error for error in result.errors), result.errors)
 
     def test_real_template_can_be_filled_and_pass_prompt_gate(self):
+        # The real review template links to this project-level dependency.
+        (self.root / 'spec/持续迭代.md').write_text('持续迭代规则测试依赖。\n', encoding='utf-8')
         source = Path(__file__).resolve().parents[2] / '01_创作模板' / '作品模板'
         directory = self.root / '04_作品项目' / '001_真实模板填写'
         for relative in (*WORK_REQUIRED, '05_生成结果/README.md'):

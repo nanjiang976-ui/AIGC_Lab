@@ -1,0 +1,2 @@
+prompt_id,case_id,version,title,availability,source_type,canonical_path,original_media_path,usage_notes,media_validation
+STUDY-001-P01,STUDY-001,v001,调度与Shot截图可见摘录,部分可见文字_非完整原文,用户截图,案例/STUDY-001_四截图文字拆解/原始提示词摘录.md,案例/STUDY-001_四截图文字拆解/原始资料/,原文只存本案例;未知字不补造;新句式需参数化后入通用库,NOT_RUN

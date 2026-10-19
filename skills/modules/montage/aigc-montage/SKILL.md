@@ -3,7 +3,7 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 ---
 
 # 混剪与活动回顾
@@ -35,7 +35,7 @@ metadata:
 | 全部使用现有素材 | `aigc-script` 写编辑结构，`aigc-storyboard` 写选段，再 `aigc-editing` |
 | 不生成任何新画面 | 跳角色资产、人物调度、关键帧与视频生成节点；素材 ID 仍持续使用 |
 | 音轨、原声、J/L-cut | `aigc-audio` 记来源与声音跨接，不能让声音暗示错误现场关系 |
-| 素材确认存在缺口 | 先找同场原素材或提出补拍；用户批准生成装饰段才调用 `aigc-keyframes`、`aigc-video-prompts` |
+| 素材确认存在缺口 | 先找同场原素材或提出补拍；用户批准生成装饰段才调用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes` |
 | 交付 | `aigc-review` 核对剪辑表算术、事件关系、实际衔接与完整播放 |
 
 ## 专用创作判断

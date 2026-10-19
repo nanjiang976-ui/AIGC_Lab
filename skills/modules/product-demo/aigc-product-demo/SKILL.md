@@ -3,7 +3,7 @@ name: aigc-product-demo
 description: Use when creating software walkthroughs, app tutorials, product how-to videos, or screen demonstrations that must match real UI and reproducible actions.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
+  bundle_version: "1.1.0"
 ---
 
 # 产品功能演示
@@ -36,7 +36,7 @@ metadata:
 | 主要使用真实录屏 | `aigc-storyboard` → `aigc-audio`/`aigc-editing`，跳生成 UI、关键帧及视频生成 |
 | 需要指示框/放大或鼠标强调 | `aigc-visual-assets` 仅做叠加规范，不重新绘制实际控件 |
 | 实物装配或人手操作 | `aigc-blocking` 锁手部、部件、接触与方向；纯屏幕点击可并入分镜 |
-| 片头/包装需要生成 | 只对此段使用 `aigc-keyframes`、`aigc-video-prompts`，明确与真实演示分段 |
+| 片头/包装需要生成 | 只对此段使用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`；明确与真实演示分段 |
 | 交付 | `aigc-review` 逐步核对真实版本、可见状态与讲解，不以剪辑流畅替代功能验证 |
 
 ## 专用创作判断

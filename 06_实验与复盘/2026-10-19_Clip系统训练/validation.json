@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "bundle_version": "1.1.0",
+  "base_commit": "bdd2724940231a76c595afaefad01654592e8034",
+  "branch": "codex/aigc-clip-system",
+  "scope": "本地系统与文字行为，不是媒体结果",
+  "checks": [
+    {
+      "name": "structure",
+      "result": "PASS",
+      "evidence": "structure.txt"
+    },
+    {
+      "name": "bundle",
+      "result": "PASS",
+      "evidence": "bundle.json"
+    },
+    {
+      "name": "format",
+      "result": "PASS",
+      "evidence": "skill-format.json"
+    },
+    {
+      "name": "unit_tests",
+      "result": "PASS",
+      "evidence": "unittest.txt"
+    },
+    {
+      "name": "isolated_install",
+      "result": "PASS",
+      "evidence": "isolated-install-preview.json"
+    },
+    {
+      "name": "generated_mapping",
+      "result": "PASS",
+      "evidence": "generated-mapping-validation.json"
+    },
+    {
+      "name": "git_diff_check",
+      "result": "PASS",
+      "evidence": "diff-check.txt"
+    },
+    {
+      "name": "historical_works_and_experience_index_unchanged",
+      "result": "PASS"
+    }
+  ],
+  "counts": {
+    "skills": 22,
+    "unit_tests": 134,
+    "actual_text_requests": 9
+  },
+  "unperformed": [
+    "image_generation",
+    "video_generation",
+    "full_playback",
+    "user_media_acceptance",
+    "global_install_sync",
+    "merge",
+    "git_commit",
+    "remote_publish"
+  ],
+  "source_sha256": {
+    "scripts/validate_project.py": "b9ec294a695ae969035ddda94a2e24e62788f8bca538923115982eee9ceef7a3",
+    "scripts/tests/test_clip_validation.py": "b72ab99a1f66c4a1729ec3a6f3868987257f2f6f1f9918d9874efe1565909797",
+    "skills/catalog.json": "51fb363a4cebeb8ced124a666db190f0383674f700f1aefeb707c60b24f78539",
+    "skills/aigc-creator/references/reference-assets.md": "00483150466f464d1bd24382118ecaf4847a3d41c66798f9435888709372c2da",
+    "skills/aigc-creator/references/clip-prompts.md": "a4ab266f1870130b52f5d9f0bae1042022641003ad46b3161b70aa21e3427f22"
+  },
+  "status": "PASS"
+}

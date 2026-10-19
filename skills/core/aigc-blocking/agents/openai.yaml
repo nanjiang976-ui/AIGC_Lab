@@ -1,4 +1,6 @@
 interface:
-  display_name: "AIGC 场面调度"
-  short_description: "拆解复杂走位与道具交接，校核空间坐标、画面关系和实际动作衔接"
-  default_prompt: "请使用 $aigc-blocking 设计这场戏的空间布局、角色走位、道具交接与相机路径。"
+  display_name: "AIGC 完整镜头调度"
+  short_description: "把故事写成可执行的逐镜画面、空间、表演、台词、声音与精确计划时间"
+  default_prompt: "请使用 $aigc-blocking，把这场戏写成完整镜头调度，保留已有设定和台词。"
+policy:
+  allow_implicit_invocation: true

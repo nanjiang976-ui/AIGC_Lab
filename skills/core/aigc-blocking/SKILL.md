@@ -2,11 +2,11 @@
 name: aigc-blocking
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.0.1"
-description: Use when an AI video scene needs multi-character staging, walk paths, eyelines, camera-relative positions, prop transfers, or repair after actual action diverges from the plan.
+  bundle_version: "1.1.0"
+description: "把故事或场景写成完整镜头调度，或局部设计人物走位、视线、道具交接与相机路径；用户说写调度即可，后台补齐分镜、声音和时间，不要求记六维字段。"
 ---
 
-# 场面调度与空间连续性
+# 完整镜头调度与空间连续性
 
 把人物目的、走位、接触和摄影机路径放在同一空间中；动作复杂时补清因果，不只删减动作。
 
@@ -14,7 +14,7 @@ description: Use when an AI video scene needs multi-character staging, walk path
 
 - 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`；混合调度稿或移动机位按需读 `screenshot-analysis.md` 的截图2、3，连续观看设计读 `film-cases.md`。
-- 本节点决定真实空间里的行为与可达路径；景别、镜头数和剪辑分配交 `aigc-storyboard`。
+- 完整调度请求读取共享 `director-dispatch.md`，后台协同 `aigc-storyboard` 决定镜头数/观看方式，协同 `aigc-audio` 写声源/对白/节拍，再由本入口整合成一份完整调度。局部走位请求只执行所需范围，不让用户在三个节点之间搬运材料。
 
 ## 最小输入与缺项
 
@@ -45,6 +45,10 @@ description: Use when an AI video scene needs multi-character staging, walk path
 7. 与真实结果比对。计划坐着而实际站起时，选择承接站姿或明确修复上镜，不能下镜自动坐回。
 
 ## 输出
+
+完整调度必须按共享 `director-dispatch.md` 交付六维与逐镜必填内容：物理事实、空间、台词、情绪动作链、同步声音和精确计划时间；逐镜前景/背景物体、虚实焦、方位与声源、主体、机位、景别裁切、详细动作及其音效均可定位。没有前景独立物体或音源时如实写无/不适用，不凭空添加。开始给明确镜头数及理由，结束给入口/出口/切点与相邻镜头连续性。
+
+下列空间表是完整调度的后端资料；用户只要求走位时可以单独交付。
 
 - 空间示意：地标、轴线、相机区域和障碍；ASCII/文字即可，画图不能代替解释。
 - 调度表：节拍、角色起止、身体/视线、双手/道具、触发、并行关系、摄影机路径。
