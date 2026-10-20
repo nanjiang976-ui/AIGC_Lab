@@ -54,5 +54,19 @@
     "global_install_sync",
     "LibTV_derived_bundle_sync"
   ],
-  "github_browser_verification": "pending_after_publication"
+  "github_browser_verification": {
+    "content_commit_seen": "ce29da5beae7ac741e3bc780337344a97ef296e2",
+    "readme_version_seen": "1.4.1",
+    "startup_template_new_fields_seen": true,
+    "type_headings_seen": 9,
+    "narrative_steps_rendered": true,
+    "montage_navigation_and_details_expansion": true,
+    "all_details_expanded": false
+  },
+  "main_structure_after_merge": {
+    "passed": true,
+    "work_count": 4
+  },
+  "preserved_untracked_files_sha256": 977,
+  "preserved_local_index_files": 2
 }
