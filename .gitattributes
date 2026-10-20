@@ -11,3 +11,6 @@
 # Preserve the verified v001 snapshot bytes and its recorded SHA-256 hashes.
 04_作品项目/WORK-001_雨夜送伞/历史/v001/** -text
 04_作品项目/WORK-003_先做一小步/历史/v001/** -text
+
+# Preserve the retired skill package bytes recorded in its SHA-256 manifest.
+06_实验与复盘/Skill停用备份/2026-10-20_aigc-review/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

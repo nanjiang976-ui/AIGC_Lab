@@ -3,7 +3,7 @@ name: aigc-explainer
 description: Use when creating AI educational explainers, science animations, mechanism demonstrations, or concept videos requiring claim accuracy and bounded analogies.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 科普与知识解释
@@ -11,6 +11,10 @@ metadata:
 围绕一个观众能回答的问题组织解释，保证画面关系与所讲机制相符。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 抽象图形或实体解剖需复现 | `aigc-visual-assets` 锁颜色含义、结构与尺度；无人物不做角色三视图 |
 | 图元迁移、空间遮挡或多对象交换 | `aigc-blocking` 记录关系；静态图解可并入 `aigc-storyboard` |
 | 关键结构必须精确 | `aigc-keyframes` 校对结构，再由 `aigc-video-prompts` 描述变化 |
-| 解说与图解同步 | `aigc-audio`、`aigc-editing`；用实际配音核对节奏，再 `aigc-review` |
+| 解说与图解同步 | `aigc-audio`、`aigc-editing`写同步方案；用户在LibTV核对实际节奏并反馈 |
 
 ## 专用创作判断
 

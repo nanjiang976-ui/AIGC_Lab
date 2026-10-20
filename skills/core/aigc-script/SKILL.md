@@ -2,13 +2,17 @@
 name: aigc-script
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 description: Use when an AI video or comic needs a story script, scene beats, concise dialogue, or revision of dramatic cause and effect before detailed storyboarding.
 ---
 
 # 剧情与表演脚本
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 把日常表达变成能演出的行动与信息变化；解决故事因果和对白，详细机位由分镜节点继续完成。
 

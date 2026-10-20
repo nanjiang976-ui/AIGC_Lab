@@ -2,13 +2,17 @@
 name: aigc-iteration
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 description: Use when reviewing an AI-video creation or study case, recording reusable findings, comparing a revision against evidence, or maintaining this project's custom skills after validated behavior tests.
 ---
 
 # 创作复盘与持续迭代
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 接受“总结这次哪里有效”“把这条拉片经验用于下次”“这个问题反复出现，改进规则”等自然表达。包装项目现有经验循环，沿用其编号、版本和状态；不另建一套评价体系。
 

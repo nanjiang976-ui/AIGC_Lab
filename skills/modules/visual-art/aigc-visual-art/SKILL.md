@@ -3,7 +3,7 @@ name: aigc-visual-art
 description: Use when planning AI visual art, abstract motion, ambient scenes, non-narrative clips, or seamless-loop targets without requiring characters or plot.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 视觉艺术与氛围影像
@@ -11,6 +11,10 @@ metadata:
 用受控的形状、光、材质和运动产生观看体验；没有故事或人物也能形成完整作品。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -39,7 +43,7 @@ metadata:
 | 无复杂物体接触 | 跳独立 `aigc-blocking`；多物体相遇、遮挡或运动路径冲突时再用 |
 | 单镜或多段变化 | `aigc-storyboard` 给持续变化与时长理由，不强行拆成多个镜头 |
 | 对起止状态有要求 | `aigc-keyframes` 设计关键状态，`aigc-video-prompts` 写运动规则 |
-| 有声音/要成片 | 按需 `aigc-audio`，然后 `aigc-editing`、`aigc-review`；静音作品可跳音轨制作 |
+| 有声音/要成片 | 按需`aigc-audio`及`aigc-editing`；用户在LibTV确认循环与声音，静音作品可跳音轨制作 |
 
 ## 专用创作判断
 

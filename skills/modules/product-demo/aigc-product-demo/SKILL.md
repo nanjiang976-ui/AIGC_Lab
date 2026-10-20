@@ -3,7 +3,7 @@ name: aigc-product-demo
 description: Use when creating software walkthroughs, app tutorials, product how-to videos, or screen demonstrations that must match real UI and reproducible actions.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 产品功能演示
@@ -11,6 +11,10 @@ metadata:
 用真实步骤证明用户能完成什么，确保视频里的操作能在目标产品环境复现。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -39,7 +43,7 @@ metadata:
 | 需要指示框/放大或鼠标强调 | `aigc-visual-assets` 仅做叠加规范，不重新绘制实际控件 |
 | 实物装配或人手操作 | `aigc-blocking` 锁手部、部件、接触与方向；纯屏幕点击可并入分镜 |
 | 片头/包装需要生成 | 只对此段使用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`；明确与真实演示分段 |
-| 交付 | `aigc-review` 逐步核对真实版本、可见状态与讲解，不以剪辑流畅替代功能验证 |
+| 交付 | Codex核对文字步骤与已提供版本资料；用户在LibTV逐步检查画面、状态与讲解，功能验证仍需真实操作证据 |
 
 ## 专用创作判断
 

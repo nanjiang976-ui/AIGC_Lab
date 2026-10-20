@@ -3,7 +3,7 @@ name: aigc-music
 description: Use when planning music-driven AI videos, music visualizers, MV sequences, beat-synchronized imagery, or audiovisual edits tied to a supplied track.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 音乐驱动影像
@@ -11,6 +11,10 @@ metadata:
 让视觉服从实际音乐结构；拍数换算给计划网格，实际音轨决定同步位置。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 抽象动效无人物 | `aigc-visual-assets` 建形状/材质母版，跳角色三视图与人物关系脚本 |
 | 舞蹈、人物或物体节奏运动 | `aigc-blocking` 写动作相位与可执行幅度，再 `aigc-storyboard` |
 | 需要生成段落 | 按控制需要选 `aigc-keyframes` → `aigc-video-prompts`；已有素材可直接剪辑 |
-| 精确同步和整段播放 | `aigc-editing` 以音轨时间轴校准，`aigc-review` 检查节奏与接点 |
+| 精确同步和整段播放 | `aigc-editing`依据音轨时间轴或用户报告写校准方案，用户在LibTV检查实际节奏与接点 |
 
 ## 专用创作判断
 

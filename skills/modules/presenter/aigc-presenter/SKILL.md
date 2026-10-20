@@ -3,7 +3,7 @@ name: aigc-presenter
 description: Use when planning AI presenter, avatar, host, talking-head, or digital-human videos where speech delivery, gesture timing, and lip-sync are central.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 主持人与数字人口播
@@ -11,6 +11,10 @@ metadata:
 先让话说得自然、重点听得清楚，再用克制动作服务表达。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -39,7 +43,7 @@ metadata:
 | 坐姿固定、无复杂互动 | 调度可在 `aigc-storyboard` 内写清手势/视线，不单独展开 `aigc-blocking` |
 | 走位、持物或与屏幕互动 | `aigc-blocking` 锁定轨迹与指向，再做分镜 |
 | 静态驱动或视频生成 | 按平台条件选 `aigc-keyframes`、`aigc-video-prompts`，已有完整实拍可跳生成 |
-| 字幕、插图、口型验收 | `aigc-editing` → `aigc-review`；只交文本不宣称配音、口型已验证 |
+| 字幕、插图、口型验收 | `aigc-editing`写方案，用户在LibTV观看试听；只交文本不宣称配音、口型已验证 |
 
 ## 专用创作判断
 

@@ -92,15 +92,6 @@
       ]
     },
     {
-      "name": "aigc-review",
-      "path": "skills/core/aigc-review",
-      "group": "core",
-      "title": "连续性与交付审查",
-      "dependencies": [
-        "aigc-creator"
-      ]
-    },
-    {
       "name": "aigc-narrative",
       "path": "skills/modules/narrative/aigc-narrative",
       "group": "module",
@@ -116,8 +107,7 @@
         "aigc-keyframes",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -135,8 +125,7 @@
         "aigc-keyframes",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -154,8 +143,7 @@
         "aigc-keyframes",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -172,8 +160,7 @@
         "aigc-storyboard",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -190,8 +177,7 @@
         "aigc-storyboard",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -209,8 +195,7 @@
         "aigc-keyframes",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -226,8 +211,7 @@
         "aigc-storyboard",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -244,8 +228,7 @@
         "aigc-keyframes",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -261,8 +244,7 @@
         "aigc-storyboard",
         "aigc-video-prompts",
         "aigc-audio",
-        "aigc-editing",
-        "aigc-review"
+        "aigc-editing"
       ]
     },
     {
@@ -284,6 +266,6 @@
       ]
     }
   ],
-  "bundle_version": "1.1.1",
+  "bundle_version": "1.2.0",
   "invocation_registry": "skills/aigc-creator/references/invocations.json"
 }

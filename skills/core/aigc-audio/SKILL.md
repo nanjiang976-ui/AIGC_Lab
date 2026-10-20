@@ -2,13 +2,17 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 description: Use when an AI video needs dialogue timing, voice direction, sound events, music placement, or a lip-sync plan before or after visual generation.
 ---
 
 # 声音、试读与口型
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 声音从脚本阶段参与时长设计，再按真实画面完成同步；不能到剪辑末尾才发现对白装不下。
 
@@ -34,7 +38,11 @@ description: Use when an AI video needs dialogue timing, voice direction, sound 
 5. 发声时点绑定事件，例如戒指第一次接触地砖；生成后以实际帧对齐，不能机械套计划秒数。
 6. 设计声音先入或延续时说明来源与目的；跨切点尾音不是第二次落物，也不是画面转场重叠。
 7. 安排对白清晰度与底噪/音乐相对层次；音量数值若无测量只作混音目标。
-8. 播放检查整句、停顿、爆音、截断、声线连续、口型和画面事件；静态波形或文件存在不足以通过。
+8. 由用户在LibTV试听整句并观看口型，反馈停顿、爆音、截断、声线连续和画面事件；Codex依据反馈修改声音计划、台词节拍或口型方案，文件存在与文字自检不代替用户验收。
+
+## 平台原生声音与独立调用
+
+当前模型和入口已核验支持原生音频时，将逐字台词、声源、表演、节拍和声音层次交给 video-prompts，直接编入同一次视频生成；不默认另做配音或混音。完整调度中已完成这些内容时后台复用，用户无需再走一次声音节点。需要单独设计/修改声音、排查台词或口型，或原生结果未达要求时，本入口仍可独立调用。写入提示词与开启音频开关不代替实际试听、原词和同步检查。
 
 ## 口型与生成能力分支
 
@@ -45,7 +53,7 @@ description: Use when an AI video needs dialogue timing, voice direction, sound 
 | 不支持两者 | 提出反应镜头/画外音/遮挡等可剪辑方案，或选择其他工具 | 不能暗把用户要求的正面说话改掉 |
 | 只要求文字包 | 给对白正文、表演说明和执行计划 | 音频生成、真实时长和口型均 NOT_RUN |
 
-把对白盖在嘴部可见画面上不等于完成口型；语音文件生成成功也不等于镜头时长合格。
+把对白盖在嘴部可见画面上不等于完成口型；实际同步与时长由用户在LibTV观看试听后确认，Codex不默认要求回传复审。
 
 ## 已填短例
 

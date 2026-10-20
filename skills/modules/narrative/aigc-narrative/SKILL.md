@@ -3,7 +3,7 @@ name: aigc-narrative
 description: Use when planning or revising narrative AI shorts, character-driven scenes, AI comics, dramatic causality, tension, or multi-character performance continuity.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 剧情与 AI 漫剧
@@ -11,6 +11,10 @@ metadata:
 用人物的可见选择推动事件变化；风格、画幅和模型不替代戏剧目的。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 多人互动、跨轴、交接道具 | `aigc-blocking` 先锁世界位置、接触点和可见动作，再到 `aigc-storyboard` |
 | 单人静态短对白 | 调度可压缩为分镜内的站位/视线记录，不另造完整空间表 |
 | 完整多镜头文字包 | `aigc-visual-assets`参考资产 → `aigc-blocking`完整调度（协同分镜/声音）→ `aigc-video-prompts`编译Clip；身份参考可直接进入Clip，只有首帧/首尾帧入口或明确端点控制才调用`aigc-keyframes`；缺所需图保留草案，明确纯文生或单节点按范围裁剪 |
-| 对白、环境声、成片 | `aigc-audio` → `aigc-editing` → `aigc-review`；只交文字时不生成或播放 |
+| 对白、环境声、成片 | `aigc-audio` → `aigc-editing`；用户在LibTV观看和试听验收，Codex按反馈调整文字 |
 
 ## 专用创作判断
 

@@ -80,11 +80,11 @@
 
 generation=PASS 时记录 tool、model、generated_at、revision 和非空 evidence 列表；review=PASS 时记录 reviewer、reviewed_at、revision 和 evidence。时间使用 ISO 格式（如 `2026-09-28T15:30:00+08:00`）。证据文件必须真实存在且非空。
 
-generation.evidence 应指向实际生成资产及生成记录，review.evidence 应指向有检查结论的验收记录。审查人可以是实际执行检查的 Agent 或用户，但必须如实记录身份；不要把 Agent 复查写成用户验收。证据记录包含文件位置、检查项、实际结果与残留问题。
+generation.evidence 应指向实际生成资产及生成记录，review.evidence 应指向有检查结论的验收记录。文字自检可记录Codex，实际媒体观看验收记录用户及其确认来源；用户未反馈时保持待验收，不把Codex文字自检写成媒体通过。证据记录包含文件位置、检查项、实际结果与残留问题。
 
 修改已准备/已验收的具体内容时，先保留旧文件或 Git 版本，递增 revision；将 status 改回 DRAFT，把对应 generation/review 重置为 NOT_RUN，并将历史结果移到修改记录中。历史版本可单独归档，不删除历史媒体。
 
-当前校验器校验“声明的版本相符”和证据路径存在，不验证媒体真实性，也不能发现人为遗漏的版本递增。审查时须同时查看 Git 差异、实际提示词和媒体，避免旧结果被误用。
+当前校验器校验“声明的版本相符”和证据路径存在，不验证媒体真实性，也不能发现人为遗漏的版本递增。Codex自检Git差异与实际提示词，用户在LibTV检查媒体并反馈版本和状态，避免旧结果被误用。
 
 ## 检查分层
 

@@ -3,7 +3,7 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 混剪与活动回顾
@@ -11,6 +11,10 @@ metadata:
 先知道手里有什么，再决定怎样连起来；剪辑节奏不能替代素材事实。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 不生成任何新画面 | 跳角色资产、人物调度、关键帧与视频生成节点；素材 ID 仍持续使用 |
 | 音轨、原声、J/L-cut | `aigc-audio` 记来源与声音跨接，不能让声音暗示错误现场关系 |
 | 素材确认存在缺口 | 先找同场原素材或提出补拍；用户批准生成装饰段才调用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes` |
-| 交付 | `aigc-review` 核对剪辑表算术、事件关系、实际衔接与完整播放 |
+| 交付 | Codex自检剪辑表算术与事件描述；用户在LibTV观看实际衔接及完整成片并反馈 |
 
 ## 专用创作判断
 

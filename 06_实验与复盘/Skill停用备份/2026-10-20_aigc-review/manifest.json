@@ -1,0 +1,22 @@
+{
+  "status": "retired",
+  "retired_at": "2026-10-20",
+  "reason": "用户在LibTV完成媒体验收，移除独立审查Skill",
+  "files": [
+    {
+      "source": "skills/core/aigc-review/SKILL.md",
+      "archived": "SKILL.md.txt",
+      "sha256": "F6DC084B8A84D9A3312EF4E250B3B5206EA2732CD3D97122D5778F661BB7CB40"
+    },
+    {
+      "source": "skills/core/aigc-review/references/usage.md",
+      "archived": "references/usage.md.txt",
+      "sha256": "B718E05775562F114356B84C161864CFCC2B2811F42F16C1419FDD130DDC4E5F"
+    },
+    {
+      "source": "skills/core/aigc-review/agents/openai.yaml",
+      "archived": "agents/openai.yaml.txt",
+      "sha256": "843A5F46207A8E13B6CBEEB9ECC5D0A3BF660DE99C10AC0568EB7B3613A6EC32"
+    }
+  ]
+}

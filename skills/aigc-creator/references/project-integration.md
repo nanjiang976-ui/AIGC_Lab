@@ -51,7 +51,7 @@ python -X utf8 scripts/validate_project.py --work "04_作品项目/WORK-001_实�
 python -X utf8 scripts/validate_project.py --work "04_作品项目/WORK-001_实际名称" --phase delivery
 ```
 
-仅准备草稿时运行结构检查并说明未到 prompts/delivery 阶段。有文字交付需做内容复核，媒体交付还需真实生成证据、播放/视觉检查。检查失败保留准确状态，不能填造用户审核人或虚假证据来通过。脚本检查Clip区间/引用/发送结构，不判断调度内容与媒体真实性；连续性和剪辑台账仍逐项人工/Agent复查。
+仅准备草稿时运行结构检查并说明未到 prompts/delivery 阶段。有文字交付需做内容复核，媒体交付还需真实生成证据与用户在LibTV观看/试听后的确认记录。检查失败保留准确状态，不能填造用户审核人或虚假证据来通过。脚本检查Clip区间/引用/发送结构，不判断调度内容与媒体真实性；连续性和剪辑的文字/区间由Codex自检，实际媒体由用户在LibTV检查并反馈。
 
 仓库 `skills/catalog.json` 是全套分发清单：`skills/aigc-creator/` 为总控，`skills/core/` 为共享节点，`skills/modules/` 为分类模块。安装时各包按唯一skill名平铺到用户级技能目录，包内 references/assets 保持原相对位置；共享资料由叶节点通过总控的实际发现路径读取，不使用跨包相对链接。
 

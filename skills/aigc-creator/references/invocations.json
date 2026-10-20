@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "bundle_version": "1.1.1",
+  "bundle_version": "1.2.0",
   "skills": [
     {
       "name": "aigc-creator",
@@ -105,17 +105,6 @@
         "设计转场",
         "安排剪辑",
         "核算片长"
-      ],
-      "usage": "references/usage.md"
-    },
-    {
-      "name": "aigc-review",
-      "aliases": [
-        "检查生成结果",
-        "审查提示词",
-        "连续性审查",
-        "审查文字包",
-        "检查实际衔接"
       ],
       "usage": "references/usage.md"
     },

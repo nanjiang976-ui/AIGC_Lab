@@ -99,7 +99,7 @@
 <rect x="440.0" y="1090.0" width="320" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
 <tspan x="600" y="1123">剪辑、混音</tspan>
-<tspan x="600" y="1151">整片播放验收</tspan>
+<tspan x="600" y="1151">用户播放验收</tspan>
 </text>
 </g>
 <g id="node-M">

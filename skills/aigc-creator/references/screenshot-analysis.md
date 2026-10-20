@@ -16,7 +16,7 @@
 
 需要检查：中近景是否足以看清闪避和踉跄，激烈手持是否妨碍看懂动作；0.3秒是创作节拍目标，实际实现需生成/剪辑验证。不能仅因“术语专业”就判为可执行。
 
-用于：`aigc-storyboard` 的镜头条目，`aigc-video-prompts` 的动态分层，`aigc-audio` 的声音事件，`aigc-review` 的时长/画面可见性检查。
+用于：`aigc-storyboard` 的镜头条目，`aigc-video-prompts` 的动态分层，`aigc-audio` 的声音事件，各创作节点的时长与画面可见性文字自检。
 
 ## 截图2：把对白落到空间与表演
 

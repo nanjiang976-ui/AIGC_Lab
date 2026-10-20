@@ -2,13 +2,17 @@
 name: aigc-keyframes
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 description: Use when an AI image or video needs a shot's static first frame, endpoint image, or revised keyframe based on a verified previous result.
 ---
 
 # 静态关键帧
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 从完整镜头中截出一个确定瞬间；动态过程保留给视频节点，不能压进一张图片。
 

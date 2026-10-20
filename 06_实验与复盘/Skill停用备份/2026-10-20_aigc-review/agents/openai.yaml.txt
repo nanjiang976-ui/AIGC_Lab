@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC 审查修复"
+  short_description: "分层检查文字与真实媒体，输出可修复问题、责任节点和明确证据范围"
+  default_prompt: "请使用 $aigc-review 审查当前制作包，区分事实、风险和审美建议，给出责任节点与最小修复。"

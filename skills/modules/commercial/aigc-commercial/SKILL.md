@@ -3,7 +3,7 @@ name: aigc-commercial
 description: Use when planning AI product advertisements, brand films, campaign videos, product beauty shots, or evidence-sensitive promotional claims.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 商业广告与品牌短片
@@ -11,6 +11,10 @@ metadata:
 先确定观众需要记住或采取的行动，再让每项产品主张对应证据和镜头。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 真实产品复现 | `aigc-visual-assets` 锁型号、轮廓、材质、颜色、Logo 与参考角度 |
 | 人手使用或拆装 | `aigc-blocking` 检查持握、接触、开合、受力；静物旋转可直接进 `aigc-storyboard` |
 | 外观可控性重要 | `aigc-keyframes` 校对再到 `aigc-video-prompts`；已有批准镜头则不重建 |
-| 旁白、字幕与转化信息 | `aigc-audio`、`aigc-editing`、`aigc-review`；无口播可跳配音，但仍检查实际音轨 |
+| 旁白、字幕与转化信息 | `aigc-audio`、`aigc-editing`；无口播可跳配音，实际音轨与画面可读性由用户在LibTV确认 |
 
 ## 专用创作判断
 

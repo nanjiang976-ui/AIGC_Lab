@@ -12,47 +12,69 @@
 1. **视觉资产**：制作角色/物体与场景参考。角色四格板负责身份锚定，本场服装在每条Clip中独立定义；场景图锁定空间与风格。
 2. **镜头调度**：把每个镜头看见和听见的内容写全，交代前后景、相机、动作、台词、声音和精确计划节拍。
 3. **Clip编译**：将调度打包为一次生成所需的完整提示词。一条Clip可含一镜或多镜；连续长镜也可分段生成，保留源Shot关系。
-4. **视频生成**：按实际模型入口绑定参考资产，首帧/首尾帧是按需要启用的支路；检查真实结果，再接后段。
-5. **后期整合**：按实际可用入出点剪辑，调整BGM、对白和音效，完成混音与整片播放验收。
+4. **视频生成**：按实际模型入口绑定参考资产，首帧/首尾帧是按需要启用的支路；用户在LibTV检查并反馈真实结果，再按反馈接后段。
+5. **后期整合**：按实际可用入出点剪辑，调整BGM、对白和音效，安排混音，由用户在LibTV完成整片播放验收。
 
 独立生成通常不会自动读取项目台账，参考图构图可能影响输出，否定表达也因模型而异。Clip体系通过自足状态、身份/机位分离、正向正文与平台约束适配来应对这些风险，不把它们写成所有模型都相同的缺陷。详细规则见[Clip编译](skills/aigc-creator/references/clip-prompts.md)与[模型适配](skills/aigc-creator/references/model-adaptation.md)。
 
 **常用入口：**[参考图制作](skills/core/aigc-visual-assets/SKILL.md) · [完整镜头调度](skills/core/aigc-blocking/SKILL.md) · [调度转Clip](skills/core/aigc-video-prompts/SKILL.md) · [四格人物设定表转换提示词](02_提示词库/成熟提示词资产/README.md) · [镜头术语复习](03_参考素材与风格/镜头术语库.md) · [视频拉片复刻库](03_参考素材与风格/视频拉片复刻/README.md)。
 
-当前套件为1.1.1，共 **1个总控 + 12个共享节点 + 9个类型模块**；每个Skill均有个人调用模板和使用方法。本轮修订与识别验证见[个人模板记录](spec/plans/2026-10-19-个人调用模板与README修订.md)，原系统实际输出与边界见[1.1.0训练与验收](06_实验与复盘/2026-10-19_Clip系统训练/README.md)。历史1.0套件的31例文字训练和101项测试见[旧版训练记录](06_实验与复盘/2026-10-16_Skill链训练/README.md)，它们不是新版本或媒体效果的证据。用户级安装与项目源文件分开同步。
+当前套件为1.2.0，共 **1个总控 + 11个共享节点 + 9个类型模块**；每个Skill均有个人调用模板和使用方法。本轮移除独立审查节点并改由用户在LibTV验收，见[移除与验证记录](skills/aigc-creator/references/review-removal-validation.md)；1.1.2的结尾衔接、分组及行为范围见[本轮验证](skills/aigc-creator/references/next-step-validation.md)；1.1.1的调用模板与识别验证见[个人模板记录](spec/plans/2026-10-19-个人调用模板与README修订.md)，1.1.0系统实际输出与边界见[训练与验收](06_实验与复盘/2026-10-19_Clip系统训练/README.md)。历史1.0套件的31例文字训练和101项测试见[旧版训练记录](06_实验与复盘/2026-10-16_Skill链训练/README.md)，它们不是新版本或媒体效果的证据。用户级安装与项目源文件分开同步。
+
+## 用户在LibTV完成媒体验收
+
+实际图片、视频、声音和成片由用户在LibTV观看、试听并选择；用户反馈“已选用”或具体偏差后，Codex直接继续对应的调度、Clip、声音或剪辑修改，不设置独立审查节点，不要求先上传媒体供Codex复审。Codex仍负责提示词、台词、时间与引用的文字自检；用户反馈、真实标签和未知项分别记录，不虚构素材或验收通过。
 
 ## 我的 Skill 调用模板
 
-日常直接从下表选择要做的事，打开对应的“模板与用法”，复制其中的调用模板发给 Codex；把括号中的资料换成你本轮内容即可。每份都附有完整示例、所需输入、交付内容和下一步。
+先选“现在要做哪一步”，再按需要指定作品类型。**通用节点决定这一步做什么，类型模块决定这类作品重点检查什么。** 真人／2D／3D、横竖屏和文生／图生是独立表达约束，不另复制一套 Skill。catalog 的依赖表示配套可用，不表示每个作品都要顺序走完21项。
 
-模板第一行带有明确的 `$skill-name`，后台可据此定位对应 Skill；常用中文口令也有统一索引。自然说法不必完全照抄，多个步骤或意思不明确时由总控判断当前节点。**这些模板发给 Codex；真正发给图片/视频模型的正文，由相应 Skill 完整展开。**
+下面的例句发给 Codex；打开对应“模板与用法”可复制完整模板。模板第一行的 `$skill-name` 明确指定入口，后台沿用当前项目同版本源码。真正交给图片、视频或剪辑平台的正文由节点展开，上传和参数另列。
 
-| 我现在要做什么 | 模板与使用方法 | 最短调用示例 |
+### 通用能力：总控与共享节点
+
+| 现在要做什么 | 模板与用法 | 可以直接这样说 |
 |---|---|---|
-| 全链路创作总控 | [aigc-creator](skills/aigc-creator/references/usage.md) | 全链路创作：…… |
-| 需求访谈与PRD | [aigc-prd](skills/core/aigc-prd/references/usage.md) | 完善创作需求：…… |
-| 剧情与信息脚本 | [aigc-script](skills/core/aigc-script/references/usage.md) | 写剧情脚本：…… |
-| 参考图与视觉资产 | [aigc-visual-assets](skills/core/aigc-visual-assets/references/usage.md) | 角色参考图：…… |
-| 完整镜头调度 | [aigc-blocking](skills/core/aigc-blocking/references/usage.md) | 写完整镜头调度：…… |
-| 分镜设计 | [aigc-storyboard](skills/core/aigc-storyboard/references/usage.md) | 写分镜：…… |
-| 首帧与关键帧 | [aigc-keyframes](skills/core/aigc-keyframes/references/usage.md) | 制作首帧：…… |
-| 调度转Clip提示词 | [aigc-video-prompts](skills/core/aigc-video-prompts/references/usage.md) | 调度转Clip：…… |
-| 声音与对白表演 | [aigc-audio](skills/core/aigc-audio/references/usage.md) | 设计声音：…… |
-| 剪辑与后期 | [aigc-editing](skills/core/aigc-editing/references/usage.md) | 整理剪辑方案：…… |
-| 连续性与交付审查 | [aigc-review](skills/core/aigc-review/references/usage.md) | 检查生成结果：…… |
-| 剧情短片与AI漫剧 | [aigc-narrative](skills/modules/narrative/aigc-narrative/references/usage.md) | 剧情短片：…… |
-| 广告与品牌宣传 | [aigc-commercial](skills/modules/commercial/aigc-commercial/references/usage.md) | 产品广告：…… |
-| 科普与知识讲解 | [aigc-explainer](skills/modules/explainer/aigc-explainer/references/usage.md) | 科普讲解：…… |
-| 数字人与口播 | [aigc-presenter](skills/modules/presenter/aigc-presenter/references/usage.md) | 数字人口播：…… |
-| 纪实与历史情景重建 | [aigc-documentary](skills/modules/documentary/aigc-documentary/references/usage.md) | 纪实短片：…… |
-| 音乐MV与节拍视觉 | [aigc-music](skills/modules/music/aigc-music/references/usage.md) | 音乐MV：…… |
-| 产品与操作演示 | [aigc-product-demo](skills/modules/product-demo/aigc-product-demo/references/usage.md) | 产品操作演示：…… |
-| 氛围艺术与循环影像 | [aigc-visual-art](skills/modules/visual-art/aigc-visual-art/references/usage.md) | 氛围艺术：…… |
-| 混剪、预告与活动回顾 | [aigc-montage](skills/modules/montage/aigc-montage/references/usage.md) | 已有素材混剪：…… |
-| 视频拉片与复刻 | [aigc-shot-study](skills/core/aigc-shot-study/references/usage.md) | 视频拉片：…… |
-| 创作复盘与持续迭代 | [aigc-iteration](skills/core/aigc-iteration/references/usage.md) | 复盘创作：…… |
+| 总控选路 | [aigc-creator](skills/aigc-creator/references/usage.md) | 我想做一部30秒短片，已有角色但没有故事，请判断从哪步开始；只做文字。 |
+| 完善需求 | [aigc-prd](skills/core/aigc-prd/references/usage.md) | 把“雨夜归还一把伞”完善成可制作的需求，每次只问一个关键问题。 |
+| 写故事与信息脚本 | [aigc-script](skills/core/aigc-script/references/usage.md) | 把两位朋友归还雨伞后和解的故事写成20秒脚本，结尾保持克制。 |
+| 做参考资产 | [aigc-visual-assets](skills/core/aigc-visual-assets/references/usage.md) | 新建短发女性的四格角色参考图提示词，灰色外套，人物右脸有一颗痣。 |
+| 写完整镜头调度 | [aigc-blocking](skills/core/aigc-blocking/references/usage.md) | 把上述归伞脚本写成完整调度，一起设计相机、动作、画面、声音和节拍。 |
+| 单独改分镜 | [aigc-storyboard](skills/core/aigc-storyboard/references/usage.md) | 保留剧情与台词，只比较3镜和5镜的景别、信息递进与切点。 |
+| 制作静态首帧／关键帧 | [aigc-keyframes](skills/core/aigc-keyframes/references/usage.md) | 为递伞之前写静态首帧提示词，双手尚未接触，不写后续动作。 |
+| 编译Clip | [aigc-video-prompts](skills/core/aigc-video-prompts/references/usage.md) | 把上述调度转成LibTV Clip提示词，列素材绑定与缺项；仅聊天、不生成。 |
+| 专项声音与对白 | [aigc-audio](skills/core/aigc-audio/references/usage.md) | 只调整这场戏的对白停顿和雨声，保持原台词，先检查计划时长。 |
+| 剪辑与后期 | [aigc-editing](skills/core/aigc-editing/references/usage.md) | 根据这三段实际视频写文字智能剪辑指令，保留声音跨切并核算总片长。 |
+| 拉片与复刻研究 | [aigc-shot-study](skills/core/aigc-shot-study/references/usage.md) | 拆这段视频的机位、画布和提示词，分清观察与推断，提炼一个可迁移方法。 |
+| 复盘与持续迭代 | [aigc-iteration](skills/core/aigc-iteration/references/usage.md) | 对照原目标复盘这轮结果，保留失败与反例，只沉淀有依据的经验。 |
 
-不确定选哪个时，使用[总控模板](skills/aigc-creator/references/usage.md)，说明你手头已有的资料和本轮想拿到的结果。只做一步就用该节点模板，续作时带上准确作品目录或ID。已有完整资料不重新开展全片访谈。
+**常用的整合入口是“完整镜头调度”。** 它已在后台协同分镜与声音，不要求你把同一场戏再送三个节点。只调整镜头或只修声音时，对应专项入口才单独使用。首帧按真实模型入口启用，身份参考板不直接当视频第一帧。
+
+**平台执行生成与剪辑，用户在LibTV观看验收，Skill负责把要求写准并按反馈修改。** 原生音画可用时，声音方案直接编入Clip，不默认另做配音；文字智能剪辑可用时，后期节点直接给该入口的剪辑指令，不默认要求换软件。只有缺能力或结果不合格时才补修复路线。是否保留独立入口，取决于有无独立输入、判断与验收任务，不以平台有一个按钮为删除依据。
+
+### 按作品用途选择：类型模块
+
+类型模块通常选一个主类型；已有明确节点时直接调用该节点，不必先把类型表走一遍。混合用途只在需要时补一个次类型。
+
+| 作品类型 | 模板与用法 | 可以直接这样说 |
+|---|---|---|
+| 剧情短片／AI漫剧 | [aigc-narrative](skills/modules/narrative/aigc-narrative/references/usage.md) | 做一部朋友雨夜归伞的写实剧情短片，用行动完成和解。 |
+| 商品／品牌广告 | [aigc-commercial](skills/modules/commercial/aigc-commercial/references/usage.md) | 为这款保温杯设计20秒广告，只用我已提供证据的卖点。 |
+| 科普／知识解释 | [aigc-explainer](skills/modules/explainer/aigc-explainer/references/usage.md) | 用热量转移解释热泵，明确真实机制与类比的边界。 |
+| 数字人／主持口播 | [aigc-presenter](skills/modules/presenter/aigc-presenter/references/usage.md) | 把这份文字改成45秒数字人口播，安排停顿、手势和可说出的句子。 |
+| 纪实／情景重建 | [aigc-documentary](skills/modules/documentary/aigc-documentary/references/usage.md) | 根据这些来源做人物纪实短片，区分档案画面与情景重建。 |
+| 音乐MV／节拍视觉 | [aigc-music](skills/modules/music/aigc-music/references/usage.md) | 按这首已提供音乐的段落和拍点设计MV，先写视听方案。 |
+| 产品操作／软件教程 | [aigc-product-demo](skills/modules/product-demo/aigc-product-demo/references/usage.md) | 根据这些真实界面和操作步骤做教程，未提供的按钮与结果保留待查。 |
+| 氛围艺术／循环影像 | [aigc-visual-art](skills/modules/visual-art/aigc-visual-art/references/usage.md) | 做一个10秒雨夜霓虹循环影像，先设计运动规则和首尾接点。 |
+| 现有素材混剪／回顾 | [aigc-montage](skills/modules/montage/aigc-montage/references/usage.md) | 把这批活动素材整理成30秒回顾，保留事件顺序并标记素材缺口。 |
+
+### 完成一个节点后怎样继续
+
+每个节点交付末尾都会用**加粗文字写出下一节点或最近可执行动作、携带本轮哪些具体成果，以及一句继续口令**。同一聊天直接引用刚才的成果，只补新增资料；跨聊天再粘贴点名的正文、版本与真实文件。下一动作确需图片或媒体时先补实际素材；仅文字的下游仍可完成草案并列出缺项。本轮明确到此结束时就停止。
+
+例如：**下一节点：aigc-video-prompts。继续说“把上述完整调度转成LibTV Clip，沿用角色和台词，仅聊天”；本聊天直接复用刚才的脚本、逐镜调度和锁定项，实际图未提供的部分保持草案。**
+
+已授权连续完成多个节点时，后台直接推进；结尾口令帮助你续接，不要求逐站重复确认，也不自动增加出图、费用、保存或发布授权。本轮源码与行为检查见[结尾衔接验证](skills/aigc-creator/references/next-step-validation.md)。
 
 ## 按你手上已有的材料选择入口
 
@@ -77,10 +99,10 @@
 | 阶段 | 你提供或决定什么 | Codex完成什么 | 怎样进入下一步 |
 |---|---|---|---|
 | 1. 明确作品 | 用途、故事、时长、画幅、风格及已有资料；不确定的可以讨论 | 选择类型，整理需求和已确认设定，建立作品版本 | 核心方向清楚即继续，不重复整部作品访谈 |
-| 2. 制作参考资产 | 角色／物体／场景描述，或原始参考图 | 生成参考图正文，标明身份、衣装、空间用途；人物用对应四格预设 | 实际出图后回传文件，检查身份与空间；已有合格资产直接复用 |
+| 2. 制作参考资产 | 角色／物体／场景描述，或原始参考图 | 生成参考图正文，标明身份、衣装、空间用途；人物用对应四格预设 | 用户在LibTV确认身份与空间，反馈选用结果及实际标签；已有合格资产直接复用 |
 | 3. 写完整调度 | 已定故事、台词与不可改变项 | 逐镜写前后景、焦点、机位、动作、情绪物理表现、声音、精确计划节拍与切点 | 阅读是否符合想拍的戏，有问题只改受影响处 |
 | 4. 编译Clip | 调度、实际参考、选择的平台／模型／入口 | 分Clip、映射源Shot，写六区块创作包；按平台生成干净发送版 | 核验真实素材与标签；需要首帧/首尾帧时才补对应输入 |
-| 5. 生成与检查 | 明确本轮生成范围与预算上限，使用已连接工具或自行在平台生成 | 按授权先测试代表片段，记录实际输入、结果与偏差；检查后再扩展 | 回传实际结果，确认修复还是接受，并据真实状态接后段 |
+| 5. 生成与检查 | 明确本轮生成范围与预算上限，使用已连接工具或自行在平台生成 | 按授权先测试代表片段，记录实际输入、结果与偏差；用户确认后再扩展 | 用户反馈修复或接受决定及实际结束状态，Codex据此接后段 |
 | 6. 剪辑与混音 | 可用片段、音轨、成片要求 | 整理入出点、转场、对白、环境声、音效、BGM和输出计划；工具可用且获授权时执行 | 检查整段画面与声音，不能只看首尾截图 |
 | 7. 复盘与续作 | 具体反馈、实际结果、哪些内容保持不变 | 对照目标，保留成功与失败，沉淀适用经验并记录下轮起点 | 下次按作品ID继续，或把已验证方法用于新作品 |
 
@@ -90,18 +112,18 @@
 
 ### 回传图片或视频后怎样继续
 
-在 Codex 附上实际文件，或给出可访问的文件位置和对应作品／Clip；只给口头反馈时会记录为你的反馈，不冒充已看过媒体。可以直接说：
+用户在LibTV自行观看并选定素材或片段，然后向Codex反馈选择与实际偏差；无需默认回传媒体复审，用户反馈会标明来源。可以直接说：
 
 ```text
-这是刚才作品实际生成的角色图和场景图，请先检查再绑定。
-保持人物身份，剧情服装仍按调度正文定义；图有问题先给局部修复建议。
-合格后继续整理下一条Clip的发送正文，本轮先不生成视频。
+我已在LibTV检查并选定角色图和场景图，人物身份与空间可用。
+沿用已确认的人物设定，剧情服装仍按每条Clip正文独立定义；素材名称和实际标签如下。
+请继续整理下一条Clip的完整标准模板，本轮先不生成视频。
 ```
 
 ```text
-这是这条Clip的实际视频：第3秒右手变形，结尾人物已经站起来。
+我在LibTV观看这条Clip时发现：第3秒右手变形，结尾人物已经站起来。
 保持台词、衣装和场景不变，只修需要修改的部分，并检查下一条如何衔接。
-先做结果审查和提示词修订，不重新生成整部片。
+直接按以上反馈修订提示词，并承接已站起的结尾状态；本轮不重新生成。
 ```
 
 ### 中断后继续、局部修改和续作
@@ -156,7 +178,7 @@ flowchart TB
     H --> K[按授权生成 实际结果回填]
     I --> K
     J --> K
-    K --> L[剪辑 混音 整片播放验收]
+    K --> L[剪辑 混音 用户在LibTV验收]
     M[拉片 镜头/画布/提示词] --> N[候选方法 行为对照 陌生案例复测]
     N --> O[本项目Skill限定更新]
     O --> C
@@ -209,7 +231,6 @@ flowchart TB
 | [aigc-video-prompts](skills/core/aigc-video-prompts/SKILL.md) | 完整调度、真实输入 → 一镜/多镜Clip包、Shot区间映射与平台发送正文 |
 | [aigc-audio](skills/core/aigc-audio/SKILL.md) | 对白、人物表演、事件节拍 → 配音稿/指导、环境声、音效、音乐与声音衔接 |
 | [aigc-editing](skills/core/aigc-editing/SKILL.md) | 镜头计划／真实素材和音轨 → 入出点、保留时长、转场、字幕、混音与输出计划 |
-| [aigc-review](skills/core/aigc-review/SKILL.md) | 当前资料／真实结果 → 有证据的问题、修复提示词、责任节点与复查范围 |
 | [aigc-shot-study](skills/core/aigc-shot-study/SKILL.md) | 视频/工程/提示词 → 三层拆解、来源案例、候选方法和复刻证据 |
 | [aigc-iteration](skills/core/aigc-iteration/SKILL.md) | 当前需求与实际结果 → 检索、对照、复测、按授权写回与停止条件 |
 
@@ -267,7 +288,7 @@ flowchart TB
 ```text
 skills/
 ├─ aigc-creator/          总控、共享协议、原截图、语言库、来源资料
-├─ core/aigc-*/          12个共享节点
+├─ core/aigc-*/          11个共享节点
 ├─ modules/
 │  ├─ narrative/         剧情模块及其专属skill
 │  ├─ commercial/        广告模块及其专属skill

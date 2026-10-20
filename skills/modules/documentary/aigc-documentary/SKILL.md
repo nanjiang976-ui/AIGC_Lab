@@ -3,7 +3,7 @@ name: aigc-documentary
 description: Use when planning documentary AI videos, historical or real-event explainers, archival sequences, or clearly labeled generated reconstructions requiring source traceability.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.1.1"
+  bundle_version: "1.2.0"
 ---
 
 # 纪实与生成重建
@@ -11,6 +11,10 @@ metadata:
 让观众分辨哪些是发生过且有依据的事，哪些是解释、补充拍摄或视觉重建。
 
 需要复制调用或查看使用方法时，读[我的调用模板与用法](references/usage.md)。
+
+每次面向用户交付的最后一段，读取同版本总控 `references/handoff.md` 的“面向用户的结尾衔接”，加粗提示下一节点、携带本轮哪些成果及继续口令；缺项按实际依赖选择补齐或草案续接，当前范围结束则明确停止。
+
+作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
 ## 适用边界
 
@@ -38,7 +42,7 @@ metadata:
 | 全部使用真实素材 | `aigc-storyboard` → `aigc-editing`，可跳资产生成、关键帧和视频生成节点 |
 | 用户允许重建 | `aigc-visual-assets` 锁有依据特征，`aigc-blocking` 只处理确有必要的空间动作 |
 | 重建画面需要生成 | `aigc-video-prompts`编译Clip；仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`；提示词与成片均继承重建身份 |
-| 档案原声、配音或拟音 | `aigc-audio` 分轨标来源；`aigc-review` 同时审事实链与标识可读性 |
+| 档案原声、配音或拟音 | `aigc-audio`分轨标来源；Codex自检文字事实链，用户在LibTV确认声音与标识可读性 |
 
 ## 专用创作判断
 
