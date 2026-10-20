@@ -14,3 +14,10 @@
 
 # Preserve the retired skill package bytes recorded in its SHA-256 manifest.
 06_实验与复盘/Skill停用备份/2026-10-20_aigc-review/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve the previous local review source bytes used for this revision comparison.
+06_实验与复盘/2026-10-20_素材与声音扩展/改前源码/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+06_实验与复盘/2026-10-20_素材与声音扩展/音频接入前源码/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep the intentional two-space Markdown hard break in this verbatim execution record.
+06_实验与复盘/2026-10-20_逐步提示词交接/独立执行_画布初测.md whitespace=-blank-at-eol

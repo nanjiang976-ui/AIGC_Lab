@@ -4,7 +4,7 @@
 
 - [总控](aigc-creator/SKILL.md)：选择当前阶段、主模块与节点，组织交接、续作和变更。
 - [清单](catalog.json)：机器可检查的唯一名称、源路径、分类和安装依赖。
-- `core/aigc-*/`：PRD、脚本、视觉资产、场面调度、分镜、关键帧、Clip提示词、声音、剪辑、审查、拉片复刻、持续迭代。
+- `core/aigc-*/`：PRD、脚本、视觉资产、场面调度、分镜、关键帧、Clip提示词、声音、剪辑、拉片复刻、持续迭代。
 - `modules/<用途>/aigc-<用途>/`：类型专属skill；每个模块README只说明其定位和入口。
 
 ## 类型模块
@@ -17,6 +17,8 @@
 
 - [选择路线](aigc-creator/references/routes.md)、[交接协议](aigc-creator/references/handoff.md)、[连续性](aigc-creator/references/continuity.md)。
 - [参考资产规范](aigc-creator/references/reference-assets.md)、[完整调度](aigc-creator/references/director-dispatch.md)、[Clip编译](aigc-creator/references/clip-prompts.md)。
+- [逐条Clip画布连接说明](aigc-creator/references/canvas-handoff.md)：素材全名、用途、组合关系及真实视频/末帧输入的区别。
+- [当前作品脉络](aigc-creator/references/current-context.md)、[人物音色与逐Shot配乐](aigc-creator/references/voice-and-music.md)：全片/场景/镜头依据、用户修改传播、稳定声音资产与完整BGM提示词。
 - [镜头术语](aigc-creator/references/shot-glossary.md)、[拉片](aigc-creator/references/shot-study.md)、[限定持续迭代](aigc-creator/references/iteration.md)。
 - [导演语言](aigc-creator/references/prompt-language.md)、[修饰词与表演语言库](aigc-creator/references/lexicon.md)。
 - [三张用户截图拆解与原件](aigc-creator/references/screenshot-analysis.md)、[真实电影案例](aigc-creator/references/film-cases.md)。

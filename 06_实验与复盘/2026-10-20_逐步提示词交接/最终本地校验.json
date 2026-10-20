@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-20",
+  "scope": "local structure, skill formatting and text routing only",
+  "bundle_version": "1.2.1",
+  "checks": [
+    {
+      "name": "project",
+      "cmd": "python -X utf8 scripts/validate_project.py",
+      "chunk_id": "fea808",
+      "wall_time_seconds": 0.7288564,
+      "exit_code": 0,
+      "original_token_count": 48,
+      "output": "PASS phase=structure 结构检查通过；作品数量=2\r\n检查仅验证文件、字段和关联；结构通过不代表已生成或已验收，也不验证媒体真实性或审美质量。\r\n"
+    },
+    {
+      "name": "bundle",
+      "cmd": "python -X utf8 scripts/skill_bundle.py validate",
+      "chunk_id": "489e6d",
+      "wall_time_seconds": 0.6439755,
+      "exit_code": 0,
+      "original_token_count": 53,
+      "output": "{\r\n  \"mode\": \"validate\",\r\n  \"ok\": true,\r\n  \"package_count\": 21,\r\n  \"errors\": [],\r\n  \"actions\": [],\r\n  \"extras_preserved\": [],\r\n  \"backup_dir\": null,\r\n  \"applied\": false,\r\n  \"written\": [],\r\n  \"attempted\": []\r\n}\r\n"
+    },
+    {
+      "name": "routing_tests",
+      "cmd": "python -X utf8 -m unittest discover -s scripts/tests -p test_skill_invocations.py -v",
+      "chunk_id": "45efc8",
+      "wall_time_seconds": 1.9310263,
+      "exit_code": 0,
+      "original_token_count": 1295,
+      "output": "test_alias_collision_ignores_case_and_whitespace (test_skill_invocations.SkillInvocationTests.test_alias_collision_ignores_case_and_whitespace) ... ok\r\ntest_aliases_must_be_nonempty_strings (test_skill_invocations.SkillInvocationTests.test_aliases_must_be_nonempty_strings) ... ok\r\ntest_bad_catalog_group_reports_errors_without_crashing (test_skill_invocations.SkillInvocationTests.test_bad_catalog_group_reports_errors_without_crashing) ... ok\r\ntest_chinese_alias_selects_core_with_module_context (test_skill_invocations.SkillInvocationTests.test_chinese_alias_selects_core_with_module_context) ... ok\r\ntest_dollar_names_inside_body_are_not_explicit_directives (test_skill_invocations.SkillInvocationTests.test_dollar_names_inside_body_are_not_explicit_directives) ... ok\r\ntest_duplicate_skill_and_unknown_skill_are_rejected (test_skill_invocations.SkillInvocationTests.test_duplicate_skill_and_unknown_skill_are_rejected) ... ok\r\ntest_empty_input_is_rejected (test_skill_invocations.SkillInvocationTests.test_empty_input_is_rejected) ... ok\r\ntest_explicit_candidates_follow_text_order_reverse_to_registry (test_skill_invocations.SkillInvocationTests.test_explicit_candidates_follow_text_order_reverse_to_registry) ... ok\r\ntest_first_line_explicit_name_has_priority (test_skill_invocations.SkillInvocationTests.test_first_line_explicit_name_has_priority) ... ok\r\ntest_legacy_catalog_requires_registry_for_routing (test_skill_invocations.SkillInvocationTests.test_legacy_catalog_requires_registry_for_routing) ... ok\r\ntest_legacy_catalog_still_validates_without_registry (test_skill_invocations.SkillInvocationTests.test_legacy_catalog_still_validates_without_registry) ... ok\r\ntest_malformed_registry_and_duplicate_json_keys_are_rejected (test_skill_invocations.SkillInvocationTests.test_malformed_registry_and_duplicate_json_keys_are_rejected) ... ok\r\ntest_missing_empty_or_non_markdown_usage_is_rejected (test_skill_invocations.SkillInvocationTests.test_missing_empty_or_non_markdown_usage_is_rejected) ... ok\r\ntest_module_alias_can_select_its_own_entry (test_skill_invocations.SkillInvocationTests.test_module_alias_can_select_its_own_entry) ... ok\r\ntest_multiple_core_intents_are_retained_for_orchestration (test_skill_invocations.SkillInvocationTests.test_multiple_core_intents_are_retained_for_orchestration) ... ok\r\ntest_multiple_explicit_names_on_first_line_are_all_retained (test_skill_invocations.SkillInvocationTests.test_multiple_explicit_names_on_first_line_are_all_retained) ... ok\r\ntest_multiple_explicit_names_with_unknown_name_do_not_partially_route (test_skill_invocations.SkillInvocationTests.test_multiple_explicit_names_with_unknown_name_do_not_partially_route) ... ok\r\ntest_natural_candidates_follow_first_alias_position_not_registry_order (test_skill_invocations.SkillInvocationTests.test_natural_candidates_follow_first_alias_position_not_registry_order) ... ok\r\ntest_real_template_prefix_and_chinese_period_resolve_explicit_skill (test_skill_invocations.SkillInvocationTests.test_real_template_prefix_and_chinese_period_resolve_explicit_skill) ... ok\r\ntest_registry_bundle_version_must_match (test_skill_invocations.SkillInvocationTests.test_registry_bundle_version_must_match) ... ok\r\ntest_registry_must_cover_exact_catalog_set (test_skill_invocations.SkillInvocationTests.test_registry_must_cover_exact_catalog_set) ... ok\r\ntest_registry_path_cannot_escape_repository (test_skill_invocations.SkillInvocationTests.test_registry_path_cannot_escape_repository) ... ok\r\ntest_reparse_usage_is_rejected_before_read (test_skill_invocations.SkillInvocationTests.test_reparse_usage_is_rejected_before_read) ... ok\r\ntest_repeated_same_explicit_name_remains_a_single_intent (test_skill_invocations.SkillInvocationTests.test_repeated_same_explicit_name_remains_a_single_intent) ... ok\r\ntest_route_command_prints_json (test_skill_invocations.SkillInvocationTests.test_route_command_prints_json) ... ok\r\ntest_route_does_not_modify_files (test_skill_invocations.SkillInvocationTests.test_route_does_not_modify_files) ... ok\r\ntest_short_template_prefix_with_module_skill_resolves_explicit_skill (test_skill_invocations.SkillInvocationTests.test_short_template_prefix_with_module_skill_resolves_explicit_skill) ... ok\r\ntest_unknown_explicit_name_is_rejected_without_alias_fallback (test_skill_invocations.SkillInvocationTests.test_unknown_explicit_name_is_rejected_without_alias_fallback) ... ok\r\ntest_unknown_prefixed_explicit_name_with_punctuation_is_rejected (test_skill_invocations.SkillInvocationTests.test_unknown_prefixed_explicit_name_with_punctuation_is_rejected) ... ok\r\ntest_unmatched_request_falls_back_without_claiming_recognition (test_skill_invocations.SkillInvocationTests.test_unmatched_request_falls_back_without_claiming_recognition) ... ok\r\ntest_usage_cannot_leave_its_own_installable_package (test_skill_invocations.SkillInvocationTests.test_usage_cannot_leave_its_own_installable_package) ... ok\r\ntest_valid_registry_covers_all_catalog_skills (test_skill_invocations.SkillInvocationTests.test_valid_registry_covers_all_catalog_skills) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 32 tests in 1.246s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "quick_validate",
+      "cmd": "@'\nfrom pathlib import Path\nimport json,subprocess,sys\nr=Path.cwd(); c=json.loads((r/'skills/catalog.json').read_text(encoding='utf-8')); failures=[]\nfor e in c['skills']:\n p=subprocess.run([sys.executable,'-X','utf8','C:/Users/NJ/.codex/skills/.system/skill-creator/scripts/quick_validate.py',str(r/e['path'])],capture_output=True,text=True,encoding='utf-8')\n if p.returncode: failures.append([e['name'],p.stdout,p.stderr])\nprint(f'{len(c[\"skills\"])-len(failures)} PASS; {len(failures)} FAIL')\nfor f in failures: print(f)\nsys.exit(bool(failures))\n'@ | python -X utf8 -",
+      "chunk_id": "01962e",
+      "wall_time_seconds": 3.086617,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "21 PASS; 0 FAIL\r\n"
+    },
+    {
+      "name": "diff",
+      "cmd": "git diff --check",
+      "chunk_id": "fdf471",
+      "wall_time_seconds": 0.4468043,
+      "exit_code": 0,
+      "original_token_count": 128,
+      "output": "warning: in the working copy of '06_实验与复盘/README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'skills/aigc-creator/references/usage.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'skills/core/aigc-video-prompts/references/usage.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'spec/plans/README.md', CRLF will be replaced by LF the next time Git touches it\n"
+    }
+  ]
+}

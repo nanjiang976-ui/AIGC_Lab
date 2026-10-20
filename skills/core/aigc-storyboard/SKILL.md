@@ -2,7 +2,7 @@
 name: aigc-storyboard
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 description: Use when an AI video or comic needs a concrete shot count, shot-by-shot camera and performance design, tension progression, or continuity checks between planned shots.
 ---
 

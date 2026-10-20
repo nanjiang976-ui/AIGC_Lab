@@ -3,7 +3,7 @@ name: aigc-explainer
 description: Use when creating AI educational explainers, science animations, mechanism demonstrations, or concept videos requiring claim accuracy and bounded analogies.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 ---
 
 # 科普与知识解释
@@ -32,6 +32,8 @@ metadata:
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；需要措辞或参数时按需读 `references/lexicon.md`、`references/model-adaptation.md`。
 - 缺少依赖时明确报告；公共协议不从跨包相对路径猜测。
 - 每镜头记录相机、角色/主体、画面及前后状态；重要概念主体、变化动作、不能画错的关系前置，不承诺跨模型权重。
+
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
@@ -74,7 +76,7 @@ metadata:
 | EP01_SH002，10秒 | 固定正视；卡片不动、阈值线移动；颜色映射不变 | 阈值9 → 阈值5，卡8转为高类，错误标记移除 |
 | EP01_SH003，7秒 | 固定正视；新空白卡进入右侧待测区；旧卡与规则仍可见 | 已知卡正确 → 新卡待测，留问号由后期添加 |
 
-第二镜可发送草案：
+第二镜导演表达片段，非 Clip 发送稿：
 
 ```text
 两张矩形卡片保持固定位置，竖直分界线从较右位置缓慢向左移动并停在两张卡片之间；卡片形状、颜色、位置全程不变。固定正视的简洁二维示意，浅色背景，分界线移动路径清楚。画面不自动生成数字、标签或箭头；数值、分类结果和错误标记由后期按教学脚本精确叠加。

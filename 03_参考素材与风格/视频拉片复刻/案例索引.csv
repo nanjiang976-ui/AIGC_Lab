@@ -1,2 +1,3 @@
 case_id,version,title,source_type,available_inputs,shot_types,shot_sizes,camera_moves,composition,style,audio,problem,platform,model,validation_scope,case_status,case_path,updated_at
 STUDY-001,v001,四截图文字拆解,截图文字,四张用户截图,调度混合稿;Shot条目,中近景;中景;特写,跟随;手持;缓慢推进,三分构图文字;中心构图文字;前景物件,室内叙事文字;青绿顶光文字,画外对白文字;抽噎文字;环境声抽空文字,动作情绪物理化;时间切片;声音触发,未知,未知,截图可见文字分析,文字拆解已完成_媒体未执行,案例/STUDY-001_四截图文字拆解/README.md,2026-10-19
+STUDY-002,v001,LibTV公开画布流程观察,公开画布与可见文本,5个公开来源;4个只读画布;1个入口不可用,部分组级与逐镜文字,以实际可见文字为限,部分逐镜文字;实际运动未验,画布分组与资产连线,分组风格约束文字,7项角色命名音频可见;未试听,角色音色;逐ShotBGM;全片脉络;状态派生,LibTV,仅局部选中节点显示Seedance2.5;其余未知,浏览器只读UI与部分文字;无全片播放,流程观察完成_媒体未验证,案例/STUDY-002_LibTV公开画布流程观察/README.md,2026-10-20

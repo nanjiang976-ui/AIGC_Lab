@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-20",
+  "state": "previous local 1.2.1 review before latest reference-layout and approved Clip changes",
+  "files": [
+    {
+      "source": "skills/aigc-creator/references/reference-assets.md",
+      "snapshot": "skills__aigc-creator__references__reference-assets.md.txt",
+      "sha256": "34f47e6b2245bbed5e0c1eee73aea8dc18fb09a4867f17a8b14b83f071ece14b",
+      "bytes": 12667
+    },
+    {
+      "source": "skills/core/aigc-visual-assets/SKILL.md",
+      "snapshot": "skills__core__aigc-visual-assets__SKILL.md.txt",
+      "sha256": "ba436586965df106c577eef04c4241552e055b4fafb6ece67b009743f2563373",
+      "bytes": 7413
+    },
+    {
+      "source": "skills/core/aigc-visual-assets/references/usage.md",
+      "snapshot": "skills__core__aigc-visual-assets__references__usage.md.txt",
+      "sha256": "a3ec9f5c484b50fd3646a08572c06e58420f227fac870c0b998040872e8f0f0a",
+      "bytes": 4189
+    },
+    {
+      "source": "skills/aigc-creator/references/clip-prompts.md",
+      "snapshot": "skills__aigc-creator__references__clip-prompts.md.txt",
+      "sha256": "f99584dd8ac4f6c94ff7b27afacc9ac6b3ee5980e87189b7e6ad9620aae48d73",
+      "bytes": 8141
+    },
+    {
+      "source": "skills/core/aigc-video-prompts/SKILL.md",
+      "snapshot": "skills__core__aigc-video-prompts__SKILL.md.txt",
+      "sha256": "cf65e2f8771726386727163f86be33a754828c921c45e2b879c409b0adf76d6c",
+      "bytes": 9586
+    },
+    {
+      "source": "skills/core/aigc-video-prompts/references/usage.md",
+      "snapshot": "skills__core__aigc-video-prompts__references__usage.md.txt",
+      "sha256": "f3f153f42f65f26b583154a3d831b6fb2d969af91d8803d3c98ef621d65f9885",
+      "bytes": 3666
+    }
+  ]
+}

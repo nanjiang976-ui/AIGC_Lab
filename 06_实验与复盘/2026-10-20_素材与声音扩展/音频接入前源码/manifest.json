@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-20",
+  "state": "before approved option A audio and current-context integration",
+  "files": [
+    {
+      "source": "skills/core/aigc-audio/SKILL.md",
+      "snapshot": "skills__core__aigc-audio__SKILL.md.txt",
+      "sha256": "90b0f732bc4157dafc202960b3c5a477e0673d2b67197a89f14a47510e754a25",
+      "bytes": 6705
+    },
+    {
+      "source": "skills/core/aigc-audio/references/usage.md",
+      "snapshot": "skills__core__aigc-audio__references__usage.md.txt",
+      "sha256": "0bd8f659d430d102ae3dc4a93cb08af1c08a53afb1e013a58d43ab1be9af7ed1",
+      "bytes": 3030
+    },
+    {
+      "source": "skills/aigc-creator/references/handoff.md",
+      "snapshot": "skills__aigc-creator__references__handoff.md.txt",
+      "sha256": "4bfbc8b1fafb761252e6bcdd33c5fb34a6c81f6bb5c288dda1d5d5695af8de79",
+      "bytes": 13269
+    },
+    {
+      "source": "skills/aigc-creator/SKILL.md",
+      "snapshot": "skills__aigc-creator__SKILL.md.txt",
+      "sha256": "eea3e8c2eb3760c525c9ce5c81dbecc0475abc1aa654417a4fbd0ec5174a1823",
+      "bytes": 9611
+    },
+    {
+      "source": "skills/aigc-creator/references/routes.md",
+      "snapshot": "skills__aigc-creator__references__routes.md.txt",
+      "sha256": "5b034d2e1f6efb9337281d4656d9994d13f53c9d0a761c991597ba8561335fa7",
+      "bytes": 9360
+    },
+    {
+      "source": "skills/aigc-creator/references/director-dispatch.md",
+      "snapshot": "skills__aigc-creator__references__director-dispatch.md.txt",
+      "sha256": "6cf75a9994fd6aae4663e6077c219f8511541f398056e9d3039c57b920e31aee",
+      "bytes": 5277
+    },
+    {
+      "source": "skills/core/aigc-blocking/SKILL.md",
+      "snapshot": "skills__core__aigc-blocking__SKILL.md.txt",
+      "sha256": "f14804b4d1ef0752cbe4a7bb8bd6f2d1acac382a150c70f3541df56996f0ff58",
+      "bytes": 7407
+    },
+    {
+      "source": "skills/core/aigc-editing/SKILL.md",
+      "snapshot": "skills__core__aigc-editing__SKILL.md.txt",
+      "sha256": "c68355b2317a9f5cf9c485bbb80fbc7860a1def6f30e3757aa2d1f5c0b383bea",
+      "bytes": 7170
+    },
+    {
+      "source": "01_创作模板/作品模板/01_故事与角色设定.md",
+      "snapshot": "01_创作模板__作品模板__01_故事与角色设定.md.txt",
+      "sha256": "af5f5d2cb003e2578c1f7117737cde6998cfa2bc61be9db2753e3073760ccfd7",
+      "bytes": 1299
+    }
+  ]
+}

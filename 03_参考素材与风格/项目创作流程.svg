@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1210" viewBox="0 0 1200 1210" role="img" aria-labelledby="title desc">
 <title id="title">AIGC_Lab 创作流程</title>
-<desc id="desc">参考资产、完整调度、Clip编译，按身份参考、首尾帧或纯文生模式生成，经过剪辑混音与播放验收；拉片和行为验证反向改进项目Skill。15个节点，18条连线。</desc>
+<desc id="desc">想法需求、剧本、人物道具场景参考图与人物音色提示词、完整调度与逐Shot声音BGM、Clip编译；各节点承接当前作品脉络，交付后由用户调整并调用下一节点，用户在LibTV生成和验收。拉片和行为验证反向改进项目Skill。15个节点，18条连线。</desc>
 <rect width="1200" height="1210" fill="#FFFFFF"/>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#66758C"/></marker></defs>
 <g fill="none" stroke="#66758C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)">
@@ -26,32 +26,35 @@
 <g id="node-A">
 <rect x="440.0" y="24.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="67">自然语言需求或已有资料</tspan>
+<tspan x="600" y="53">想法与需求</tspan>
+<tspan x="600" y="81">补本步必要缺口</tspan>
 </text>
 </g>
 <g id="node-B">
 <rect x="440.0" y="124.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="167">补本步必要缺口</tspan>
+<tspan x="600" y="153">编写剧本</tspan>
+<tspan x="600" y="181">人物、道具与场景清单</tspan>
 </text>
 </g>
 <g id="node-C">
 <rect x="440.0" y="224.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="253">参考资产</tspan>
-<tspan x="600" y="281">角色或场景</tspan>
+<tspan x="600" y="253">视觉资产与人物音色</tspan>
+<tspan x="600" y="281">图像 / 音色提示词</tspan>
 </text>
 </g>
 <g id="node-D">
 <rect x="440.0" y="324.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="367">完整镜头调度</tspan>
+<tspan x="600" y="353">完整镜头调度</tspan>
+<tspan x="600" y="381">逐Shot声音与BGM</tspan>
 </text>
 </g>
 <g id="node-E">
 <rect x="440.0" y="424.0" width="320" height="72" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="453">分镜与声音协同</tspan>
+<tspan x="600" y="453">后台分镜与声音协同</tspan>
 <tspan x="600" y="481">时间与连续性检查</tspan>
 </text>
 </g>
@@ -71,8 +74,8 @@
 <g id="node-H">
 <rect x="150.0" y="820.0" width="260" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="280" y="853">绑定已审资产</tspan>
-<tspan x="280" y="881">与独立机位</tspan>
+<tspan x="280" y="853">按用途绑定选定资产</tspan>
+<tspan x="280" y="881">图像 / 声音（按入口）</tspan>
 </text>
 </g>
 <g id="node-I">
@@ -91,8 +94,8 @@
 <g id="node-K">
 <rect x="440.0" y="960.0" width="320" height="80" rx="10" fill="#EEF4FF" stroke="#7C9CC9" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="600" y="993">按授权生成</tspan>
-<tspan x="600" y="1021">实际结果回填</tspan>
+<tspan x="600" y="993">用户在LibTV生成</tspan>
+<tspan x="600" y="1021">反馈实际结果</tspan>
 </text>
 </g>
 <g id="node-L">
@@ -124,7 +127,7 @@
 </text>
 </g>
 <rect x="192" y="779" width="176" height="28" fill="#FFFFFF"/>
-<text x="280" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">身份与场景参考</text>
+<text x="280" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">图像与声音参考</text>
 <rect x="512" y="779" width="176" height="28" fill="#FFFFFF"/>
 <text x="600" y="800" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" fill="#40546F">首帧或首尾帧</text>
 <rect x="832" y="779" width="176" height="28" fill="#FFFFFF"/>

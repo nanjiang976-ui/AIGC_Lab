@@ -3,7 +3,7 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 ---
 
 # 混剪与活动回顾
@@ -32,6 +32,8 @@ metadata:
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；需分析截图读 `references/screenshot-analysis.md`。
 - 生成补充片段才按需读其 `references/model-adaptation.md`；缺依赖时报告，不臆测文件或素材内容。
 - 每个选段写相机/原始机位、人物/主体、画面及入出状态；主体、关键动作和不能改变的事实前置，已有素材不必重写生成提示词。
+
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 

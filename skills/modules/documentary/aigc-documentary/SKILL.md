@@ -3,7 +3,7 @@ name: aigc-documentary
 description: Use when planning documentary AI videos, historical or real-event explainers, archival sequences, or clearly labeled generated reconstructions requiring source traceability.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 ---
 
 # 纪实与生成重建
@@ -32,6 +32,8 @@ metadata:
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；借鉴电影手法才读 `references/film-cases.md`，不复制其事实判断。
 - 参数依赖按需读其 `references/model-adaptation.md`；找不到总控时报告，不猜共享文件位置。
 - 每镜头写相机、人物/主体、画面及前后状态；最重要主体、动作、真实/重建硬约束前置，不宣称提示词顺序保证事实准确。
+
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
@@ -66,7 +68,7 @@ metadata:
 | EP01_SH002，8秒，AI重建 | 固定室内中景；空椅、接水桶和滴水；后期持续重建标识 | 桶在地面、滴水继续 → 位置不变；S02只支撑桶存在，不证明当日数量/位置 |
 | EP01_SH003，5秒，资料说明 | 固定文档布局；S02次日照片；说明时间差 | 次日照片出现 → 保持；何时恢复开放尚无来源 |
 
-第二镜可发送草案：
+第二镜导演表达片段，非 Clip 发送稿：
 
 ```text
 用于明确标识的 AI 情景重建：空置阅读室一角，一只接水桶静置在地面，屋顶少量水滴落入桶中；不出现人物、可辨机构名称或日期印记。固定室内中景，椅子与桶的位置始终稳定，灰色自然光，动作仅为间歇滴水。画面上方留出持续标识区，由后期加入“AI情景重建，非当日现场影像”。

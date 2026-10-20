@@ -2,7 +2,7 @@
 name: aigc-script
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 description: Use when an AI video or comic needs a story script, scene beats, concise dialogue, or revision of dramatic cause and effect before detailed storyboarding.
 ---
 
@@ -14,7 +14,7 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 
 作品素材与成片的观看验收按同版总控 `references/handoff.md` 的“用户媒体验收与反馈”执行：用户在LibTV观看确认，Codex负责文字自检及按反馈修改。
 
-把日常表达变成能演出的行动与信息变化；解决故事因果和对白，详细机位由分镜节点继续完成。
+把日常表达变成能演出的行动与信息变化；解决故事因果和对白，并交出下一步参考图提示词所需的资产清单。详细机位由完整调度内部协同分镜完成。
 
 ## 入口与依赖
 
@@ -39,6 +39,7 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 6. 将截图3的首帧、动作节拍、运镜意图、声音、结束状态拆开；脚本保存全过程，静态图只取其中一刻。
 7. 初步提出明确镜头数及理由，再交分镜调整；镜头数由信息变化、可见性与停留需要决定。
 8. 把对白交 `aigc-audio` 前置试读：保留呼吸、反应和动作时间；若超时，提供删台词/改节奏/增时的具体取舍。
+9. 从当前剧本提取人物、重要道具与场景清单：关键物的可见结构、使用方式与揭示时机必须能支持动作因果；没有确认的外观保持待定，不为了填清单擅自定妆。
 
 ## 镜头建议怎样有依据
 
@@ -52,7 +53,10 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 - 场景脚本：人物目标、事件顺序、动作、对白、声音线索、结尾状态。
 - 节拍表：计划时长、信息变化、张力、表演变化、候选镜头数及理由。
 - 固定约束与待验证项：关键物归属、不可提前揭示内容、试读状态。
+- 参考资产清单：人物、重要道具、场景及必要衣装，沿用固定ID；逐项写剧情用途、已定外观/结构、已有参考与待补信息，区分文字设定和用户已确认的实际素材。无对应资产类型时如实注明不适用。
 - 交给调度/分镜的动作和视线需要；交给声音的逐字对白与停顿意图。
+
+默认交付到剧本与资产清单即停止，用户可先改剧本；下一步建议调用参考图提示词节点，并直接复用本聊天当前稿。只有用户明确要求跨节点连续完成时才继续；已有适用资产或用户指定直接写调度时按该范围交接。
 
 ## 已填短例
 
@@ -75,6 +79,7 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 
 - 每个关键结果都有行动原因，哭泣有情绪诱因；未改用户确认结局。
 - 对白、表演、道具与时间能交给调度，不靠形容词承担事件。
+- 资产清单能供参考图提示词接手，重要道具的结构/用途与剧情相容，未定外观未冒充已确认。
 - 有明确候选镜头数、理由和张力变化；详细摄影未完成时如实交接。
 - 已估时、已实际试读、已生成音频分别记录，不把估时写成实测。
 

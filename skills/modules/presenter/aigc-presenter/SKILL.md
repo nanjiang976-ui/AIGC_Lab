@@ -3,7 +3,7 @@ name: aigc-presenter
 description: Use when planning AI presenter, avatar, host, talking-head, or digital-human videos where speech delivery, gesture timing, and lip-sync are central.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 ---
 
 # 主持人与数字人口播
@@ -32,6 +32,8 @@ metadata:
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md` 和 `references/prompt-language.md`；表演措辞按需读 `references/lexicon.md`。
 - 具体工具的音色、口型、输入时长等由其 `references/model-adaptation.md` 和当前官方能力核对；缺依赖不假定平台支持。
 - 每镜头记录相机、人物/主体、画面及前后状态；人物、发言/动作、身份与视线硬约束前置，不声称跨模型位置权重。
+
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
@@ -78,7 +80,7 @@ metadata:
 | 8–22秒 | 同机位；右手开放手势后收回；右侧出现后期纸卡 | 手略抬 → 手收回、视线仍向镜头；纸卡不遮脸 |
 | 22–30秒 | 同机位；轻微点头结束；纸卡渐隐 | 双手自然 → 保持自然姿势，结尾留静止尾量 |
 
-画面可发送草案：
+画面导演表达片段，非 Clip 发送稿：
 
 ```text
 一位原创虚构成年讲师，椭圆脸、深棕色眼睛、短黑发、无胡须、中等偏暖肤色，穿浅蓝无标识衬衫，面向镜头自然说话。固定中近景，双手起初自然放于腹前，说话期间右手缓慢做一次开放手势并收回，结束后保持自然姿势。浅灰背景，人物左侧留字幕安全区，柔和正面光，表情克制，不添加身份徽章或背景文字。

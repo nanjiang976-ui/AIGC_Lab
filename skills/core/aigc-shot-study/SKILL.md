@@ -2,7 +2,7 @@
 name: aigc-shot-study
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 description: Use when the user supplies a public AI-video project, finished video, prompt, or screenshot to study its shots, canvas structure, and prompt design, then prepare a traceable recreation case and reusable findings.
 ---
 

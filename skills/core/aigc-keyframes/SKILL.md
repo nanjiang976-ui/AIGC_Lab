@@ -2,7 +2,7 @@
 name: aigc-keyframes
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 description: Use when an AI image or video needs a shot's static first frame, endpoint image, or revised keyframe based on a verified previous result.
 ---
 

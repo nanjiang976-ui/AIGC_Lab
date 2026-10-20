@@ -3,7 +3,7 @@ name: aigc-commercial
 description: Use when planning AI product advertisements, brand films, campaign videos, product beauty shots, or evidence-sensitive promotional claims.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.2.0"
+  bundle_version: "1.3.0"
 ---
 
 # 商业广告与品牌短片
@@ -32,6 +32,8 @@ metadata:
 - 按以上规则定位总控后，以其目录为基准读取 `references/handoff.md`、`references/prompt-language.md`；外观措辞按需读 `references/lexicon.md`。
 - 需要平台参数时再读其 `references/model-adaptation.md` 并核验当前能力；找不到依赖时报告，不猜目录。
 - 每镜头写相机、角色/主体、画面三要素及前后状态；主体、动作、外观/文案硬约束前置，不宣称提示词位置普遍决定模型权重。
+
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
@@ -72,7 +74,7 @@ metadata:
 | EP01_SH002，6秒 | 固定侧前方中近景；手握把手将杯平移靠近自己；桌面水平线稳定 | 杯在桌面中央 → 杯仍接触桌面并停在人物前，手未离开 |
 | EP01_SH003，5秒 | 同方向固定近景；手放开退出；产品左侧留文案区 | 手仍持杯 → 杯静止、手退出，后期加入创意文案 |
 
-第二镜可发送草案：
+第二镜导演表达片段，非 Clip 发送稿：
 
 ```text
 一只无品牌浅灰陶瓷杯，圆形杯口、直筒杯身，杯高约为杯口直径的 1.2 倍，右侧只有一个环形把手。一只成年人的右手握住把手，将杯沿水平桌面缓慢拉近并停住，全程不抬杯、不改变杯型与比例。固定侧前方中近景，杯与桌面接触处可见，柔和窗光，背景安静。杯身不出现 Logo、性能数字或装饰文字。
