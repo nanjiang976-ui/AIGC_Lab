@@ -1,6 +1,6 @@
-# 音乐驱动影像
+# aigc-music（音乐影像）｜类型说明
 
-入口：[aigc-music](aigc-music/SKILL.md)。用实际音轨的结构与重音组织视觉段落，明确 BPM、拍数和秒数之间的换算。
+入口：[aigc-music（音乐影像）](aigc-music/SKILL.md)。用实际音轨的结构与重音组织视觉段落，明确 BPM、拍数和秒数之间的换算。
 
 示例：`用 $aigc-music 为这段 120 BPM 音轨设计 16 拍影像，先给节拍网格和视觉变化。`
 

@@ -1,6 +1,6 @@
-# 产品功能演示
+# aigc-product-demo（产品演示）｜类型说明
 
-入口：[aigc-product-demo](aigc-product-demo/SKILL.md)。根据实际界面与操作证据，把用户目标变成可复现的步骤、录屏与结果展示。
+入口：[aigc-product-demo（产品演示）](aigc-product-demo/SKILL.md)。根据实际界面与操作证据，把用户目标变成可复现的步骤、录屏与结果展示。
 
 示例：`用 $aigc-product-demo 根据这段录屏做 25 秒教程，保留真实按钮、等待和保存结果。`
 

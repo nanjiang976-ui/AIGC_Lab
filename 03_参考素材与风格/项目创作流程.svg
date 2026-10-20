@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1210" viewBox="0 0 1200 1210" role="img" aria-labelledby="title desc">
 <title id="title">AIGC_Lab 创作流程</title>
-<desc id="desc">想法需求、剧本、人物道具场景参考图与人物音色提示词、完整调度与逐Shot声音BGM、Clip编译；各节点承接当前作品脉络，交付后由用户调整并调用下一节点，用户在LibTV生成和验收。拉片和行为验证反向改进项目Skill。15个节点，18条连线。</desc>
+<desc id="desc">想法需求、剧本、人物道具场景参考图与人物音色提示词、完整调度与逐Shot声音BGM、Clip编译；各节点承接当前作品脉络，交付后由用户调整并调用下一节点，用户在LibTV生成和验收。拉片先对照项目提出优化，经用户批准后实施与验证。15个节点，18条连线；可点击Skill导航位于README链接流程图。</desc>
 <rect width="1200" height="1210" fill="#FFFFFF"/>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#66758C"/></marker></defs>
 <g fill="none" stroke="#66758C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)">
@@ -115,15 +115,15 @@
 <g id="node-N">
 <rect x="60.0" y="360.0" width="300" height="80" rx="10" fill="#F0F8F4" stroke="#79A68E" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="210" y="393">候选方法</tspan>
-<tspan x="210" y="421">行为对照、陌生案例复测</tspan>
+<tspan x="210" y="393">对照项目、提出优化</tspan>
+<tspan x="210" y="421">等待用户审批</tspan>
 </text>
 </g>
 <g id="node-O">
 <rect x="60.0" y="520.0" width="300" height="80" rx="10" fill="#F0F8F4" stroke="#79A68E" stroke-width="2"/>
 <text text-anchor="middle" fill="#172033" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20">
-<tspan x="210" y="553">本项目 Skill</tspan>
-<tspan x="210" y="581">限定更新</tspan>
+<tspan x="210" y="553">按批准范围实施</tspan>
+<tspan x="210" y="581">行为对照与复测</tspan>
 </text>
 </g>
 <rect x="192" y="779" width="176" height="28" fill="#FFFFFF"/>

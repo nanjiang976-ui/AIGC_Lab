@@ -1,6 +1,6 @@
-# 科普与知识解释
+# aigc-explainer（科普解释）｜类型说明
 
-入口：[aigc-explainer](aigc-explainer/SKILL.md)。把一个明确问题转成可检查的主张、机制图解和有边界的类比。
+入口：[aigc-explainer（科普解释）](aigc-explainer/SKILL.md)。把一个明确问题转成可检查的主张、机制图解和有边界的类比。
 
 示例：`用 $aigc-explainer 向中学生解释监督学习，30 秒，说明类比哪里不成立。`
 

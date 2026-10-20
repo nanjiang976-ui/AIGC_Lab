@@ -2,11 +2,11 @@
 name: aigc-prd
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when an AI image, video, or comic request is still vague, or an existing creative PRD needs a readiness and contradiction check before production.
 ---
 
-# 创作需求 PRD
+# aigc-prd（创作需求）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,7 +18,7 @@ description: Use when an AI image, video, or comic request is still vague, or an
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`；模糊想法按需读 `interview.md`，涉及已有作品时读 `project-integration.md`。
 - 用户只要检查需求时停在本节点；单张图片不强制增加剧情、对白和视频时长。
 
@@ -65,7 +65,7 @@ description: Use when an AI image, video, or comic request is still vague, or an
 | 确认内容 | 姐妹关系；戒指最初在A口袋；B受委屈；终点为戒指揭示 |
 | 复用输入 | 当前版本人物设定，不另设年龄、脸型和衣服 |
 | 工作假设 | “A看到戒指后停住”作为结尾表演，需与原要求对照 |
-| 下一步 | aigc-script 编排信息节拍，aigc-visual-assets 检查缺失视角 |
+| 下一步 | aigc-script（剧情脚本） 编排信息节拍，aigc-visual-assets（参考图资产） 检查缺失视角 |
 
 如果人物设定文件已可读，本例无需再问“人物长什么样”；若无权读取，只索取该设定。
 若用户只说“两人吵架后哭了”，首问可以是：“你更想写哪一种关系冲突？”附家人误解、恋人忽视、朋友怀疑三个方向；不追加时长、平台和画风问卷。

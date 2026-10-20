@@ -2,11 +2,11 @@
 name: aigc-editing
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when AI-generated clips need an edit plan, source in/out points, duration and overlap accounting, sound bridges, or repair of continuity in an assembled sequence.
 ---
 
-# 剪辑与成片时间轴
+# aigc-editing（剪辑时间轴）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,7 +18,7 @@ description: Use when AI-generated clips need an edit plan, source in/out points
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`；平台延长/导出约束按需读 `model-adaptation.md`，动作注意落点可参考 `film-cases.md`。
 - 按同版 `current-context.md` 承接最新剧情位置、人物目的、全片视听约束与实际状态；声音整合按 `voice-and-music.md` 读取选定VOICE/BGM及Shot/Clip映射。角色声音事实取自作品 `01_故事与角色设定.md`，逐Shot声音正文取自当前调度或 `04_生成提示词/` 的实际声音稿，不假定存在固定的声音计划文件。
 - 本节点负责素材选段和视听连接；不能靠剪辑说明把未生成素材标为已完成。

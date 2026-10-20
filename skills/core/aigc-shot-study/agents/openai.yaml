@@ -1,4 +1,4 @@
 interface:
-  display_name: "AIGC 视频拉片复刻"
+  display_name: "AIGC 拉片分析"
   short_description: "拆解用户给定视频、公开工程和提示词，沉淀有来源的镜头方法与复刻案例"
   default_prompt: "请使用 $aigc-shot-study 拆解我提供的案例，说明可见证据、未知项和下一部可用的方法。"

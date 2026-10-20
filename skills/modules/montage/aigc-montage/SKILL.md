@@ -3,10 +3,10 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 混剪与活动回顾
+# aigc-montage（混剪回顾）
 
 先知道手里有什么，再决定怎样连起来；剪辑节奏不能替代素材事实。
 
@@ -19,8 +19,8 @@ metadata:
 ## 适用边界
 
 - 适用：活动回顾、素材混剪、精选片段、已有影像重新编排和声音连接。
-- 不适用：从零生成全部剧情以 `aigc-narrative` 为主；按曲目节拍主导的混剪可叠加 `aigc-music`。
-- 活动真实性要求高时叠加 `aigc-documentary`；非事件关联的意象混剪明确其概念表达，不暗示真实因果。
+- 不适用：从零生成全部剧情以 `aigc-narrative`（剧情与漫剧） 为主；按曲目节拍主导的混剪可叠加 `aigc-music`（音乐影像）。
+- 活动真实性要求高时叠加 `aigc-documentary`（纪实与重建）；非事件关联的意象混剪明确其概念表达，不暗示真实因果。
 - 素材形态和画幅不是用途类型；保留用户的排序、风格与删改边界。
 
 ## 最小输入与公共协议
@@ -28,22 +28,22 @@ metadata:
 - 最少需要可访问素材或可靠逐段观察记录、目标用途、总时长、排序约束、声音条件与授权范围。
 - 清单记录素材 ID、实际文件/来源、时长、画幅、内容观察、收音、可用区间及是否已看；没看过不写“开场/高潮/互动”。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；需分析截图读 `references/screenshot-analysis.md`。
 - 生成补充片段才按需读其 `references/model-adaptation.md`；缺依赖时报告，不臆测文件或素材内容。
 - 每个选段写相机/原始机位、人物/主体、画面及入出状态；主体、关键动作和不能改变的事实前置，已有素材不必重写生成提示词。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 用途、时长或排序目标未知 | `aigc-prd`；已有剪辑 brief 则只核对可用素材 |
-| 全部使用现有素材 | `aigc-script` 写编辑结构，`aigc-storyboard` 写选段，再 `aigc-editing` |
+| 用途、时长或排序目标未知 | `aigc-prd`（创作需求）；已有剪辑 brief 则只核对可用素材 |
+| 全部使用现有素材 | `aigc-script`（剧情脚本） 写编辑结构，`aigc-storyboard`（分镜设计） 写选段，再 `aigc-editing`（剪辑时间轴） |
 | 不生成任何新画面 | 跳角色资产、人物调度、关键帧与视频生成节点；素材 ID 仍持续使用 |
-| 音轨、原声、J/L-cut | `aigc-audio` 记来源与声音跨接，不能让声音暗示错误现场关系 |
-| 素材确认存在缺口 | 先找同场原素材或提出补拍；用户批准生成装饰段才调用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes` |
+| 音轨、原声、J/L-cut | `aigc-audio`（声音制作） 记来源与声音跨接，不能让声音暗示错误现场关系 |
+| 素材确认存在缺口 | 先找同场原素材或提出补拍；用户批准生成装饰段才调用`aigc-video-prompts`（视频提示词），仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`（静态关键帧） |
 | 交付 | Codex自检剪辑表算术与事件描述；用户在LibTV观看实际衔接及完整成片并反馈 |
 
 ## 专用创作判断

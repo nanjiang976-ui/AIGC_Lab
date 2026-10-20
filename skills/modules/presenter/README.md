@@ -1,6 +1,6 @@
-# 主持人与数字人口播
+# aigc-presenter（主持人口播）｜类型说明
 
-入口：[aigc-presenter](aigc-presenter/SKILL.md)。以可自然说出的声音稿为中心，安排停顿、视线、手势与口型核验。
+入口：[aigc-presenter（主持人口播）](aigc-presenter/SKILL.md)。以可自然说出的声音稿为中心，安排停顿、视线、手势与口型核验。
 
 示例：`用 $aigc-presenter 做 30 秒原创虚构讲师口播，先给声音稿和动作安排。`
 

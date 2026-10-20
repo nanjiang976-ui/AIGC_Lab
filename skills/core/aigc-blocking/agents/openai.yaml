@@ -1,5 +1,5 @@
 interface:
-  display_name: "AIGC 完整镜头调度"
+  display_name: "AIGC 场面调度"
   short_description: "把故事写成可执行的逐镜画面、空间、表演、台词、声音与精确计划时间"
   default_prompt: "请使用 $aigc-blocking，把这场戏写成完整镜头调度，保留已有设定和台词。"
 policy:

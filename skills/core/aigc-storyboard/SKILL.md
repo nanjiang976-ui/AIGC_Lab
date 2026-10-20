@@ -2,11 +2,11 @@
 name: aigc-storyboard
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when an AI video or comic needs a concrete shot count, shot-by-shot camera and performance design, tension progression, or continuity checks between planned shots.
 ---
 
-# 分镜与摄影设计
+# aigc-storyboard（分镜设计）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,10 +18,10 @@ description: Use when an AI video or comic needs a concrete shot count, shot-by-
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`prompt-language.md`；详细镜头或混合稿按需读 `screenshot-analysis.md` 的截图1、2，借鉴电影技法读 `film-cases.md`。
 - 先消费剧本和调度；已有分镜只改受影响镜头，不强制回到 PRD。
-- 完整调度由 `aigc-blocking` 整合时，按共享 `director-dispatch.md` 输出所需镜头数、构图/裁切、切点与时间，不复制另一个互相冲突的调度版本；术语定义以 `shot-glossary.md` 为准。
+- 完整调度由 `aigc-blocking`（场面调度） 整合时，按共享 `director-dispatch.md` 输出所需镜头数、构图/裁切、切点与时间，不复制另一个互相冲突的调度版本；术语定义以 `shot-glossary.md` 为准。
 
 ## 最小输入与缺项
 

@@ -2,11 +2,11 @@
 name: aigc-blocking
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: "把故事或场景写成完整镜头调度，或局部设计人物走位、视线、道具交接与相机路径；用户说写调度即可，后台补齐分镜、声音和时间，不要求记六维字段。"
 ---
 
-# 完整镜头调度与空间连续性
+# aigc-blocking（场面调度）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,10 +18,10 @@ description: "把故事或场景写成完整镜头调度，或局部设计人物
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`；混合调度稿或移动机位按需读 `screenshot-analysis.md` 的截图2、3，连续观看设计读 `film-cases.md`。
-- 完整调度请求读取共享 `director-dispatch.md`，后台协同 `aigc-storyboard` 决定镜头数/观看方式，协同 `aigc-audio` 写声源/对白/节拍，再由本入口整合成一份完整调度。局部走位请求只执行所需范围，不让用户在三个节点之间搬运材料。
-- 进入完整调度时按同版 `current-context.md` 整理当前有效的全片与场景脉络；涉及声音时读 `voice-and-music.md`。后台调用 `aigc-audio` 的逐Shot声音/BGM子能力，承接角色声音卡与用户选定资产。仅走位、视线或道具交接请求不扩成整套声音制作。
+- 完整调度请求读取共享 `director-dispatch.md`，后台协同 `aigc-storyboard`（分镜设计） 决定镜头数/观看方式，协同 `aigc-audio`（声音制作） 写声源/对白/节拍，再由本入口整合成一份完整调度。局部走位请求只执行所需范围，不让用户在三个节点之间搬运材料。
+- 进入完整调度时按同版 `current-context.md` 整理当前有效的全片与场景脉络；涉及声音时读 `voice-and-music.md`。后台调用 `aigc-audio`（声音制作） 的逐Shot声音/BGM子能力，承接角色声音卡与用户选定资产。仅走位、视线或道具交接请求不扩成整套声音制作。
 
 ## 最小输入与缺项
 

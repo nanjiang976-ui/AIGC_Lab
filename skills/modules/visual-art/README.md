@@ -1,6 +1,6 @@
-# 视觉艺术与氛围影像
+# aigc-visual-art（视觉艺术）｜类型说明
 
-入口：[aigc-visual-art](aigc-visual-art/SKILL.md)。以视觉关系、运动节奏和循环接点为中心，按需裁剪故事与人物资产流程。
+入口：[aigc-visual-art（视觉艺术）](aigc-visual-art/SKILL.md)。以视觉关系、运动节奏和循环接点为中心，按需裁剪故事与人物资产流程。
 
 示例：`用 $aigc-visual-art 做 10 秒无人雨夜循环，给场景母版、运动规则与首尾检查方式。`
 

@@ -2,14 +2,14 @@
 
 本项目有1个总控、11个共享节点、9个类型专属模块。完整项目说明、主流程图、调用方式和逐节点打磨方法在[根README](../README.md)，此处只维护源文件导航。
 
-- [总控](aigc-creator/SKILL.md)：选择当前阶段、主模块与节点，组织交接、续作和变更。
+- [aigc-creator（全链路创作总控）](aigc-creator/SKILL.md)：选择当前阶段、主模块与节点，组织交接、续作和变更。
 - [清单](catalog.json)：机器可检查的唯一名称、源路径、分类和安装依赖。
 - `core/aigc-*/`：PRD、脚本、视觉资产、场面调度、分镜、关键帧、Clip提示词、声音、剪辑、拉片复刻、持续迭代。
 - `modules/<用途>/aigc-<用途>/`：类型专属skill；每个模块README只说明其定位和入口。
 
 ## 类型模块
 
-[剧情与漫剧](modules/narrative/README.md) · [商业广告](modules/commercial/README.md) · [科普讲解](modules/explainer/README.md) · [数字人口播](modules/presenter/README.md) · [纪实](modules/documentary/README.md) · [音乐](modules/music/README.md) · [产品演示](modules/product-demo/README.md) · [氛围艺术](modules/visual-art/README.md) · [混剪预告](modules/montage/README.md)
+[aigc-narrative（剧情与漫剧）](modules/narrative/README.md) · [aigc-commercial（商业广告）](modules/commercial/README.md) · [aigc-explainer（科普解释）](modules/explainer/README.md) · [aigc-presenter（主持人口播）](modules/presenter/README.md) · [aigc-documentary（纪实与重建）](modules/documentary/README.md) · [aigc-music（音乐影像）](modules/music/README.md) · [aigc-product-demo（产品演示）](modules/product-demo/README.md) · [aigc-visual-art（视觉艺术）](modules/visual-art/README.md) · [aigc-montage（混剪回顾）](modules/montage/README.md)
 
 ## 公共资源
 
@@ -28,7 +28,7 @@
 
 安装更新见[使用说明](../05_工具与模型适配/AIGC创作Skill使用说明.md)。历史1.0测试结果见[旧版训练记录](../06_实验与复盘/2026-10-16_Skill链训练/README.md)。
 
-1.1.0的范围和实际验证见[本轮计划](../spec/plans/2026-10-19-Clip创作系统.md)。
+当前1.4.0的范围和实际验证见[拉片审批与节点导航计划](../spec/plans/2026-10-20-拉片审批与节点导航.md)；1.1.0历史范围见[Clip创作系统计划](../spec/plans/2026-10-19-Clip创作系统.md)。
 
 ## 我的调用模板
 

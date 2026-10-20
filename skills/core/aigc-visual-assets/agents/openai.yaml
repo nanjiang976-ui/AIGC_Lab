@@ -1,4 +1,4 @@
 interface:
-  display_name: "AIGC 参考图制作"
+  display_name: "AIGC 参考图资产"
   short_description: "制作人物四格、生物与场景参考提示词，重要道具每件单张单视角，旧图保留身份衣装"
   default_prompt: "请使用 $aigc-visual-assets，把我提供的人物图整理成上排正面与3/4胸像、下排背面与略3/4正面全身的四格参考图，先交付可复制提示词。"

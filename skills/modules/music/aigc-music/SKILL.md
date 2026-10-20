@@ -3,10 +3,10 @@ name: aigc-music
 description: Use when planning music-driven AI videos, music visualizers, MV sequences, beat-synchronized imagery, or audiovisual edits tied to a supplied track.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 音乐驱动影像
+# aigc-music（音乐影像）
 
 让视觉服从实际音乐结构；拍数换算给计划网格，实际音轨决定同步位置。
 
@@ -19,8 +19,8 @@ metadata:
 ## 适用边界
 
 - 适用：MV、视觉化音乐片段、节拍动效、以乐句或音色变化组织的影像。
-- 不适用：普通 BGM 设计与制作归 `aigc-audio`；只有背景配乐的广告不必切换主模块。完整调度的声音主链按同版 `references/handoff.md` 读取；没有音乐目的的循环氛围画面用 `aigc-visual-art`。
-- 有人物故事可叠加 `aigc-narrative`，明确故事与音乐谁主导转折；不把每个鼓点都设为切镜点。
+- 不适用：普通 BGM 设计与制作归 `aigc-audio`（声音制作）；只有背景配乐的广告不必切换主模块。完整调度的声音主链按同版 `references/handoff.md` 读取；没有音乐目的的循环氛围画面用 `aigc-visual-art`（视觉艺术）。
+- 有人物故事可叠加 `aigc-narrative`（剧情与漫剧），明确故事与音乐谁主导转折；不把每个鼓点都设为切镜点。
 - 动画/实拍风格与横竖屏独立记录，本模块不构成音乐影像的穷尽分类。
 
 ## 最小输入与公共协议
@@ -28,23 +28,23 @@ metadata:
 - 最少需要音轨或明确的待作曲条件、片段起点/长度、速度与拍号已知程度、视觉目的及本轮范围。
 - 未收到/未听音轨时，只能制作假设节拍草案；不得声称听见乐器、鼓点、情绪高潮或准确落拍。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；动势/材质按需读 `references/lexicon.md`。
 - 需生成工具时再读其 `references/model-adaptation.md`；缺依赖时报告，不凭通用例子承诺音画同步功能。
 - 每镜头记录相机、角色/主体、画面及前后状态；主体、运动与节奏硬约束前置，精确踩点仍交后期实测。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 只有视觉愿望或歌曲概念 | `aigc-prd` 定范围；现有曲目不擅自更换 |
-| 真实音轨已到 | `aigc-audio` 先记时长、起拍、段落、重音与测量方式，再交 `aigc-script` 写视觉节奏谱 |
-| 抽象动效无人物 | `aigc-visual-assets` 建形状/材质母版，跳角色三视图与人物关系脚本 |
-| 舞蹈、人物或物体节奏运动 | `aigc-blocking` 写动作相位与可执行幅度，再 `aigc-storyboard` |
-| 需要生成段落 | 按控制需要选 `aigc-keyframes` → `aigc-video-prompts`；已有素材可直接剪辑 |
-| 精确同步和整段播放 | `aigc-editing`依据音轨时间轴或用户报告写校准方案，用户在LibTV检查实际节奏与接点 |
+| 只有视觉愿望或歌曲概念 | `aigc-prd`（创作需求） 定范围；现有曲目不擅自更换 |
+| 真实音轨已到 | `aigc-audio`（声音制作） 先记时长、起拍、段落、重音与测量方式，再交 `aigc-script`（剧情脚本） 写视觉节奏谱 |
+| 抽象动效无人物 | `aigc-visual-assets`（参考图资产） 建形状/材质母版，跳角色三视图与人物关系脚本 |
+| 舞蹈、人物或物体节奏运动 | `aigc-blocking`（场面调度） 写动作相位与可执行幅度，再 `aigc-storyboard`（分镜设计） |
+| 需要生成段落 | 按控制需要选 `aigc-keyframes`（静态关键帧） → `aigc-video-prompts`（视频提示词）；已有素材可直接剪辑 |
+| 精确同步和整段播放 | `aigc-editing`（剪辑时间轴）依据音轨时间轴或用户报告写校准方案，用户在LibTV检查实际节奏与接点 |
 
 ## 专用创作判断
 

@@ -1,0 +1,55 @@
+{
+  "version": "1.4.0",
+  "date": "2026-10-20",
+  "base_commit": "6ef3ed4f8b8867b56abec853c0fd3644e02c4727",
+  "scope": "local_structure_format_routing_and_text_behavior",
+  "project_structure": {
+    "passed": true,
+    "work_count": 2
+  },
+  "bundle": {
+    "passed": true,
+    "count": 21
+  },
+  "skill_format": {
+    "passed": true,
+    "count": 21
+  },
+  "existing_unit_tests": {
+    "passed": true,
+    "count": 166
+  },
+  "invocation_cases": {
+    "passed": true,
+    "count": 63
+  },
+  "readme_skill_flow": {
+    "links": 23,
+    "unique_skills": 21,
+    "all_local_targets_exist": true
+  },
+  "independent_review": {
+    "navigation": "old_type_names_fixed",
+    "behavior": "generic_repeat_references_fixed_and_fresh_retest_accepted"
+  },
+  "behavior_evidence": {
+    "baseline": "基线执行_Clip_1.3.0.md",
+    "initial": [
+      "独立执行_拉片项目对照.md",
+      "独立执行_Clip素材引用.md",
+      "独立执行_关键帧素材引用.md"
+    ],
+    "fresh_retest": "陌生复测_素材引用.md",
+    "scope": "single_text_executions_not_statistical_or_media_validation"
+  },
+  "not_run": [
+    "media_generation",
+    "video_playback",
+    "audio_audition",
+    "LibTV_reference_binding",
+    "user_acceptance_of_media",
+    "global_skill_sync",
+    "LibTV_derived_bundle_sync"
+  ],
+  "browser_github_clicks": "pending_after_publication"
+}

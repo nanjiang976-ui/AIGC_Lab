@@ -2,11 +2,11 @@
 name: aigc-visual-assets
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Create reference prompts for people, creatures, props, and scenes from plain-language descriptions, standardize an existing character image into a four-panel sheet, or repair reference assets for AI video. Deliver each important or explicitly requested prop as one standalone single-view image prompt, and separate character identity from later Clip clothing.
 ---
 
-# 参考图制作：人物、生物、道具与场景
+# aigc-visual-assets（参考图资产）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -20,7 +20,7 @@ description: Create reference prompts for people, creatures, props, and scenes f
 
 - 已明确完整 AIGC_Lab 工作区时，验证项目契约并读取该根 `skills/aigc-creator/references/handoff.md`、`reference-assets.md`；脱离项目再定位同版本总控，检查 metadata 的 bundle 与 bundle_version。缺配套文件时报告，不混接旧全局副本。
 - **先确定资产类型**：人物、生物或物体型角色、道具、场景。一次请求包含多类资产时逐项识别；用户自然语言已足够判断时直接声明类型，“帮我做参考图”而主体不明时只补问类型和主体，不先猜图。
-- “转换这张人物图”进入旧图标准化；“创建角色”进入新建预设。仅准备提示词时不生成媒体。逐镜首帧是后续入口按模型选择的分支，交 `aigc-keyframes`，身份联系板不冒充首帧。
+- “转换这张人物图”进入旧图标准化；“创建角色”进入新建预设。仅准备提示词时不生成媒体。逐镜首帧是后续入口按模型选择的分支，交 `aigc-keyframes`（静态关键帧），身份联系板不冒充首帧。
 - 读取已确认设定、镜头用途、实际参考文件与状态；只补影响本步的缺口。未选平台可交完整通用文字，参考绑定、原生分辨率和生成就绪状态待适配核验。
 
 ## 本节点的选择规则
@@ -35,6 +35,7 @@ description: Create reference prompts for people, creatures, props, and scenes f
 ## 产出与检查
 
 - 逐项交付本轮所需资产的独立、完整图片正文；每份标题和正文都使用完整、易识别的资产名称，不只写“道具”“它”或内部 ID。正文外注明类型、视图方案、上传素材与用途、目标尺寸、实际入口及待核验项。正文不留模板括号、“同上”或虚构文件引用。
+- 转换或派生图片引用已有命名素材时，按handoff使用可渲染Markdown并加粗完整素材名；新建且没有上游引用的正文仍可代码块。展示加粗不修改资产登记名称、路径、版本或实际标签。
 - 人物四格是一个图文件，不是四张独立图片；道具每件一张单视角图，不套四格。人物可保留 FRONT／3/4 VIEW／BACK／3/4 FRONT 小标签，需检查准确可读，不能接受乱码；必要时后期加字。确需拆图或入口仅接单人图时，按已授权路线裁切或分别生成，再逐图检查；不声称整板一定被模型理解。
 - 资产记录固定 ID、版本、完整名称、用途、适用的不变项与状态、文字候选／待生成／用户确认可用、真实文件或平台标签，以及用户确认来源。人物另记身份和衣装；道具另记结构与作用状态。用户在 LibTV 确认可用后可继续下游，不要求回传 Codex 复审；用户未反馈不代填已验收，只有文字不得填写实际像素。
 - 人物验收检查四格同一身份、同衣装、体态比例和左右侧别；上排胸像尺度相近、3/4 转侧明确，下排全身同尺度且头脚完整，关键细节可读。柔光、中性表情、干净背景及无可见图像噪点属于人物参考规范；禁止以美颜或抹去五官来追求整洁。

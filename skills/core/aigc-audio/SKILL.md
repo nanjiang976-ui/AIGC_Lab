@@ -2,11 +2,11 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when an AI video needs reusable character voice designs, Shot-specific BGM prompts, dialogue timing, sound events, or a lip-sync plan before or after visual generation.
 ---
 
-# 人物音色、Shot配乐、试读与口型
+# aigc-audio（声音制作）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,10 +18,10 @@ description: Use when an AI video needs reusable character voice designs, Shot-s
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`model-adaptation.md`。涉及作品声音、剧本或调度时，读取同版 `current-context.md`，沿用最新剧情位置、声音选择及上游变更；人物音色或Shot配乐任务另读同版 `voice-and-music.md`。声音与动作时序按需读 `screenshot-analysis.md` 的截图1及 `film-cases.md` 的相关案例。这些共享文档均从已定位的总控references读取，不跨Skill猜路径。
 - 本节点可在分镜之前试读；不擅自录音、调用付费配音或替换用户锁定台词。
-- 只做图片不强制声音；无对白且无需固定角色发声时音色项不适用；用户明确不用配乐时记录不适用，不为了填表加音乐。MV和音乐主导的叙事/节拍视觉继续由 `aigc-music` 负责，本节点承接其声音资产和同步。
+- 只做图片不强制声音；无对白且无需固定角色发声时音色项不适用；用户明确不用配乐时记录不适用，不为了填表加音乐。MV和音乐主导的叙事/节拍视觉继续由 `aigc-music`（音乐影像） 负责，本节点承接其声音资产和同步。
 
 ## 最小输入与缺项
 
@@ -51,7 +51,7 @@ description: Use when an AI video needs reusable character voice designs, Shot-s
 
 ## 平台原生声音与独立调用
 
-当前模型和入口已核验支持原生音频、且用户未指定先制作独立声音资产时，可将逐字台词、声源、表演、节拍和声音层次交给 video-prompts，直接编入同一次视频生成；不默认另做配音或混音。**用户指定先做人物声音或BGM资产时，必须先交该资产所需的设计正文、试听/BGM文本和生成/选择卡，不能因视频原生带声音而省略。** 完整调度中已完成的内容后台复用，用户无需重复调用。按当前入口核验选定声音如何供视频消费、是否支持语音参考或口型、原生与独立音轨怎样避免重复；音频节点存在不证明能锁定后续视频声线。需要单独设计/修改声音、排查台词或口型，或原生结果未达要求时，本入口仍可独立调用。写入提示词与开启音频开关不代替实际试听、原词和同步检查；文字设计不增加生成或费用授权。
+当前模型和入口已核验支持原生音频、且用户未指定先制作独立声音资产时，可将逐字台词、声源、表演、节拍和声音层次交给 aigc-video-prompts（视频提示词），直接编入同一次视频生成；不默认另做配音或混音。**用户指定先做人物声音或BGM资产时，必须先交该资产所需的设计正文、试听/BGM文本和生成/选择卡，不能因视频原生带声音而省略。** 完整调度中已完成的内容后台复用，用户无需重复调用。按当前入口核验选定声音如何供视频消费、是否支持语音参考或口型、原生与独立音轨怎样避免重复；音频节点存在不证明能锁定后续视频声线。需要单独设计/修改声音、排查台词或口型，或原生结果未达要求时，本入口仍可独立调用。写入提示词与开启音频开关不代替实际试听、原词和同步检查；文字设计不增加生成或费用授权。
 
 ## 口型与生成能力分支
 
@@ -86,10 +86,11 @@ description: Use when an AI video needs reusable character voice designs, Shot-s
 ## 输出与验收
 
 - 逐字声音脚本、表演方向、事件表、素材来源及声音路线；上传/参数在正文外。
+- 引用已有音色样音、对白音轨、BGM、图像或片段时，按handoff在可渲染Markdown主稿中加粗完整素材名；试听台词与要朗读的文字不混入导演标记，实际ID/路径不加入加粗符号。
 - 有音色/BGM任务时，核对声音卡、可复制正文、试听文本、LibTV生成/选择卡和Shot/Clip资产映射；不适用项给原因。用户未选定真实声音或音乐时，不标“声线已锁定”或“音乐已就绪”。
 - 计划时长、文本估时、实际音频时长三列分开；真实时长填文件与测量方式。
 - 对白听清、事件音对应动作、背景声音来源合理、跨镜没有重复触发。
-- 口型只在实际播放检查后评价；未测不得 PASS，指出需要 `aigc-video-prompts` 或 `aigc-editing` 修复的部分。
+- 口型只在实际播放检查后评价；未测不得 PASS，指出需要 `aigc-video-prompts`（视频提示词） 或 `aigc-editing`（剪辑时间轴） 修复的部分。
 
 ## 演练请求
 

@@ -3,10 +3,10 @@ name: aigc-visual-art
 description: Use when planning AI visual art, abstract motion, ambient scenes, non-narrative clips, or seamless-loop targets without requiring characters or plot.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 视觉艺术与氛围影像
+# aigc-visual-art（视觉艺术）
 
 用受控的形状、光、材质和运动产生观看体验；没有故事或人物也能形成完整作品。
 
@@ -19,7 +19,7 @@ metadata:
 ## 适用边界
 
 - 适用：抽象艺术、环境氛围、装置视觉、循环画面和以感官变化为目标的短片。
-- 不适用：靠人物选择产生情节变化时用 `aigc-narrative`；精确依音乐结构变化时以 `aigc-music` 为主。
+- 不适用：靠人物选择产生情节变化时用 `aigc-narrative`（剧情与漫剧）；精确依音乐结构变化时以 `aigc-music`（音乐影像） 为主。
 - 可以有人物作为视觉主体，但不因此自动补剧情、台词和人物关系；保留用户指定的开放含义。
 - 2D、3D、写实、竖屏不是用途分类；本模块不是所有非叙事视频的强制入口。
 
@@ -28,24 +28,24 @@ metadata:
 - 最少需要视觉主题、希望的观看感受、时长/画幅、主体有无、是否循环和本轮范围。
 - 把情绪偏好转为可见变量，例如“平静”对应稳定构图、低幅运动和较少突变；这些是本片方案，不能提升为用户全局审美。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md`、`references/prompt-language.md`；材质/光线措辞按需读 `references/lexicon.md`。
 - 需要首尾帧控制时读其 `references/model-adaptation.md` 核验具体能力；缺依赖不承诺平台保证无缝。
 - 每镜头写相机、角色或非人物主体、画面及前后状态；主视觉、运动、不能变化的要素前置，不把位置权重当通用事实。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 视觉目的或循环条件未知 | `aigc-prd` 收窄体验和范围 |
-| 无故事、无对白 | `aigc-script` 可压缩为“视觉段落/变化谱”，不强建三幕 |
-| 无人物 | `aigc-visual-assets` 仅建场景、形状、材质母版；省角色三视图与服装设定 |
-| 无复杂物体接触 | 跳独立 `aigc-blocking`；多物体相遇、遮挡或运动路径冲突时再用 |
-| 单镜或多段变化 | `aigc-storyboard` 给持续变化与时长理由，不强行拆成多个镜头 |
-| 对起止状态有要求 | `aigc-keyframes` 设计关键状态，`aigc-video-prompts` 写运动规则 |
-| 有声音/要成片 | 按需`aigc-audio`及`aigc-editing`；用户在LibTV确认循环与声音，静音作品可跳音轨制作 |
+| 视觉目的或循环条件未知 | `aigc-prd`（创作需求） 收窄体验和范围 |
+| 无故事、无对白 | `aigc-script`（剧情脚本） 可压缩为“视觉段落/变化谱”，不强建三幕 |
+| 无人物 | `aigc-visual-assets`（参考图资产） 仅建场景、形状、材质母版；省角色三视图与服装设定 |
+| 无复杂物体接触 | 跳独立 `aigc-blocking`（场面调度）；多物体相遇、遮挡或运动路径冲突时再用 |
+| 单镜或多段变化 | `aigc-storyboard`（分镜设计） 给持续变化与时长理由，不强行拆成多个镜头 |
+| 对起止状态有要求 | `aigc-keyframes`（静态关键帧） 设计关键状态，`aigc-video-prompts`（视频提示词） 写运动规则 |
+| 有声音/要成片 | 按需`aigc-audio`（声音制作）及`aigc-editing`（剪辑时间轴）；用户在LibTV确认循环与声音，静音作品可跳音轨制作 |
 
 ## 专用创作判断
 

@@ -2,11 +2,11 @@
 name: aigc-keyframes
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when an AI image or video needs a shot's static first frame, endpoint image, or revised keyframe based on a verified previous result.
 ---
 
-# 静态关键帧
+# aigc-keyframes（静态关键帧）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,7 +18,7 @@ description: Use when an AI image or video needs a shot's static first frame, en
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`model-adaptation.md`；裁切与接触可见性按 `prompt-language.md` 的对应小节检查，复杂连续镜头按需读 `screenshot-analysis.md` 的截图3。
 - 本节点产出图片正文和静态检查；全段动作、原生声音及生成任务由对应节点处理。
 
@@ -67,7 +67,7 @@ description: Use when an AI image or video needs a shot's static first frame, en
 ## 输出
 
 - 每张图的目的、来源版本、计划/实际状态与后续用途。
-- 一图一个完整代码块；文件、镜头 ID、上传/设置和检查说明放代码块外。
+- 一图一个完整主稿；引用上游参考图/实际末帧时按handoff用可渲染Markdown并加粗完整素材名，无素材引用时可用单个代码块。文件、镜头ID、上传/设置和检查说明放主稿之外，机器路径和标签保持原值。
 - 已有素材的真实映射；未生成图明确标待生成，正文不含占位或假附件。
 - 静态审查清单及下一镜继承状态；若图片失败，不把它作为已锁定首帧继续生产。
 

@@ -3,10 +3,10 @@ name: aigc-presenter
 description: Use when planning AI presenter, avatar, host, talking-head, or digital-human videos where speech delivery, gesture timing, and lip-sync are central.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 主持人与数字人口播
+# aigc-presenter（主持人口播）
 
 先让话说得自然、重点听得清楚，再用克制动作服务表达。
 
@@ -19,7 +19,7 @@ metadata:
 ## 适用边界
 
 - 适用：讲师口播、主持开场、虚构数字人、出镜解说和以说话人为中心的介绍。
-- 不适用：角色冲突推动情节时用 `aigc-narrative`；需科学机制解释时叠加 `aigc-explainer`。
+- 不适用：角色冲突推动情节时用 `aigc-narrative`（剧情与漫剧）；需科学机制解释时叠加 `aigc-explainer`（科普解释）。
 - 真人出镜素材可沿用，但身份、声线与肖像来源需明确；未给身份时使用原创虚构角色，不虚构职业资质或真人背书。
 - 是否出镜、真人还是虚构人物、口音与性格由用户决定，不把数字人口播当所有知识内容的默认形式。
 
@@ -28,24 +28,24 @@ metadata:
 - 最少需要讲给谁听、核心信息/现有讲稿、总时长、人物身份来源、声音偏好及交付范围。
 - 完整稿件先保留事实与意图；只在影响可说性、时长或表达清晰时提出具体改句，不擅自更改承诺。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md` 和 `references/prompt-language.md`；表演措辞按需读 `references/lexicon.md`。
 - 具体工具的音色、口型、输入时长等由其 `references/model-adaptation.md` 和当前官方能力核对；缺依赖不假定平台支持。
 - 每镜头记录相机、人物/主体、画面及前后状态；人物、发言/动作、身份与视线硬约束前置，不声称跨模型位置权重。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 受众、身份或表达目的不清 | `aigc-prd`；现有完整讲稿不重新全问卷 |
-| 声音稿与说话节奏 | `aigc-script` → `aigc-audio`，实际声音优先决定可用时长 |
-| 讲师持续复现 | `aigc-visual-assets` 锁脸、发型、服装；已有授权可用母版直接引用 |
-| 坐姿固定、无复杂互动 | 调度可在 `aigc-storyboard` 内写清手势/视线，不单独展开 `aigc-blocking` |
-| 走位、持物或与屏幕互动 | `aigc-blocking` 锁定轨迹与指向，再做分镜 |
-| 静态驱动或视频生成 | 按平台条件选 `aigc-keyframes`、`aigc-video-prompts`，已有完整实拍可跳生成 |
-| 字幕、插图、口型验收 | `aigc-editing`写方案，用户在LibTV观看试听；只交文本不宣称配音、口型已验证 |
+| 受众、身份或表达目的不清 | `aigc-prd`（创作需求）；现有完整讲稿不重新全问卷 |
+| 声音稿与说话节奏 | `aigc-script`（剧情脚本） → `aigc-audio`（声音制作），实际声音优先决定可用时长 |
+| 讲师持续复现 | `aigc-visual-assets`（参考图资产） 锁脸、发型、服装；已有授权可用母版直接引用 |
+| 坐姿固定、无复杂互动 | 调度可在 `aigc-storyboard`（分镜设计） 内写清手势/视线，不单独展开 `aigc-blocking`（场面调度） |
+| 走位、持物或与屏幕互动 | `aigc-blocking`（场面调度） 锁定轨迹与指向，再做分镜 |
+| 静态驱动或视频生成 | 按平台条件选 `aigc-keyframes`（静态关键帧）、`aigc-video-prompts`（视频提示词），已有完整实拍可跳生成 |
+| 字幕、插图、口型验收 | `aigc-editing`（剪辑时间轴）写方案，用户在LibTV观看试听；只交文本不宣称配音、口型已验证 |
 
 ## 专用创作判断
 

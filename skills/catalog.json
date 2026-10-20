@@ -12,7 +12,7 @@
       "name": "aigc-prd",
       "path": "skills/core/aigc-prd",
       "group": "core",
-      "title": "需求访谈与PRD",
+      "title": "创作需求",
       "dependencies": [
         "aigc-creator"
       ]
@@ -21,7 +21,7 @@
       "name": "aigc-script",
       "path": "skills/core/aigc-script",
       "group": "core",
-      "title": "剧情与信息脚本",
+      "title": "剧情脚本",
       "dependencies": [
         "aigc-creator"
       ]
@@ -30,7 +30,7 @@
       "name": "aigc-visual-assets",
       "path": "skills/core/aigc-visual-assets",
       "group": "core",
-      "title": "参考图与视觉资产",
+      "title": "参考图资产",
       "dependencies": [
         "aigc-creator"
       ]
@@ -39,7 +39,7 @@
       "name": "aigc-blocking",
       "path": "skills/core/aigc-blocking",
       "group": "core",
-      "title": "完整镜头调度",
+      "title": "场面调度",
       "dependencies": [
         "aigc-creator",
         "aigc-storyboard",
@@ -59,7 +59,7 @@
       "name": "aigc-keyframes",
       "path": "skills/core/aigc-keyframes",
       "group": "core",
-      "title": "首帧与关键帧",
+      "title": "静态关键帧",
       "dependencies": [
         "aigc-creator"
       ]
@@ -68,7 +68,7 @@
       "name": "aigc-video-prompts",
       "path": "skills/core/aigc-video-prompts",
       "group": "core",
-      "title": "调度转Clip提示词",
+      "title": "视频提示词",
       "dependencies": [
         "aigc-creator"
       ]
@@ -77,7 +77,7 @@
       "name": "aigc-audio",
       "path": "skills/core/aigc-audio",
       "group": "core",
-      "title": "声音与对白表演",
+      "title": "声音制作",
       "dependencies": [
         "aigc-creator"
       ]
@@ -86,7 +86,7 @@
       "name": "aigc-editing",
       "path": "skills/core/aigc-editing",
       "group": "core",
-      "title": "剪辑与后期",
+      "title": "剪辑时间轴",
       "dependencies": [
         "aigc-creator"
       ]
@@ -96,7 +96,7 @@
       "path": "skills/modules/narrative/aigc-narrative",
       "group": "module",
       "module": "narrative",
-      "title": "剧情短片与AI漫剧",
+      "title": "剧情与漫剧",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -115,7 +115,7 @@
       "path": "skills/modules/commercial/aigc-commercial",
       "group": "module",
       "module": "commercial",
-      "title": "广告与品牌宣传",
+      "title": "商业广告",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -133,7 +133,7 @@
       "path": "skills/modules/explainer/aigc-explainer",
       "group": "module",
       "module": "explainer",
-      "title": "科普与知识讲解",
+      "title": "科普解释",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -151,7 +151,7 @@
       "path": "skills/modules/presenter/aigc-presenter",
       "group": "module",
       "module": "presenter",
-      "title": "数字人与口播",
+      "title": "主持人口播",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -168,7 +168,7 @@
       "path": "skills/modules/documentary/aigc-documentary",
       "group": "module",
       "module": "documentary",
-      "title": "纪实与历史情景重建",
+      "title": "纪实与重建",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -185,7 +185,7 @@
       "path": "skills/modules/music/aigc-music",
       "group": "module",
       "module": "music",
-      "title": "音乐MV与节拍视觉",
+      "title": "音乐影像",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -203,7 +203,7 @@
       "path": "skills/modules/product-demo/aigc-product-demo",
       "group": "module",
       "module": "product-demo",
-      "title": "产品与操作演示",
+      "title": "产品演示",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -219,7 +219,7 @@
       "path": "skills/modules/visual-art/aigc-visual-art",
       "group": "module",
       "module": "visual-art",
-      "title": "氛围艺术与循环影像",
+      "title": "视觉艺术",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -236,7 +236,7 @@
       "path": "skills/modules/montage/aigc-montage",
       "group": "module",
       "module": "montage",
-      "title": "混剪、预告与活动回顾",
+      "title": "混剪回顾",
       "dependencies": [
         "aigc-creator",
         "aigc-prd",
@@ -251,7 +251,7 @@
       "name": "aigc-shot-study",
       "path": "skills/core/aigc-shot-study",
       "group": "core",
-      "title": "视频拉片与复刻",
+      "title": "拉片分析",
       "dependencies": [
         "aigc-creator"
       ]
@@ -260,12 +260,12 @@
       "name": "aigc-iteration",
       "path": "skills/core/aigc-iteration",
       "group": "core",
-      "title": "创作复盘与持续迭代",
+      "title": "创作复盘",
       "dependencies": [
         "aigc-creator"
       ]
     }
   ],
-  "bundle_version": "1.3.0",
+  "bundle_version": "1.4.0",
   "invocation_registry": "skills/aigc-creator/references/invocations.json"
 }

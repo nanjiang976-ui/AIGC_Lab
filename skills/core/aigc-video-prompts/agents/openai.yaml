@@ -1,5 +1,5 @@
 interface:
-  display_name: "AIGC 调度转Clip"
+  display_name: "AIGC 视频提示词"
   short_description: "把调度打包为一镜或多镜Clip，处理真实素材、时间映射和平台发送正文"
   default_prompt: "请使用 $aigc-video-prompts，把这份调度转成可复制的Clip提示词并列清素材依赖。"
 policy:

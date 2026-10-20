@@ -2,11 +2,11 @@
 name: aigc-iteration
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when reviewing an AI-video creation or study case, recording reusable findings, comparing a revision against evidence, or maintaining this project's custom skills after validated behavior tests.
 ---
 
-# 创作复盘与持续迭代
+# aigc-iteration（创作复盘）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,7 +18,7 @@ description: Use when reviewing an AI-video creation or study case, recording re
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时从当前包安装根或总控元数据定位同版本 `aigc-creator`，核对 bundle、bundle_version；缺失则报告，禁止混用副本。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时从当前包安装根或总控元数据定位同版本 `aigc-creator`（全链路创作总控），核对 bundle、bundle_version；缺失则报告，禁止混用副本。
 - 读取同版本 `iteration.md`。完整项目中再读实际项目的 `spec/持续迭代.md` 与经验索引，仅加载相关来源；案例来自拉片时按需读 `shot-study.md`。
 - 没有完整项目时仍可完成证据对照与候选提案；以共享资源为便携流程，不冒称具有 AIGC_Lab 的持续源码维护权限。
 
@@ -29,7 +29,7 @@ description: Use when reviewing an AI-video creation or study case, recording re
 3. 查重并核对经验 ID、版本、条件和证据。候选只能标注试用；变化范围不能自动扩大为全片或全部 Skill。
 4. 对照实际输入输出、预定判据和反例，区分文本行为、用户反馈和媒体效果。无法播放就保留媒体未执行；未测试不能因入库升级状态。
 5. 先保留来源与对照，再写实际变化的模块/适配资料，最后由单一写入者更新索引。原始案例提示词留案例，通用表达参数化后入库；纯复用允许零新增。
-6. 若属于已授权的本项目自定义 Skill 改进，按 `iteration.md` 的维护门槛完成真实基线、候选规则、独立实际执行、针对性修订及陌生案例复测；门槛满足后可更新限定源码并记录，不重复申请同一授权。核心创作原则改变、范围扩大或其他安装包修改需先确认。
+6. 若改进来自拉片提案，先核对具体提案ID和用户批准范围；未批准只整理建议，不因交给本节点就实施。已获具体授权后按 `iteration.md` 的维护门槛完成真实基线、候选规则、独立实际执行、针对性修订及陌生案例复测，再更新限定源码并记录；不重复申请同一授权。核心创作原则改变、范围扩大或其他安装包修改需先确认。
 
 ## 交付与停止
 

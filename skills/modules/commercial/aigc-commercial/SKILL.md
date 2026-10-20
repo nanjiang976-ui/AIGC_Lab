@@ -3,10 +3,10 @@ name: aigc-commercial
 description: Use when planning AI product advertisements, brand films, campaign videos, product beauty shots, or evidence-sensitive promotional claims.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 商业广告与品牌短片
+# aigc-commercial（商业广告）
 
 先确定观众需要记住或采取的行动，再让每项产品主张对应证据和镜头。
 
@@ -19,8 +19,8 @@ metadata:
 ## 适用边界
 
 - 适用：品牌认知、促销、产品亮相、使用情境广告；传播目标为主。
-- 不适用：教用户完成真实软件操作的教程以 `aigc-product-demo` 为主；无产品或品牌目标的抽象影像用 `aigc-visual-art`。
-- 剧情广告可叠加 `aigc-narrative`，但人物戏不能改变产品外观或把虚构情节当使用证明。
+- 不适用：教用户完成真实软件操作的教程以 `aigc-product-demo`（产品演示） 为主；无产品或品牌目标的抽象影像用 `aigc-visual-art`（视觉艺术）。
+- 剧情广告可叠加 `aigc-narrative`（剧情与漫剧），但人物戏不能改变产品外观或把虚构情节当使用证明。
 - 2D、3D、竖屏只是表现约束；本模块不声称覆盖所有商业片形态，也不替用户决定品牌定位。
 
 ## 最小输入与公共协议
@@ -28,23 +28,23 @@ metadata:
 - 最少需要产品身份与外观依据、目标观众、传播目的、时长、核心主张及可用证据、交付范围。
 - 资料缺少时仍可做明确标注的概念方案；真实产品外观和性能没有依据时不能宣称“可正式投放”。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读取 `references/handoff.md`、`references/prompt-language.md`；外观措辞按需读 `references/lexicon.md`。
 - 需要平台参数时再读其 `references/model-adaptation.md` 并核验当前能力；找不到依赖时报告，不猜目录。
 - 每镜头写相机、角色/主体、画面三要素及前后状态；主体、动作、外观/文案硬约束前置，不宣称提示词位置普遍决定模型权重。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 传播目标、受众或行动未定 | `aigc-prd`；已有完整 brief 时只核对冲突 |
-| 主张和镜头功能 | `aigc-script` 写“主张—证据—可见表达—行动” |
-| 真实产品复现 | `aigc-visual-assets` 锁型号、轮廓、材质、颜色、Logo 与参考角度 |
-| 人手使用或拆装 | `aigc-blocking` 检查持握、接触、开合、受力；静物旋转可直接进 `aigc-storyboard` |
-| 外观可控性重要 | `aigc-keyframes` 校对再到 `aigc-video-prompts`；已有批准镜头则不重建 |
-| 旁白、字幕与转化信息 | `aigc-audio`、`aigc-editing`；无口播可跳配音，实际音轨与画面可读性由用户在LibTV确认 |
+| 传播目标、受众或行动未定 | `aigc-prd`（创作需求）；已有完整 brief 时只核对冲突 |
+| 主张和镜头功能 | `aigc-script`（剧情脚本） 写“主张—证据—可见表达—行动” |
+| 真实产品复现 | `aigc-visual-assets`（参考图资产） 锁型号、轮廓、材质、颜色、Logo 与参考角度 |
+| 人手使用或拆装 | `aigc-blocking`（场面调度） 检查持握、接触、开合、受力；静物旋转可直接进 `aigc-storyboard`（分镜设计） |
+| 外观可控性重要 | `aigc-keyframes`（静态关键帧） 校对再到 `aigc-video-prompts`（视频提示词）；已有批准镜头则不重建 |
+| 旁白、字幕与转化信息 | `aigc-audio`（声音制作）、`aigc-editing`（剪辑时间轴）；无口播可跳配音，实际音轨与画面可读性由用户在LibTV确认 |
 
 ## 专用创作判断
 

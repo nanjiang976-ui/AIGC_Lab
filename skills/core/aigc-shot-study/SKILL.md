@@ -2,11 +2,11 @@
 name: aigc-shot-study
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
-description: Use when the user supplies a public AI-video project, finished video, prompt, or screenshot to study its shots, canvas structure, and prompt design, then prepare a traceable recreation case and reusable findings.
+  bundle_version: "1.4.0"
+description: Use when the user supplies an AI-platform public canvas, video, prompt, or screenshot to study shots and workflow, compare with the current project, and propose evidence-backed improvements for user approval before implementation.
 ---
 
-# 视频拉片与复刻
+# aigc-shot-study（拉片分析）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,13 +18,13 @@ description: Use when the user supplies a public AI-video project, finished vide
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证项目契约及共享文件存在，优先读取该根的 `skills/aigc-creator/references`。脱离项目时从当前包的安装根或总控元数据定位同版本 `aigc-creator`，检查 metadata 的 bundle、bundle_version 一致；不猜路径或混用旧全局副本。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证项目契约及共享文件存在，优先读取该根的 `skills/aigc-creator/references`。脱离项目时从当前包的安装根或总控元数据定位同版本 `aigc-creator`（全链路创作总控），检查 metadata 的 bundle、bundle_version 一致；不猜路径或混用旧全局副本。
 - 读取同版本共享资源 `shot-study.md`。需要把观察送入经验循环或维护规则时读取 `iteration.md`；真正转写调度或 Clip 时再读取 `handoff.md` 及相应创作节点。
 - 在完整项目中按项目契约发现 `03_参考素材与风格/视频拉片复刻` 与 `spec/持续迭代.md`；没有完整项目时按照共享资源的字段在当前获准目录或聊天中交付，不假称公共库已经同步。
 
 ## 输入与缺项
 
-接受用户给定的公开来源链接、本地工程、视频、提示词或截图。先列原工程、成片、原始提示词三类资料的实际可得性；仅有一种也能开展相应范围的分析。
+接受用户给定的公开来源链接、本地工程、视频、提示词或截图。由Codex检查原工程、成片、原始提示词三类资料的实际可得性；仅有一种也能开展相应范围的分析，不让用户重复填写已有资料状态。对照目标默认当前明确的项目；用户只要来源拆解时按其范围处理，无目标项目时不凭空编造现状。
 
 只采集给定来源及完成当前案例必要的关联资料。链接需登录、权限不足、没有原工程或只有缩略图时明确记录，继续独立可做的拆解。用户给定公共来源不代表授权扫描整个社区、代为登录、公开转载或调用付费生成。
 
@@ -34,11 +34,12 @@ description: Use when the user supplies a public AI-video project, finished vide
 2. 按实际材料做三层拆解：镜头与声画、画布节点与资产依赖、提示词结构。三层均写状态；缺失层写“资料未提供”，不由成片反推成原作者事实。
 3. 对照七项观察：俯视空间、轴线、切点、事件预算、表演错峰、声音变化、下一作可迁移的一个决定。把直接观察、推断、待核验分开。
 4. 输出来源可追溯的镜头调度和 Clip 结构分析；用户要复刻时再交新增的创作文本，清楚标为本次设计。无真实资产或未完成平台适配时不标为可发送。
-5. 经允许保存时更新案例与原始提示词素材索引。原文单一存放；抽出的通用模块先查重、参数化并保留来源，不能把长原文复制到通用库冒充方法。
-6. 将值得复用的发现交给 `aigc-iteration`。只观察截图可以形成候选或文字结论；生成效果需真实输出及播放检查。是否维护 Skill 按共享迭代协议和项目授权判断。
+5. 用户未裁剪对照范围且有目标项目时，拉片后对照其当前流程：实际读取README、catalog、handoff，再按本轮问题读取相关节点源码与协议。按共享 `shot-study.md` 的五类差异交表，既有能力与未显式交付分开，不把作者做法不同当成项目缺陷。
+6. 只为有依据的差异提出少量带ID的具体优化方案，列来源证据、项目现状、最小改法及文件/依赖、预期效果与验法、影响和保持项、批准状态；没有值得改的项目允许零建议。先交用户审批，未批准的提案不实施；已有对同一具体方案的明确批准可继续，不重复申请。批准后仍遵循同版迭代协议；涉及Skill维护时按skill-creator流程，不因批准跳过基线、独立执行或陌生案例复测。
+7. 经允许保存时更新案例与原始提示词素材索引。原文单一存放；通用方法先查重并保留来源。将候选交给 `aigc-iteration`（创作复盘） 时携带提案和批准范围，不能把学习或入库当作实施批准。只有文字观察不证明生成效果；未获批准的维护留在提案阶段。
 
 ## 完成标准
 
-交付应能回答“看到了什么、从哪里知道、哪些只是推断、下一次具体采用什么、还缺什么”。镜头、画布与提示词三层均有记录；来源可打开；标签可检索；遮挡与未知保留；复刻生成、播放和声音检查分别如实写 `NOT_RUN` 或实际结果。
+交付应能回答“看到了什么、从哪里知道、与当前项目有何差异、哪些值得改、批准了什么、还缺什么”。镜头、画布与提示词三层均有记录；来源注明实际访问状态；标签可检索；遮挡与未知保留；有目标项目时交差异表与优化提案（可零项）；复刻生成、播放和声音检查分别如实写 `NOT_RUN` 或实际结果。
 
-用户只要求拉片时完成分析与候选即可停止；不为证明效果擅自开始生成。下一轮可直接说“用刚才那个错峰方法，改写这场对话”。
+本研究入口默认停在分析与待批方案，不自动生成媒体、克隆画布或发布。下一轮可说“批准OPT-001，按提案范围实施”；仅表示“继续学习”不批准修改。用户另行明确要求复刻文字或已批准实施时，执行其具体范围，其他提案仍保留原状态。

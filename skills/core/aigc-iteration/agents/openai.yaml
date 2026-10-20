@@ -1,4 +1,4 @@
 interface:
-  display_name: "AIGC 创作复盘迭代"
+  display_name: "AIGC 创作复盘"
   short_description: "对照真实输入输出复盘创作与拉片经验，验证后维护本项目的自定义规则"
   default_prompt: "请使用 $aigc-iteration 复盘本轮结果，记录有效范围、反例和下一次可采用的方法。"

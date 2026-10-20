@@ -2,11 +2,11 @@
 name: aigc-script
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 description: Use when an AI video or comic needs a story script, scene beats, concise dialogue, or revision of dramatic cause and effect before detailed storyboarding.
 ---
 
-# 剧情与表演脚本
+# aigc-script（剧情脚本）
 
 个人调用时可直接用 [提示词模板与使用方法](references/usage.md)：短口令、可复制调用模板和已填示例；这些是发给 Codex 的请求，不是生成模型正文。
 
@@ -18,7 +18,7 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 
 ## 入口与依赖
 
-- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator` 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
+- 用户明确指定完整 AIGC_Lab 工作区时，验证根目录项目契约及共享文件存在，优先用该根的 `skills/aigc-creator/references`。脱离项目时再从当前包的安装根或 `aigc-creator`（全链路创作总控） 元数据定位同版本总控；缺文件则报告，禁止混用旧全局副本或猜路径。检查当前 Skill 与总控 metadata 的 bundle、bundle_version 相同。
 - 读取定位后的 `handoff.md`、`prompt-language.md`；抽象情绪或复杂长镜头按需读 `screenshot-analysis.md` 的截图3，借用电影技法读 `film-cases.md`。
 - 主模块已有类型约束时沿用；纯产品演示或知识解说只写必要信息/操作顺序，不强造人物争执。
 
@@ -38,7 +38,7 @@ description: Use when an AI video or comic needs a story script, scene beats, co
 5. 处理动作因果：物件从哪来、受什么力移动、谁先松手、结果改变谁的判断；复杂动作保留中间接触。
 6. 将截图3的首帧、动作节拍、运镜意图、声音、结束状态拆开；脚本保存全过程，静态图只取其中一刻。
 7. 初步提出明确镜头数及理由，再交分镜调整；镜头数由信息变化、可见性与停留需要决定。
-8. 把对白交 `aigc-audio` 前置试读：保留呼吸、反应和动作时间；若超时，提供删台词/改节奏/增时的具体取舍。
+8. 把对白交 `aigc-audio`（声音制作） 前置试读：保留呼吸、反应和动作时间；若超时，提供删台词/改节奏/增时的具体取舍。
 9. 从当前剧本提取人物、重要道具与场景清单：关键物的可见结构、使用方式与揭示时机必须能支持动作因果；没有确认的外观保持待定，不为了填清单擅自定妆。
 
 ## 镜头建议怎样有依据

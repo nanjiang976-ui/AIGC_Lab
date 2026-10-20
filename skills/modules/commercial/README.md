@@ -1,6 +1,6 @@
-# 商业广告与品牌短片
+# aigc-commercial（商业广告）｜类型说明
 
-入口：[aigc-commercial](aigc-commercial/SKILL.md)。把传播目的、产品外观和有依据的主张连接到镜头与行动提示。
+入口：[aigc-commercial（商业广告）](aigc-commercial/SKILL.md)。把传播目的、产品外观和有依据的主张连接到镜头与行动提示。
 
 示例：`用 $aigc-commercial 做 15 秒杯子广告，外观按我的产品图，卖点先核对证据，只交提示词。`
 

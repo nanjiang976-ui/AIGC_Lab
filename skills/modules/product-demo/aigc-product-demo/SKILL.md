@@ -3,10 +3,10 @@ name: aigc-product-demo
 description: Use when creating software walkthroughs, app tutorials, product how-to videos, or screen demonstrations that must match real UI and reproducible actions.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 产品功能演示
+# aigc-product-demo（产品演示）
 
 用真实步骤证明用户能完成什么，确保视频里的操作能在目标产品环境复现。
 
@@ -19,7 +19,7 @@ metadata:
 ## 适用边界
 
 - 适用：软件功能演示、上手教程、界面录屏、可核实的实体产品操作说明。
-- 不适用：只展示品牌情绪和外观的广告以 `aigc-commercial` 为主；概念产品效果图不当现有功能教程。
+- 不适用：只展示品牌情绪和外观的广告以 `aigc-commercial`（商业广告） 为主；概念产品效果图不当现有功能教程。
 - 如需广告包装可叠加商业模块，但真实操作段保持可定位、可复现，不凭产品名称推断按钮与结果。
 - 保留用户指定的产品、版本与平台；不能为好看而悄悄换成另一个界面或虚构功能。
 
@@ -28,23 +28,23 @@ metadata:
 - 最少需要产品/版本/平台、要教会的任务、起始条件、实际截图或录屏/可操作访问、时长与交付范围。
 - 截图只支持可见状态；从开始到结果的操作因果需要录屏、亲自验证或明确的可靠步骤依据。缺证据时交素材清单和结构草案。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准读 `references/handoff.md` 和 `references/prompt-language.md`；需分析用户截图时读 `references/screenshot-analysis.md`。
 - 生成包装画面才按需读其 `references/model-adaptation.md`；缺公共依赖时报告，不虚构工具或引用文件。
 - 每镜头写相机/屏幕视窗、人物/主体、画面及前后状态；关键操作、真实控件、不能改动的 UI 前置。无人不必角色三视图。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 任务目标或起始条件不清 | `aigc-prd` 确认可复现目标，不重新设计整个产品 |
-| 已有操作证据 | `aigc-script` 写“前置条件—输入—动作—可见结果—证据位置” |
-| 主要使用真实录屏 | `aigc-storyboard` → `aigc-audio`/`aigc-editing`，跳生成 UI、关键帧及视频生成 |
-| 需要指示框/放大或鼠标强调 | `aigc-visual-assets` 仅做叠加规范，不重新绘制实际控件 |
-| 实物装配或人手操作 | `aigc-blocking` 锁手部、部件、接触与方向；纯屏幕点击可并入分镜 |
-| 片头/包装需要生成 | 只对此段使用`aigc-video-prompts`，仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`；明确与真实演示分段 |
+| 任务目标或起始条件不清 | `aigc-prd`（创作需求） 确认可复现目标，不重新设计整个产品 |
+| 已有操作证据 | `aigc-script`（剧情脚本） 写“前置条件—输入—动作—可见结果—证据位置” |
+| 主要使用真实录屏 | `aigc-storyboard`（分镜设计） → `aigc-audio`（声音制作）/`aigc-editing`（剪辑时间轴），跳生成 UI、关键帧及视频生成 |
+| 需要指示框/放大或鼠标强调 | `aigc-visual-assets`（参考图资产） 仅做叠加规范，不重新绘制实际控件 |
+| 实物装配或人手操作 | `aigc-blocking`（场面调度） 锁手部、部件、接触与方向；纯屏幕点击可并入分镜 |
+| 片头/包装需要生成 | 只对此段使用`aigc-video-prompts`（视频提示词），仅首帧/首尾帧入口或明确端点控制调用`aigc-keyframes`（静态关键帧）；明确与真实演示分段 |
 | 交付 | Codex核对文字步骤与已提供版本资料；用户在LibTV逐步检查画面、状态与讲解，功能验证仍需真实操作证据 |
 
 ## 专用创作判断

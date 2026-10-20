@@ -1,6 +1,6 @@
-# 剧情与 AI 漫剧
+# aigc-narrative（剧情与漫剧）｜类型说明
 
-入口：[aigc-narrative](aigc-narrative/SKILL.md)。围绕人物目标、阻力、选择与后果组织剧情，连接脚本、调度、分镜和连续性审查。
+入口：[aigc-narrative（剧情与漫剧）](aigc-narrative/SKILL.md)。围绕人物目标、阻力、选择与后果组织剧情，连接脚本、调度、分镜和连续性审查。
 
 示例：`用 $aigc-narrative 做一段 18 秒双人和解短片，先给有因果的动作设计，只交文字。`
 

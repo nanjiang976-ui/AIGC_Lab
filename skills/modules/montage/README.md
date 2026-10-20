@@ -1,6 +1,6 @@
-# 混剪与活动回顾
+# aigc-montage（混剪回顾）｜类型说明
 
-入口：[aigc-montage](aigc-montage/SKILL.md)。从实际素材清单出发，用可核验的入出点、动作接续和声音组织成片。
+入口：[aigc-montage（混剪回顾）](aigc-montage/SKILL.md)。从实际素材清单出发，用可核验的入出点、动作接续和声音组织成片。
 
 示例：`用 $aigc-montage 按这三段已授权素材做 20 秒回顾，写来源、入出点和缺口，不虚构未看到的内容。`
 

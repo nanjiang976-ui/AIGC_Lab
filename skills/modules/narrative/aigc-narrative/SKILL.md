@@ -3,10 +3,10 @@ name: aigc-narrative
 description: Use when planning or revising narrative AI shorts, character-driven scenes, AI comics, dramatic causality, tension, or multi-character performance continuity.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.3.0"
+  bundle_version: "1.4.0"
 ---
 
-# 剧情与 AI 漫剧
+# aigc-narrative（剧情与漫剧）
 
 用人物的可见选择推动事件变化；风格、画幅和模型不替代戏剧目的。
 
@@ -19,8 +19,8 @@ metadata:
 ## 适用边界
 
 - 适用：虚构剧情、AI 漫剧、由人物行动承载的品牌故事或音乐叙事段。
-- 不适用：只有氛围变化的循环画面；转 `aigc-visual-art`。真实事件考证以 `aigc-documentary` 为主。
-- 混合任务按主要验收目的选主模块；广告故事可叠加 `aigc-commercial` 检查产品与主张。
+- 不适用：只有氛围变化的循环画面；转 `aigc-visual-art`（视觉艺术）。真实事件考证以 `aigc-documentary`（纪实与重建） 为主。
+- 混合任务按主要验收目的选主模块；广告故事可叠加 `aigc-commercial`（商业广告） 检查产品与主张。
 - 本模块是常见用途之一，不把九类当作行业完整分类；保留用户选择的叙事结构与结局。
 
 ## 最小输入与公共协议
@@ -28,23 +28,23 @@ metadata:
 - 最少需要人物当前目标、阻力或关系、希望发生的变化、时长及本轮交付范围；完整 PRD 直接消费，只补决定因果的缺口。
 - 尚未给出的过错、关系、伤害、台词与结局标为提案，不写成已确认剧情。一个问题只解决当前最关键分歧。
 - 用户已明确完整 AIGC_Lab 工作区时，先核对该根的 `README.md`、`AGENTS.md`、`spec/harness-engineering.md` 与 `skills/catalog.json`，确认项目契约和本叶 skill 的归属；优先读取该根 `skills/aigc-creator/references/`，不让旧全局入口覆盖指定工作区。
-- 脱离项目时，从当前包的实际安装根或 `aigc-creator` 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
+- 脱离项目时，从当前包的实际安装根或 `aigc-creator`（全链路创作总控） 元数据定位总控，比较叶节点与总控的 metadata.bundle / metadata.bundle_version 确认版本配套；缺文件、版本不符或无法确认同版本时报告，不猜路径或静默回退。
 - 按以上规则定位总控后，以其目录为基准按需读取 `references/handoff.md` 与 `references/prompt-language.md`；缺依赖时报告，不猜安装路径。
 - 空间与表演问题再读其 `references/continuity.md`；需要摄影措辞或真实案例时读 `references/lexicon.md`、`references/film-cases.md`，保留案例来源边界。
 - 每镜头记录相机、角色/主体、画面三要素及前后状态；最重要主体、动作、硬约束前置，这是编排原则而非所有模型的位置权重保证。
 
-视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts` 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
+视频提示词交付：用户本步要求生成视频提示词时，在同一交付中由 `aigc-video-prompts`（视频提示词） 按同版总控 `references/clip-prompts.md` 后台编译，每条 Clip 只交一个保留完整六区块与 STYLE LOCK 八项的主复制稿，不让用户再调用一次。平台未知时交完整通用稿，框外注明适配未执行，不另给扁平化稿；只有已核验入口明确要求格式编译/字段分流，或用户明确要另版时，才额外提供对应平台适配版。以下导演表达或输入分工片段不是 Clip 发送稿；用户只要策划或图片时保持本步范围，图片提示词不套六区块。
 
 ## 节点取舍
 
 | 条件 | 节点与交接 |
 |---|---|
-| 只有一句创意 | `aigc-prd` 确认核心变化，再由 `aigc-script` 写行动因果 |
-| 人物或场景复现 | `aigc-visual-assets` 建固定身份；已有适用母版则引用版本 |
-| 多人互动、跨轴、交接道具 | `aigc-blocking` 锁世界位置、接触点和可见动作，内部协同分镜/声音后交完整调度，不让用户重复调用技术节点 |
+| 只有一句创意 | `aigc-prd`（创作需求） 确认核心变化，再由 `aigc-script`（剧情脚本） 写行动因果 |
+| 人物或场景复现 | `aigc-visual-assets`（参考图资产） 建固定身份；已有适用母版则引用版本 |
+| 多人互动、跨轴、交接道具 | `aigc-blocking`（场面调度） 锁世界位置、接触点和可见动作，内部协同分镜/声音后交完整调度，不让用户重复调用技术节点 |
 | 单人静态短对白 | 调度可压缩为分镜内的站位/视线记录，不另造完整空间表 |
-| 明确要求连续完成多节点文字包 | 复用已确认需求与剧本；缺剧本时先由`aigc-script`交脚本与资产清单 → `aigc-visual-assets`人物/重要道具/场景参考图提示词 → `aigc-blocking`完整调度（内部协同分镜/声音）→ `aigc-video-prompts`编译Clip；普通逐步请求只执行当前节点后停止。身份参考可直接进入Clip，只有首帧/首尾帧入口或明确端点控制才调用`aigc-keyframes`；缺所需图保留草案，明确纯文生或单节点按范围裁剪 |
-| 对白、环境声、成片 | `aigc-audio` → `aigc-editing`；用户在LibTV观看和试听验收，Codex按反馈调整文字 |
+| 明确要求连续完成多节点文字包 | 复用已确认需求与剧本；缺剧本时先由`aigc-script`（剧情脚本）交脚本与资产清单 → `aigc-visual-assets`（参考图资产）人物/重要道具/场景参考图提示词 → `aigc-blocking`（场面调度）完整调度（内部协同分镜/声音）→ `aigc-video-prompts`（视频提示词）编译Clip；普通逐步请求只执行当前节点后停止。身份参考可直接进入Clip，只有首帧/首尾帧入口或明确端点控制才调用`aigc-keyframes`（静态关键帧）；缺所需图保留草案，明确纯文生或单节点按范围裁剪 |
+| 对白、环境声、成片 | `aigc-audio`（声音制作） → `aigc-editing`（剪辑时间轴）；用户在LibTV观看和试听验收，Codex按反馈调整文字 |
 
 ## 专用创作判断
 
