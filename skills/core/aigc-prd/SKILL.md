@@ -2,7 +2,7 @@
 name: aigc-prd
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.0"
+  bundle_version: "1.4.1"
 description: Use when an AI image, video, or comic request is still vague, or an existing creative PRD needs a readiness and contradiction check before production.
 ---
 

@@ -1,0 +1,58 @@
+{
+  "version": "1.4.1",
+  "date": "2026-10-20",
+  "base_commit": "9653505d0a0fc64d75e3c52e928df5d1ddc066bd",
+  "scope": "project_source_and_github_documentation",
+  "local_checks": {
+    "structure": {
+      "passed": true,
+      "work_count": 2
+    },
+    "bundle": {
+      "passed": true,
+      "packages": 21
+    },
+    "skill_format": {
+      "passed": true,
+      "count": 21
+    },
+    "invocation_regression": {
+      "passed": true,
+      "count": 32
+    },
+    "bundle_regression": {
+      "passed": true,
+      "count": 40
+    },
+    "filled_startup_routing": {
+      "passed": true,
+      "count": 9
+    },
+    "source_links_checked": {
+      "existing_targets": 260,
+      "scope": "README creator SKILL usage and invocation protocol"
+    }
+  },
+  "actual_text_execution": {
+    "type_count": 9,
+    "new_version_two_turn_cases": 9,
+    "new_version_replies": 19,
+    "unfilled_template_cases": 1,
+    "old_version_baseline_cases": 1,
+    "independent_review": "no_blocking_issue_for_requested_scope",
+    "notes": [
+      "Old version already routes narrative to PRD; do not claim a disconnected backend was repaired.",
+      "Music initial width-based square size was corrected to height-based size in its second turn; original error retained.",
+      "C group exposed some expected_module fields briefly; not a fully blind test."
+    ]
+  },
+  "not_run": [
+    "LibTV_account_connection",
+    "platform_reference_binding",
+    "image_audio_video_generation",
+    "media_playback_acceptance",
+    "global_install_sync",
+    "LibTV_derived_bundle_sync"
+  ],
+  "github_browser_verification": "pending_after_publication"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "bundle_version": "1.4.0",
+  "bundle_version": "1.4.1",
   "skills": [
     {
       "name": "aigc-creator",

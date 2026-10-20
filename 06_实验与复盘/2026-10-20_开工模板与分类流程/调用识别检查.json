@@ -1,0 +1,475 @@
+{
+  "bundle_version": "1.4.1",
+  "startup_passed": 9,
+  "startup_total": 9,
+  "cases": [
+    {
+      "case_id": "narrative",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-narrative"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-narrative": [
+            "剧情与漫剧"
+          ],
+          "aigc-prd": [
+            "整理需求"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "matched",
+        "selected_skill": "aigc-script",
+        "candidates": [
+          {
+            "name": "aigc-script",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\references\\usage.md"
+          }
+        ],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-script": [
+            "写剧情脚本",
+            "剧情脚本"
+          ]
+        },
+        "read_only": true,
+        "reason": "命中已登记的自然语言别名；题材模块保留为创作上下文。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "commercial",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-commercial"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-commercial": [
+            "商业广告"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "matched",
+        "selected_skill": "aigc-script",
+        "candidates": [
+          {
+            "name": "aigc-script",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\references\\usage.md"
+          }
+        ],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-script\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-script": [
+            "写脚本"
+          ]
+        },
+        "read_only": true,
+        "reason": "命中已登记的自然语言别名；题材模块保留为创作上下文。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "explainer",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-explainer"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-explainer": [
+            "科普解释"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "fallback",
+        "selected_skill": "aigc-creator",
+        "candidates": [],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {},
+        "read_only": true,
+        "reason": "未命中已登记别名，回到总控判断下一步；这不表示已理解全部自然语言。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "presenter",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-presenter"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-presenter": [
+            "主持人口播"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "fallback",
+        "selected_skill": "aigc-creator",
+        "candidates": [],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {},
+        "read_only": true,
+        "reason": "未命中已登记别名，回到总控判断下一步；这不表示已理解全部自然语言。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "documentary",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-documentary"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-documentary": [
+            "纪实与重建"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "matched",
+        "selected_skill": "aigc-documentary",
+        "candidates": [
+          {
+            "name": "aigc-documentary",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\documentary\\aigc-documentary\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-documentary"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\modules\\documentary\\aigc-documentary\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-documentary": [
+            "生成重建"
+          ]
+        },
+        "read_only": true,
+        "reason": "命中已登记的自然语言别名；题材模块保留为创作上下文。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "music",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-music"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-music": [
+            "音乐影像"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "fallback",
+        "selected_skill": "aigc-creator",
+        "candidates": [],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {},
+        "read_only": true,
+        "reason": "未命中已登记别名，回到总控判断下一步；这不表示已理解全部自然语言。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "product-demo",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-product-demo"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-product-demo": [
+            "产品演示"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "fallback",
+        "selected_skill": "aigc-creator",
+        "candidates": [],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {},
+        "read_only": true,
+        "reason": "未命中已登记别名，回到总控判断下一步；这不表示已理解全部自然语言。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "visual-art",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-visual-art"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-visual-art": [
+            "视觉艺术"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "matched",
+        "selected_skill": "aigc-visual-assets",
+        "candidates": [
+          {
+            "name": "aigc-visual-assets",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-visual-assets\\references\\usage.md"
+          }
+        ],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-visual-assets\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-visual-assets": [
+            "角色参考图"
+          ]
+        },
+        "read_only": true,
+        "reason": "命中已登记的自然语言别名；题材模块保留为创作上下文。",
+        "errors": []
+      }
+    },
+    {
+      "case_id": "montage",
+      "startup_ok": true,
+      "startup": {
+        "ok": true,
+        "status": "explicit",
+        "selected_skill": "aigc-creator",
+        "candidates": [
+          {
+            "name": "aigc-creator",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+          }
+        ],
+        "context_modules": [
+          "aigc-montage"
+        ],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-montage": [
+            "混剪回顾"
+          ]
+        },
+        "read_only": true,
+        "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+        "errors": []
+      },
+      "continuation_lexical_hint": {
+        "ok": true,
+        "status": "matched",
+        "selected_skill": "aigc-editing",
+        "candidates": [
+          {
+            "name": "aigc-editing",
+            "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-editing\\references\\usage.md"
+          }
+        ],
+        "context_modules": [],
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\core\\aigc-editing\\references\\usage.md",
+        "matched_aliases": {
+          "aigc-editing": [
+            "剪辑时间轴"
+          ]
+        },
+        "read_only": true,
+        "reason": "命中已登记的自然语言别名；题材模块保留为创作上下文。",
+        "errors": []
+      }
+    }
+  ],
+  "unfilled_menu": {
+    "ok": true,
+    "status": "explicit",
+    "selected_skill": "aigc-creator",
+    "candidates": [
+      {
+        "name": "aigc-creator",
+        "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md"
+      }
+    ],
+    "context_modules": [
+      "aigc-narrative",
+      "aigc-commercial",
+      "aigc-explainer",
+      "aigc-presenter",
+      "aigc-documentary",
+      "aigc-music",
+      "aigc-product-demo",
+      "aigc-visual-art",
+      "aigc-montage"
+    ],
+    "usage_path": "C:\\Users\\NJ\\.codex\\worktrees\\aigc-clip-system\\AIGC_Lab\\skills\\aigc-creator\\references\\usage.md",
+    "matched_aliases": {
+      "aigc-narrative": [
+        "剧情与漫剧"
+      ],
+      "aigc-commercial": [
+        "商业广告"
+      ],
+      "aigc-explainer": [
+        "科普解释"
+      ],
+      "aigc-presenter": [
+        "主持人口播"
+      ],
+      "aigc-documentary": [
+        "纪实与重建"
+      ],
+      "aigc-music": [
+        "音乐影像"
+      ],
+      "aigc-product-demo": [
+        "产品演示"
+      ],
+      "aigc-visual-art": [
+        "视觉艺术"
+      ],
+      "aigc-montage": [
+        "混剪回顾"
+      ],
+      "aigc-prd": [
+        "整理需求"
+      ],
+      "aigc-script": [
+        "写剧本"
+      ],
+      "aigc-blocking": [
+        "写完整调度"
+      ]
+    },
+    "read_only": true,
+    "reason": "采用当前调用文本首个非空行的显式 Skill 名称。",
+    "errors": []
+  },
+  "unfilled_menu_note": "只读词面结果可含多个候选；不等于已选用途，须由总控读取未定/菜单状态，未执行创作。",
+  "scope": "local_read_only_invocation_only_not_skill_execution_or_platform_connection"
+}

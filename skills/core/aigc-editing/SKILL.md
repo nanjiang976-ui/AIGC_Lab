@@ -2,7 +2,7 @@
 name: aigc-editing
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.0"
+  bundle_version: "1.4.1"
 description: Use when AI-generated clips need an edit plan, source in/out points, duration and overlap accounting, sound bridges, or repair of continuity in an assembled sequence.
 ---
 

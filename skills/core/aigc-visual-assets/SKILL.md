@@ -2,7 +2,7 @@
 name: aigc-visual-assets
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.0"
+  bundle_version: "1.4.1"
 description: Create reference prompts for people, creatures, props, and scenes from plain-language descriptions, standardize an existing character image into a four-panel sheet, or repair reference assets for AI video. Deliver each important or explicitly requested prop as one standalone single-view image prompt, and separate character identity from later Clip clothing.
 ---
 

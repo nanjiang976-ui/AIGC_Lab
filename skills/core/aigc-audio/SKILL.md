@@ -2,7 +2,7 @@
 name: aigc-audio
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.0"
+  bundle_version: "1.4.1"
 description: Use when an AI video needs reusable character voice designs, Shot-specific BGM prompts, dialogue timing, sound events, or a lip-sync plan before or after visual generation.
 ---
 

@@ -2,7 +2,7 @@
 name: aigc-iteration
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.0"
+  bundle_version: "1.4.1"
 description: Use when reviewing an AI-video creation or study case, recording reusable findings, comparing a revision against evidence, or maintaining this project's custom skills after validated behavior tests.
 ---
 

@@ -266,6 +266,6 @@
       ]
     }
   ],
-  "bundle_version": "1.4.0",
+  "bundle_version": "1.4.1",
   "invocation_registry": "skills/aigc-creator/references/invocations.json"
 }
