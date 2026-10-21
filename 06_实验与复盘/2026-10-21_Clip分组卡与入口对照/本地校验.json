@@ -1,0 +1,40 @@
+{
+  "version": "1.5.0",
+  "status": "local_candidate_complete_not_merged_or_published",
+  "date": "2026-10-21",
+  "approved": [
+    "STUDY-003/OPT-001",
+    "STUDY-003/OPT-002"
+  ],
+  "deferred": [
+    "STUDY-003/OPT-003"
+  ],
+  "base_commit": "d0fec36cfdff6e08c69e51d0bb607a0aee0f87a1",
+  "checks": {
+    "bundle": 21,
+    "skill_format": 21,
+    "clip_regression": 33,
+    "invocation_regression": 32,
+    "bundle_regression": 40,
+    "all_passed": true
+  },
+  "evidence": {
+    "old_baseline": 1,
+    "new_same_request": 1,
+    "unfamiliar_requests": 3,
+    "review": "no_blocking_local_delivery_issue",
+    "boundary": "text_executions_and_final_static_review_not_media_validation"
+  },
+  "failures_preserved": [
+    "initial_package_external_case_links",
+    "adjacent_reference_markers_misparsed"
+  ],
+  "not_run": [
+    "media_generation",
+    "account_and_reference_binding",
+    "playback_acceptance",
+    "global_install_sync",
+    "LibTV_derived_bundle_sync",
+    "git_commit_merge_push"
+  ]
+}

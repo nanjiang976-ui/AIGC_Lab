@@ -1,0 +1,51 @@
+{
+  "base_commit": "d0fec36cfdff6e08c69e51d0bb607a0aee0f87a1",
+  "source_version": "1.4.1",
+  "date": "2026-10-21",
+  "snapshots": [
+    {
+      "source": "skills/aigc-creator/references/clip-prompts.md",
+      "snapshot": "skills__aigc-creator__references__clip-prompts.md.txt",
+      "sha256": "61bb40c9dcd0ee072af738c4e3fa157d94cd2134426d04b5d5bdc3347b2f0e89",
+      "bytes": 15784
+    },
+    {
+      "source": "skills/aigc-creator/references/director-dispatch.md",
+      "snapshot": "skills__aigc-creator__references__director-dispatch.md.txt",
+      "sha256": "d25f0052f40df56fc8c820ac464bc3c1b57a9757cbdb6dc279740830e08241ec",
+      "bytes": 8582
+    },
+    {
+      "source": "skills/aigc-creator/references/model-adaptation.md",
+      "snapshot": "skills__aigc-creator__references__model-adaptation.md.txt",
+      "sha256": "1531a3fd22a2166655d33ffb6249fb551d989e27cbd021e8e15b09fe311828fb",
+      "bytes": 15524
+    },
+    {
+      "source": "skills/core/aigc-video-prompts/SKILL.md",
+      "snapshot": "skills__core__aigc-video-prompts__SKILL.md.txt",
+      "sha256": "4d180f7df2d39badd29eb573e630e0149e7cb078da5f985ad44af517d11fda00",
+      "bytes": 14624
+    },
+    {
+      "source": "skills/core/aigc-video-prompts/references/usage.md",
+      "snapshot": "skills__core__aigc-video-prompts__references__usage.md.txt",
+      "sha256": "adf440d7e2eabc13a2482b2e0849041299c568bf43713b7a4eecfe33cce8bb10",
+      "bytes": 5466
+    }
+  ],
+  "protected_before": {
+    "skills/aigc-creator/references/reference-assets.md": "0066443c7d505b7b1a542adb531cb6cb3eab5ebbe23752392cebcb82f4e8c723",
+    "skills/aigc-creator/references/canvas-handoff.md": "4c50841982e3aa138c097562825dc0d43eb4c8ba474905032b4a40847123c1aa",
+    "spec/clip-contract.md": "8cfb00421a0e249467d2df689623aac3263ca9eac1e34ef67e06aa9a359788de",
+    "skills/catalog.json": "e40299b78c8a01ed37882aa846fe4a8f171931ab052445ff3eb7fe271b162c7e",
+    "scripts/skill_invocations.py": "46beb148dbc540daba612c041a50099fe1983d25569fa49b0ae04eb8044fa731",
+    "scripts/skill_bundle.py": "687721276d1df9141da57c8b6fc2cfa82fa672b948f88d3a000cec8bc11fc3a9"
+  },
+  "approval_review_snapshot": {
+    "source": "03_参考素材与风格/视频拉片复刻/案例/STUDY-003_六部LibTV短片提示词对照/README.md",
+    "snapshot": "STUDY-003_v001_审批前.md.txt",
+    "sha256": "8435e640e7e2e6f384de33147ed8ebbda8697571e28fe8578983ec6d6df4e3d9",
+    "bytes": 16629
+  }
+}

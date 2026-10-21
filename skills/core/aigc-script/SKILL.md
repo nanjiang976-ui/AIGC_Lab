@@ -2,7 +2,7 @@
 name: aigc-script
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.1"
+  bundle_version: "1.5.0"
 description: Use when an AI video or comic needs a story script, scene beats, concise dialogue, or revision of dramatic cause and effect before detailed storyboarding.
 ---
 

@@ -2,7 +2,7 @@
 name: aigc-shot-study
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.1"
+  bundle_version: "1.5.0"
 description: Use when the user supplies an AI-platform public canvas, video, prompt, or screenshot to study shots and workflow, compare with the current project, and propose evidence-backed improvements for user approval before implementation.
 ---
 

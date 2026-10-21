@@ -3,7 +3,7 @@ name: aigc-creator
 description: "用于 AIGC 图片、视频、AI 漫剧的整体创作、跨节点衔接、续作或局部变更；当用户给出想法、PRD、脚本或分镜并需要选择下一步时使用。单一专业节点已有明确输入时转交对应 skill，不重复全套访谈。"
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.1"
+  bundle_version: "1.5.0"
 ---
 
 # aigc-creator（全链路创作总控）

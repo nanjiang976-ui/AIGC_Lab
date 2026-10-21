@@ -2,7 +2,7 @@
 name: aigc-blocking
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.4.1"
+  bundle_version: "1.5.0"
 description: "把故事或场景写成完整镜头调度，或局部设计人物走位、视线、道具交接与相机路径；用户说写调度即可，后台补齐分镜、声音和时间，不要求记六维字段。"
 ---
 

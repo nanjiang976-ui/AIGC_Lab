@@ -2,7 +2,7 @@
 
 版本 v008，2026-10-20。本协议在本套件中只维护一份。作品根目录依照 [项目接入](project-integration.md) 定位。用户明确完整 AIGC_Lab 工作区时，验证项目契约后优先读该根 `skills/aigc-creator/references/`；脱离项目时再用当前包安装根/技能元数据找到配套总控。先确认共享文件和当前套件配套，不能把新工作树的叶节点混接到旧全局总控。只安装了叶节点时补齐总控依赖，不猜测绝对路径。
 
-套件身份在各 SKILL.md 的 `metadata.bundle` 与 `metadata.bundle_version` 中；本版为 `aigc-lab` / `1.4.1`。脱离项目时比较叶节点与总控这两个字段；缺失或不同则报告需要完整同步，不把“同名”当“同版”。项目内还可与 `skills/catalog.json` 的 bundle_version 核对。
+套件身份在各 SKILL.md 的 `metadata.bundle` 与 `metadata.bundle_version` 中；本版为 `aigc-lab` / `1.5.0`。脱离项目时比较叶节点与总控这两个字段；缺失或不同则报告需要完整同步，不把“同名”当“同版”。项目内还可与 `skills/catalog.json` 的 bundle_version 核对。
 
 ## 三类职责
 
