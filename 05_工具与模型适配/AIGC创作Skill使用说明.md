@@ -1,6 +1,6 @@
 # AIGC 全链路 Skill 安装与使用
 
-版本：1.5.0 · 2026-10-21。套件包含总控 `aigc-creator`（全链路创作总控）、11个共享节点、9个类型模块。项目介绍、流程图、节点衔接与训练方法以[根README](../README.md)为准，这里专门说明安装、更新和故障定位。
+版本：1.6.0 · 2026-10-21。套件包含总控 `aigc-creator`（全链路创作总控）、11个共享节点、9个类型模块。项目介绍、流程图、节点衔接与训练方法以[根README](../README.md)为准，这里专门说明安装、更新和故障定位。
 
 ## 安装前
 
@@ -64,7 +64,7 @@ JSON报告包含 `ok`、`errors`、`actions`、`extras_preserved`、`backup_dir`
 3. 在Codex技能列表确认21个名称。新技能没有出现在当前会话时重启，再明确指定一次，例如 `$aigc-prd`。
 4. 执行一个有代表性的文字请求，检查真实输出与交接；允许自动调用的配置不能代替这一步。
 
-各包 frontmatter 中 `metadata.bundle=aigc-lab`、`metadata.bundle_version=1.5.0` 标识配套版本。完整项目环境优先使用当前明确工作区的源码与共享资料，脱离项目再检查安装包是否配套；旧全局总控不能替代新工作树的公共协议。
+各包 frontmatter 中 `metadata.bundle=aigc-lab`、`metadata.bundle_version=1.6.0` 标识配套版本。完整项目环境优先使用当前明确工作区的源码与共享资料，脱离项目再检查安装包是否配套；旧全局总控不能替代新工作树的公共协议。
 
 技能包的结构和发现机制依据[OpenAI官方Skill说明](https://learn.chatgpt.com/docs/build-skills)；本机的实际加载还须按上面步骤验证。安装不需要媒体平台密钥，也不增加后台任务、定时任务或自动发布。
 

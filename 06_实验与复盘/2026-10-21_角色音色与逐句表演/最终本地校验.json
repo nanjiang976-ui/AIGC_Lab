@@ -1,0 +1,55 @@
+{
+  "version": "1.6.0",
+  "date": "2026-10-21",
+  "status": "local_candidate_complete_not_merged_published_or_installed",
+  "base_commit": "1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d",
+  "approved": [
+    "VOICE-OPT-01",
+    "VOICE-OPT-02",
+    "VOICE-OPT-03"
+  ],
+  "source_case": "STUDY-004 v001",
+  "checks": {
+    "structure": "PASS, 2 works in isolated tree",
+    "bundle_packages": 21,
+    "skill_formats": 21,
+    "clip_regressions": 33,
+    "invocation_regressions": 32,
+    "bundle_regressions": 40,
+    "total_related_regressions": 105,
+    "passed": true
+  },
+  "behavior": {
+    "old_requests": 1,
+    "new_same_request": 1,
+    "unfamiliar_requests": 4,
+    "local_correction": 1,
+    "original_same_request_retained": true,
+    "independent_review": "no_source_blocker; local causal detail corrected, unrelated sound design attribution marked candidate",
+    "claim": "explicit delivery and bounded text behavior; most capabilities already present in 1.5.0, no media improvement claim"
+  },
+  "original_outputs_sha256": {
+    "基线执行_1.5.0.md": "6829d5fabf835c8fec465bb5e1e612ccb346960bd5b4ec2dd7289c9870bd3d46",
+    "实际执行_同题1.6.0.md": "489ab60c0095482b3dffd7039cb08b7d276c8abada000fe8b1a666036cbbc179",
+    "实际执行_同题1.6.0_局部修正.md": "273a9432b1ccbedb2ef61e0daba7c7afc00305789be1f511b62089aeb014594d",
+    "陌生复测_无剧本与同龄角色.md": "9a63455382de6d6838ce9047464ad8424108f406b6005a0059a4d783c0026203",
+    "陌生复测_真实基准与Clip.md": "7640c2a2e6cf16895f40d796a19b0dffe9e313f6356ab8d5596e9ed997738dc4"
+  },
+  "not_run": [
+    "media_generation",
+    "voice_quality_or_cross_sentence_media_validation",
+    "audio_duration_measurement",
+    "lip_sync_or_mix_acceptance",
+    "new_LibTV_UI_verification",
+    "git_commit_merge_push",
+    "global_installation",
+    "LibTV_derived_package_update"
+  ],
+  "protected": {
+    "main_local_files": 979,
+    "LibTV_files": 876,
+    "global_AIGC_files": 90,
+    "main_and_global_AIGC_version": "1.5.0",
+    "scripts_contracts_BGM": "unchanged"
+  }
+}

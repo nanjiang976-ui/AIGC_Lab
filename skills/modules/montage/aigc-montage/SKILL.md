@@ -3,7 +3,7 @@ name: aigc-montage
 description: Use when assembling AI-assisted montages, event recaps, highlight reels, or edits from existing footage requiring actual asset inventories and source in/out points.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.5.0"
+  bundle_version: "1.6.0"
 ---
 
 # aigc-montage（混剪回顾）

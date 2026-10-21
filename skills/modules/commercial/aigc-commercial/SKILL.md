@@ -3,7 +3,7 @@ name: aigc-commercial
 description: Use when planning AI product advertisements, brand films, campaign videos, product beauty shots, or evidence-sensitive promotional claims.
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.5.0"
+  bundle_version: "1.6.0"
 ---
 
 # aigc-commercial（商业广告）

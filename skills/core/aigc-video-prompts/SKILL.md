@@ -2,7 +2,7 @@
 name: aigc-video-prompts
 metadata:
   bundle: "aigc-lab"
-  bundle_version: "1.5.0"
+  bundle_version: "1.6.0"
 description: "把完整调度或分镜编译为一镜或多镜的完整Clip提示词包，按实际入口要求适配，处理身份参考、衣装、时序、声画和真实结果续接；用户无需记Clip语法。"
 ---
 

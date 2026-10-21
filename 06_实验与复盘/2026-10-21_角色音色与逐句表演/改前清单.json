@@ -1,0 +1,40 @@
+{
+  "base_commit": "1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d",
+  "base_bundle": "1.5.0",
+  "sources": {
+    "skills/core/aigc-audio/SKILL.md": {
+      "git_blob_sha256": "8ae84830c116d3a280d0fbc2b8d0af04c46099d6ae695aabac69f1abf4387370",
+      "working_copy_sha256": "8ae84830c116d3a280d0fbc2b8d0af04c46099d6ae695aabac69f1abf4387370",
+      "recovery": "git show 1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d:skills/core/aigc-audio/SKILL.md"
+    },
+    "skills/core/aigc-audio/references/usage.md": {
+      "git_blob_sha256": "5a0f6fc1359b444786724646787b6cb05ee93c584ba2d084da941dc0de7f25f0",
+      "working_copy_sha256": "ed807dce7b907d13b34377dfae435532bae74844d8dc07ffe2e5d97cf0fd1349",
+      "recovery": "git show 1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d:skills/core/aigc-audio/references/usage.md",
+      "sampling_note": "usage由独立代理并行编辑，准备时工作区哈希不是固定1.5.0字节；其旧版完整内容以同条recovery及git_blob_sha256为准。基线执行者实际固定读取该提交，不受此采样影响。"
+    },
+    "skills/aigc-creator/references/voice-and-music.md": {
+      "git_blob_sha256": "0808b2e7a8e13aa2decc49d6f6b5fc91bf39cfc3509bd038faa54f0f7313842c",
+      "working_copy_sha256": "0808b2e7a8e13aa2decc49d6f6b5fc91bf39cfc3509bd038faa54f0f7313842c",
+      "recovery": "git show 1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d:skills/aigc-creator/references/voice-and-music.md"
+    },
+    "skills/aigc-creator/references/director-dispatch.md": {
+      "git_blob_sha256": "cffb1b02826f371481add3401c7771e1ff2215c4ca2076627621daefca0c51cd",
+      "working_copy_sha256": "cffb1b02826f371481add3401c7771e1ff2215c4ca2076627621daefca0c51cd",
+      "recovery": "git show 1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d:skills/aigc-creator/references/director-dispatch.md"
+    },
+    "skills/aigc-creator/references/clip-prompts.md": {
+      "git_blob_sha256": "3d0f3f3045ae4538527fa7c670176a89d005647c6dcbbe874840a9019bb68967",
+      "working_copy_sha256": "3d0f3f3045ae4538527fa7c670176a89d005647c6dcbbe874840a9019bb68967",
+      "recovery": "git show 1769ee4b6d6ab73bb35b357d0cf4026fb2c3d85d:skills/aigc-creator/references/clip-prompts.md"
+    }
+  },
+  "protected": {
+    "skills/aigc-creator/references/reference-assets.md": "0066443c7d505b7b1a542adb531cb6cb3eab5ebbe23752392cebcb82f4e8c723",
+    "skills/aigc-creator/references/canvas-handoff.md": "4c50841982e3aa138c097562825dc0d43eb4c8ba474905032b4a40847123c1aa",
+    "spec/clip-contract.md": "8cfb00421a0e249467d2df689623aac3263ca9eac1e34ef67e06aa9a359788de",
+    "scripts/skill_bundle.py": "687721276d1df9141da57c8b6fc2cfa82fa672b948f88d3a000cec8bc11fc3a9",
+    "scripts/validate_project.py": "b9ec294a695ae969035ddda94a2e24e62788f8bca538923115982eee9ceef7a3"
+  },
+  "baseline_authority": "固定Git提交原始字节与git_blob_sha256；working_copy_sha256只是准备时采样，不作为行为基线。"
+}
